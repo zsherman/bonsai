@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  mount Upmin::Engine => '/admin'
+  mount Shoppe::Engine => "/shoppe"
+  #mount Upmin::Engine => '/admin'
   root to: 'visitors#index'
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :users
 end

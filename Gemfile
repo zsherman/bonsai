@@ -17,6 +17,12 @@ gem 'pundit'
 gem 'simple_form'
 gem 'upmin-admin'
 gem 'pg'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+#gem 'shoppe', '1.0.3', :git => 'https://github.com/zsherman/core.git'
+gem 'shoppe', path: "../core"
+gem 'kaminari', '~> 0.15.1'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
