@@ -1,5 +1,5 @@
 <%# navigation styled for Zurb Foundation 5 %>
-<nav class="top-bar" data-topbar>
+<!-- <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name"><%= link_to 'Home', root_path %></li>
     <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -9,4 +9,15 @@
       <%= render 'layouts/navigation_links' %>
     </ul>
   </div>
-</nav>
+</nav> -->
+<div class="nav-wrapper">
+  <nav class="nav-collapse">
+    <ul class="clearfix">
+      <li class="nav-left"><%= link_to 'Home', root_path %></li>
+      <li class="nav-left"><%= link_to 'About', page_path('about') %></li>
+      <li class="nav-left"><%= link_to 'Boxes', page_path('boxes') %></li>
+      <%= render 'layouts/navigation_links' %>
+    </ul>
+  </nav>
+  <div class="logo"></div>
+</div>
