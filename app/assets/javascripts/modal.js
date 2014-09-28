@@ -34,7 +34,10 @@ $(function() {
   $('.md-content .btn').click(function(e) {
     var target = $(this);
     target.addClass('btn-activated');
-    setTimeout( function() { target.removeClass('btn-activated') }, 1000 );
+    if(target.hasClass('twitter')) {
+      window.location = '/users/auth/twitter';
+    }
+    setTimeout( function() { target.removeClass('btn-activated'); }, 1000 );
   })
 
 });

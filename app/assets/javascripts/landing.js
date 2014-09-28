@@ -2,7 +2,8 @@ $(function() {
 
   if(document.getElementById('large-header')) {
     var width, height, largeHeader, target, animateHeader = true;
-    var navHeight = document.getElementById('top-nav').offsetHeight;
+    //var navHeight = document.getElementById('top-nav').offsetHeight;
+    var navHeight = 63;
 
     // Main
       initHeader();
@@ -10,7 +11,7 @@ $(function() {
 
     function initHeader() {
       width = window.innerWidth;
-      height = window.innerHeight - 64 // Nav height;
+      height = window.innerHeight - navHeight // Nav height;
       target = {x: width/2, y: height/2};
 
       largeHeader = document.getElementById('large-header');
@@ -23,7 +24,7 @@ $(function() {
 
     function resize() {
       width = window.innerWidth;
-      height = window.innerHeight - 64 // Nav height;
+      height = window.innerHeight - navHeight // Nav height;
       largeHeader.style.height = height+'px';
     }
   }

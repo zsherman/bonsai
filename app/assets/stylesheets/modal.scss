@@ -27,7 +27,7 @@ perspective effects (not including the modals and the overlay).
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 380px;
   max-width: 630px;
   min-width: 320px;
   height: auto;
@@ -129,6 +129,11 @@ perspective effects (not including the modals and the overlay).
   border-right: 1px solid #E5E5E5;
 }
 
+.md-content .row .columns.invalid {
+  border: 1px solid #EABFBF;
+  background: #F8E6E6;
+}
+
 .md-content .row .columns:nth-child(:odd){
   padding: 0;
   border-right: none;
@@ -138,16 +143,20 @@ perspective effects (not including the modals and the overlay).
   box-shadow: none;
   border: none;
   margin-bottom: 0;
+  padding: 0.45rem;
   padding-top: 0;
 }
 
 ::-webkit-input-placeholder {
-  color: #C2C8CB
+  color: #C2C8CB;
+  letter-spacing: .02rem;
+  font-size: 13px;
 }
 
 .md-content .row .columns label {
   padding-left: 5px;
   padding-top: 5px;
+  letter-spacing: .02rem;
 }
 
 .md-content .row .columns label.active {
@@ -166,7 +175,7 @@ perspective effects (not including the modals and the overlay).
   color: #3F4E5B;
   position: relative;
   left: 7px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -175,9 +184,9 @@ perspective effects (not including the modals and the overlay).
   display: block;
   margin: 8px;
   font-size: 10px;
-  width: 46%;
+  width: 45.5%;
   float: left;
-  padding: 25px 25px 25px 43px;
+  padding: 22px 5px 22px 29px;
   background: #A2C160;
   outline: none;
   border-radius: 3px;
