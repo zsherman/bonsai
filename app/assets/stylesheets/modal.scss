@@ -169,6 +169,15 @@ perspective effects (not including the modals and the overlay).
   display: block;
   margin: 0 auto;
   font-size: 0.8em;
+  width: 50%;
+  float: left;
+  padding: 25px;
+  background: #A2C160;
+  outline: none;
+}
+
+.md-content button.twitter {
+  background: #33C6F4;
 }
 
 .md-content p {
