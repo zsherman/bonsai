@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :users
+  get 'products' => 'products#index', :as => 'products'
+  get 'product/:permalink' => 'products#show', :as => 'product'
 end
