@@ -9,17 +9,17 @@
         <div class="row">
           <div class="large-6 small-6 columns">
             <label><span>First Name</span>
-              <input type="text" placeholder="Raymond"/>
+              <input type="text" placeholder="Your first name"/>
             </label>
           </div>
           <div class="large-6 small-6 columns">
             <label><span>Last Name</span>
-              <input type="text" placeholder="Reddington"/>
+              <input type="text" placeholder="Your last name"/>
             </label>
           </div>
           <div class="large-12 small-12 columns">
             <label><span>Email Address</span>
-              <input type="text" placeholder="raymond@gmail.com"/>
+              <input type="text" placeholder="Your email address"/>
             </label>
           </div>
           <div class="large-12 small-12 columns">
@@ -40,9 +40,11 @@
         </div>
       </form>
       <i class="md-close"></i>
-      <button class="btn btn-7 btn-7a twitter">Connect Twitter</button>
-      <%# button_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-      <button class="btn btn-7 btn-7a">Create Account</button>
+      <div class="button-wrapper clearfix">
+        <button class="btn btn-7 btn-7a twitter">Connect Twitter</button>
+        <%# button_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+        <button class="btn btn-7 btn-7a register">Create Account</button>
+      </div>
       <p>Already have an account? <a href="#">Sign in</a></p>
     </div>
   </div>

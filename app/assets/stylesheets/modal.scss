@@ -104,7 +104,10 @@ perspective effects (not including the modals and the overlay).
   margin: 0;
   color: #37302a;
   font-size: 12px;
-  padding: 10px;
+  padding: 20px 10px;
+  margin-top: 8px;
+  border-top: 1px solid #E4E4E4;
+  background: #F1F1F1;
 }
 
 .md-content > div ul {
@@ -215,8 +218,8 @@ perspective effects (not including the modals and the overlay).
 }
 
 /* Pseudo elements for icons */
-.btn:before, {
-  font-family: "responsivenav", sans-serif;
+.btn:before {
+  font-family: FontAwesome;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -224,8 +227,12 @@ perspective effects (not including the modals and the overlay).
   text-transform: none;
   line-height: 1;
   position: relative;
-  content: "x";
+  content: "\f05d";
   -webkit-font-smoothing: antialiased;
+}
+
+.btn.twitter:before {
+  content: "\f099";
 }
 
 /* Button 7 */

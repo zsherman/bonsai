@@ -13,7 +13,21 @@
     text-align: center;
     font-size: 60px;
     color: #3D4E59;
-    padding: 40px;
+    padding: 15px 15px 0px 15px;
+  }
+
+  .divider {
+    border-bottom: 1px solid #C3C6C7;
+    width: 360px;
+    margin: 0 auto;
+  }
+
+  h3 {
+    text-align: center;
+    color: #646464;
+    font-size: 18px;
+    padding: 10px;
+    line-height: 1.8rem;
   }
 }
 
