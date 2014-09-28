@@ -29,6 +29,17 @@
     padding: 10px;
     line-height: 1.8rem;
   }
+
+  .center-wrapper {
+    top: 54%;
+
+    button {
+      background: #A2C160;
+      border: 1px solid #728D3B;
+      border-radius: 50px;
+      outline: none;
+    }
+  }
 }
 
 #large-header {
@@ -51,8 +62,10 @@
     background: image-url("store.png");
     height: 200px;
     width: 300px;
+    margin: 0 auto;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
   }
+
 }
