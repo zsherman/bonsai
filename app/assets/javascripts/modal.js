@@ -31,6 +31,12 @@ $(function() {
     $(this).parent().removeClass('active');
   });
 
+  $('.md-content .btn').click(function(e) {
+    var target = $(this);
+    target.addClass('btn-activated');
+    setTimeout( function() { target.removeClass('btn-activated') }, 1000 );
+  })
+
 });
 
 
