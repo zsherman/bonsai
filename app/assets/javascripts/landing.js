@@ -3,7 +3,7 @@ $(function() {
   if(document.getElementById('large-header')) {
     var width, height, largeHeader, target, animateHeader = true;
     //var navHeight = document.getElementById('top-nav').offsetHeight;
-    var navHeight = 63;
+    var navHeight = 60;
 
     // Main
       initHeader();

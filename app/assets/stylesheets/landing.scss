@@ -32,5 +32,27 @@
 }
 
 #large-header {
-  background: image-url("hero.jpg");
+  background: image-url("hero.png");
+}
+
+.how-it-works {
+  .step {
+    background: #fff;
+    height: 300px;
+    text-align: center;
+  }
+  h3 {
+
+  }
+  p {
+
+  }
+  .image {
+    background: image-url("store.png");
+    height: 200px;
+    width: 300px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
