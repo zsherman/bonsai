@@ -79,6 +79,7 @@ perspective effects (not including the modals and the overlay).
   color: #465361;
   margin: 0;
   padding: 0.4em;
+  padding-bottom: 0;
   text-align: center;
   font-size: 2.4em;
   font-weight: 300;
@@ -139,7 +140,8 @@ perspective effects (not including the modals and the overlay).
 }
 
 .md-content .row .columns label {
-
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .md-content .row .columns label.active {
@@ -160,12 +162,36 @@ perspective effects (not including the modals and the overlay).
   left: 7px;
   font-size: 11px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .md-content button {
   display: block;
   margin: 0 auto;
   font-size: 0.8em;
+}
+
+.md-content p {
+  color: #37302a;
+}
+
+.md-content i:before {
+  color: #A2C160; /* Edit this to change the icon color */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 20px;
+  text-transform: none;
+  position: absolute;
+  content: "x";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  top: -8px;
+  right: 8px;
+  cursor: pointer;
 }
 
 /* Individual modal styles with animations/transitions */
@@ -210,45 +236,3 @@ perspective effects (not including the modals and the overlay).
   opacity: 1;
 }
 
-// Inspired by http://tympanus.net/Development/FullscreenOverlayStyles/
-
-.blanket {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 101;
-    background: rgba(29, 41, 53, .95);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-    transition: opacity 0.5s, visibility 0s 0.5s;
-
-  .overlay-close {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    overflow: hidden;
-    border: none;
-    text-indent: 200%;
-    color: transparent;
-    outline: none;
-    z-index: 100;
-  }
-}
-
-  .blanket.open {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s;
-    animation: fadein .5s;
-  }
-
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
