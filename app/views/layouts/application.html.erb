@@ -11,7 +11,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
+    <header class="clearfix">
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
@@ -19,5 +19,6 @@
       <%= yield %>
     </main>
     <%= render 'layouts/modal' %>
+    <%= render 'layouts/cart' %>
   </body>
 </html>

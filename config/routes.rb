@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :users
   get 'products' => 'products#index', :as => 'products'
   get 'product/:permalink' => 'products#show', :as => 'product'
+  post 'product/:permalink' => 'products#buy', :as => 'buy'
+  get 'basket' => 'orders#show'
 end
