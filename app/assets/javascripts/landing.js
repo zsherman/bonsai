@@ -10,7 +10,7 @@ $(function() {
 
     function initHeader() {
       width = window.innerWidth;
-      height = window.innerHeight - 65 // Nav height;
+      height = window.innerHeight - 64 // Nav height;
       target = {x: width/2, y: height/2};
 
       largeHeader = document.getElementById('large-header');
@@ -23,7 +23,7 @@ $(function() {
 
     function resize() {
       width = window.innerWidth;
-      height = window.innerHeight - 65 // Nav height;
+      height = window.innerHeight - 64 // Nav height;
       largeHeader.style.height = height+'px';
     }
   }

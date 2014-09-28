@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require landing
+//= require modal
 //= require_tree .
 $(function() {
   // Initialize foundation
