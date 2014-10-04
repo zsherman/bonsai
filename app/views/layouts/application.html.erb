@@ -11,9 +11,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header class="clearfix">
-      <%= render 'layouts/navigation' %>
-    </header>
+    <%= render 'layouts/header' unless @header == false %>
     <main role="main">
       <%= render 'layouts/messages' %>
       <%= yield %>
