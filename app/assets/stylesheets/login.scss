@@ -1,0 +1,113 @@
+// Override styles from foundation_and_overrides
+@import "mixins";
+@import "colors";
+
+::-webkit-input-placeholder {
+  color: $submarine;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.login-wrapper {
+  height: 100%;
+  width: 100%;
+  background: $nordic;
+  text-align: center;
+
+  .authform {
+    padding: none;
+    text-align: center;
+    @include vertical-align;
+    top: 40%;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 8px;
+      letter-spacing: 1px;
+      display: block;
+      padding: 5px;
+      color: $ziggurat;
+    }
+
+    form {
+      background: $nordic;
+      border: none;
+
+      .form-group input {
+        background: $lilyWhite;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        height: 2.65rem;
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .checkbox {
+        float: left;
+        width: 100%;
+      }
+
+      .checkbox input, .checkbox label {
+        color: $ziggurat;
+        float: left;
+      }
+
+      .checkbox a {
+        font-size: 11px;
+        font-weight: 400;
+        color: $ziggurat;
+      }
+
+      .checkbox input {
+        margin-top: 2px;
+      }
+
+      .checkbox label {
+        font-size: 11px;
+        font-weight: 400;
+      }
+
+      .button {
+        font-size: 12px;
+        float: left;
+        padding: 15px 50px;
+        border-radius: 3px;
+        background: $forestGreen;
+        letter-spacing: 1px;
+
+        &:hover {
+          background: lighten($forestGreen, 10%);
+        }
+      }
+
+      .button.twitter {
+        background: $twitter;
+
+        &:hover {
+          background: lighten($twitter, 10%);
+        }
+      }
+
+
+    }
+  }
+
+  .sign-up {
+    font-size: 11px;
+    font-weight: 400;
+    color: $ziggurat;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    padding: 16px;
+  }
+}
