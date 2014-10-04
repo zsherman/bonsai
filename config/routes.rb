@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'product/:permalink' => 'products#show', :as => 'product'
   post 'product/:permalink' => 'products#buy', :as => 'buy'
   get 'basket' => 'orders#show'
+  delete 'basket' => 'orders#destroy'
 end
