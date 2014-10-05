@@ -1,0 +1,13 @@
+@import 'mixins';
+@import 'colors';
+
+.cart {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 25px;
+  border: 1px solid #DEDEDE;
+
+  tr, td {
+    background: #fff;
+  }
+}
