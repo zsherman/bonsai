@@ -1,14 +1,23 @@
-<h2>Products</h2>
+<div class="catalogue">
+  <div id="large-header">
+    <div class="row">
+      <h1>Choose your path.</h1>
+      <h3>Each box comes with a professional video series.</h3>
+    </div>
+  </div>
+  <div class="categories"></div>
 
-<% @products.each do |category, products| %>
-  <h3><%= category.name %></h3>
-  <ul>
-    <% products.each do |product| %>
-    <li>
-      <h4><%= link_to product.name, product_path(product.permalink) %></h4>
-      <p><%= product.short_description %></p>
-      <p><b>Price:</b> <%= number_to_currency product.price %></p>
-    </li>
-    <% end %>
-  </ul>
-<% end %>
+  <h2>Products</h2>
+
+  <% @products.each do |category, products| %>
+    <ul>
+      <% products.each do |product| %>
+      <li>
+        <h4><%= link_to product.name, product_path(product.permalink) %></h4>
+        <p><%= product.short_description %></p>
+        <p><b>Price:</b> <%= number_to_currency product.price %></p>
+      </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

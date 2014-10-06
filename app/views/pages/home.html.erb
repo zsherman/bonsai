@@ -4,7 +4,7 @@
     <div class="divider"></div>
     <h3>All the tools you need to create something awesome, </br> delivered to your door.</h3>
     <div class="center-wrapper" style="position: absolute; left: 50%;">
-        <button class="md-trigger" style="position: relative; left: -50%;">
+        <button class="md-trigger" data-id="2" style="position: relative; left: -50%;">
            Watch How
         </button>
     </div>
@@ -25,5 +25,24 @@
     <h3>Pick your box</h3>
     <div class="image"></div>
     <p>Choose from our awesome boxes and we'll deliver it right to your door.</p>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="md-modal md-effect video-modal" id="modal-4" data-id="2">
+  <div class="md-content">
+    <div class="clearfix">
+      <i class="md-close"></i>
+      <div class="video">
+        <iframe width="400" height="245" src="//www.youtube.com/embed/UxRrhYVT1Sw" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="button-wrapper clearfix">
+        <h3>Like what you see?</h3>
+        <h4>Sign in to checkout our courses.</h4>
+        <button class="btn btn-7 btn-7a twitter">Connect Twitter</button>
+        <%# button_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+        <button class="btn btn-7 btn-7a register">Email Signup</button>
+      </div>
+    </div>
   </div>
 </div>

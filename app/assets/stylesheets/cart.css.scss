@@ -2,12 +2,13 @@
 @import 'colors';
 
 .cart {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 25px;
-  border: 1px solid #DEDEDE;
+  border: none;
+  background: $bg;
 
-  tr, td {
-    background: #fff;
+  tr, td, thead {
+    background: $bg;
   }
 }

@@ -61,7 +61,7 @@ perspective effects (not including the modals and the overlay).
   transition: all 0.3s;
 }
 
-.md-show ~ .md-overlay {
+.md-show ~ .md-overlay, .md-overlay.md-show {
   opacity: 1;
   visibility: visible;
 }
@@ -321,7 +321,7 @@ perspective effects (not including the modals and the overlay).
 }
 
 /* Effect 3: Slide from the bottom */
-.md-effect-3 .md-content {
+.md-effect .md-content {
   -webkit-transform: translateY(20%);
   -moz-transform: translateY(20%);
   -ms-transform: translateY(20%);
@@ -332,12 +332,36 @@ perspective effects (not including the modals and the overlay).
   transition: all 0.3s;
 }
 
-.md-show.md-effect-3 .md-content {
+.md-show.md-effect .md-content {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
+}
+
+// Video Modal Styles
+
+.video-modal {
+  width: 750px;
+  max-width: 750px;
+
+  .md-content {
+    padding: 30px 20px;
+  }
+
+  .video {
+    float: left;
+  }
+
+  .button-wrapper {
+    float: right;
+    width: 300px;
+
+    button {
+      width: 94%;
+    }
+  }
 }
 
 @-webkit-keyframes fadeOutText {

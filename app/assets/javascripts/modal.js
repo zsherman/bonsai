@@ -2,11 +2,12 @@
 $(function() {
 
   var overlay = $('.md-overlay');
-  var modal = $('.md-modal');
+  var modal;
   var close = $('.md-close');
 
   function removeModal( hasPerspective ) {
     modal.removeClass('md-show');
+    overlay.removeClass('md-show');
   }
 
   function removeModalHandler() {
@@ -14,6 +15,9 @@ $(function() {
   }
 
   $('.md-trigger').on( 'click', function(ev) {
+    var id = $(ev.target).data('id');
+    modal = $(".md-modal[data-id='" + id +"']");
+    overlay.addClass('md-show');
     modal.addClass('md-show');
     overlay.on( 'click', removeModalHandler );
   });

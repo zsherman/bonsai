@@ -1,0 +1,31 @@
+.catalogue {
+  #large-header {
+    height: 340px !important;
+    background: image-url("neat2.png");
+
+    h1 {
+      font-size: 36px;
+      margin-top: 7%;
+    }
+
+    h1, h3 {
+      color: #fff;
+    }
+  }
+
+  .categories {
+    height: 60px;
+    background: #fff;
+    border: 1px solid #dedede;
+  }
+
+  ul li {
+    width: 200px;
+    float: left;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 15px;
+    height: 300px;
+    overflow: hidden;
+  }
+}

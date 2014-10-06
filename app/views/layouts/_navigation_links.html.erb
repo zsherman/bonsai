@@ -6,7 +6,8 @@
 <% else %>
   <li class="nav-right"><%= link_to 'Sign in', new_user_session_path %></li>
   <li class="nav-right"><%= link_to 'Sign up', new_user_registration_path %></li>
-  <li class="nav-right"><%= link_to 'Sign in with Twitter', user_omniauth_authorize_path(:twitter) %></li>
+  <li class="nav-right"><%= link_to "View basket", basket_path %></li>
+
 <% end %>
 <% if user_signed_in? %>
   <% if current_user.admin? %>

@@ -19,15 +19,20 @@
  *= require 'landing'
  *= require 'login'
  *= require 'cart'
+ *= require 'catalogue'
  *= require 'sweet-alert'
  *= require_self
  */
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "colors";
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500,300|Open+Sans:400,300,600,700);
-
+body {
+  background: $bg;
+}
  main {
   padding: 0;
   height: 100%;
+  background: $bg;
  }
