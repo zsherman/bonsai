@@ -1,3 +1,9 @@
-<%= render 'layouts/items', :order => current_order %>
-<p><%= link_to 'Empty basket', basket_path, :method => :delete %></p>
-<%= link_to "Checkout", checkout_path %>
+<div class="row">
+  <div class="cart-wrapper large-12 columns">
+    <%= render 'layouts/items', :order => current_order %>
+    <div class="cart-buttons">
+      <%= link_to "Checkout", checkout_path %>
+      <%= link_to 'Empty basket', basket_path, :method => :delete %>
+    </div>
+  </div>
+</div>

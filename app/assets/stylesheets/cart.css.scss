@@ -2,13 +2,29 @@
 @import 'colors';
 
 .cart {
-  width: 80%;
-  margin: 0 auto;
   margin-top: 25px;
   border: none;
-  background: $bg;
 
   tr, td, thead {
-    background: $bg;
+  }
+
+  thead:nth-child(1) {
+    border-bottom: 1px solid #ccc;
+  }
+
+  tfoot {
+    tr td:first-child {
+      text-align: right;
+    }
+  }
+}
+
+.cart-buttons {
+  a {
+    float: right;
+    padding: 10px 20px;
+    background: #5D7082;
+    color: #fff;
+    margin: 5px;
   }
 }
