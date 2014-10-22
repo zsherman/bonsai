@@ -9,15 +9,12 @@
 
   <h2>Products</h2>
 
-  <% @products.each do |category, products| %>
     <ul>
-      <% products.each do |product| %>
+      <% @products.each do |product| %>
       <li>
-        <h4><%= link_to product.name, product_path(product.permalink) %></h4>
-        <p><%= product.short_description %></p>
+        <h4><%= link_to product.title, product_path(product) %></h4>
+        <p><%= product.description %></p>
         <p><b>Price:</b> <%= number_to_currency product.price %></p>
       </li>
       <% end %>
     </ul>
-  <% end %>
-</div>

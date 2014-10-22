@@ -1,17 +1,31 @@
-<h2><%= @product.name %></h2>
+<p id="notice"><%= notice %></p>
 
-<% if @product.default_image %>
-  <%= image_tag @product.default_image.path, :width => '200px', :style => "float:right" %>
-<% end %>
-
-<p><%= @product.short_description %></p>
 <p>
-  <b><%= number_to_currency @product.price %></b>
-  <%= link_to "Add to basket", product_path(@product.permalink), :method => :post %>
+  <strong>Title:</strong>
+  <%= @product.title %>
 </p>
 
-<hr>
-<%= simple_format @product.description %>
-<hr>
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
 
-<p><%= link_to "Back to list", root_path %></p>
+<p>
+  <strong>Image url:</strong>
+  <%= @product.image_url %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @product.video_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<%= button_to 'Add to Cart', line_items_path(product_id: @product) %>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
