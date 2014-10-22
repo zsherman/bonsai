@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
   def home
     if current_user
-      redirect_to products_path
+      redirect_to edit_user_registration_path
     end
   end
 

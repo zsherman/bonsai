@@ -20,8 +20,6 @@ gem 'pg'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-#gem 'shoppe', '1.0.3', :git => 'https://github.com/zsherman/core.git'
-gem 'shoppe', path: "../core"
 gem 'kaminari', '~> 0.15.1'
 gem 'font-awesome-sass'
 group :development do
