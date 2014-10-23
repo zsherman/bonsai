@@ -1,0 +1,23 @@
+<h1>Listing unlock_codes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unlock_codes.each do |unlock_code| %>
+      <tr>
+        <td><%= link_to 'Show', unlock_code %></td>
+        <td><%= link_to 'Edit', edit_unlock_code_path(unlock_code) %></td>
+        <td><%= link_to 'Destroy', unlock_code, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unlock code', new_unlock_code_path %>

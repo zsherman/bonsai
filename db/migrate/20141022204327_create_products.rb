@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :image_url
       t.string :video_url
       t.decimal :price
-
+      t.integer :shopify_variant_id
       t.timestamps
     end
   end

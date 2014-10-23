@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :images
+
+  resources :unlock_codes
+
+  resources :purchases
+
+  resources :orders
+
   resources :line_items
 
   resources :carts
