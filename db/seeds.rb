@@ -9,12 +9,11 @@ user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 # Environment variables (ENV['...']) can be set in the file config/application.yml.
 # See http://railsapps.github.io/rails-environment-variables.html
-Product.create(:title => 'Programming Ruby 1.9',
+puts 'CREATED PRODUCTS: ' << user.email
+Product.create(:title => 'Coffee Box',
   :description =>
     %{<p>
-        Ruby is the fastest growing and most exciting dynamic language
-        out there. If you need to get working programs delivered fast,
-        you should add Ruby to your toolbox.
+        Let's make some coffee.
       </p>},
   :image_url => '/images/ruby.jpg',
   :price => 49.50)

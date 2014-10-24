@@ -34,27 +34,6 @@ ActiveRecord::Schema.define(version: 20141023000433) do
     t.datetime "updated_at"
   end
 
-  create_table "nifty_attachments", force: true do |t|
-    t.integer  "parent_id"
-    t.string   "parent_type"
-    t.string   "token"
-    t.string   "digest"
-    t.string   "role"
-    t.string   "file_name"
-    t.string   "file_type"
-    t.binary   "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "nifty_key_value_store", force: true do |t|
-    t.integer "parent_id"
-    t.string  "parent_type"
-    t.string  "group"
-    t.string  "name"
-    t.string  "value"
-  end
-
   create_table "orders", force: true do |t|
     t.integer  "cart_id"
     t.integer  "user_id"
@@ -68,6 +47,7 @@ ActiveRecord::Schema.define(version: 20141023000433) do
     t.string   "image_url"
     t.string   "video_url"
     t.decimal  "price"
+    t.integer  "shopify_variant_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

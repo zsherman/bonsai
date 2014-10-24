@@ -3,6 +3,7 @@ class CreateUnlockCodes < ActiveRecord::Migration
     create_table :unlock_codes do |t|
       t.references :user
       t.references :product
+      t.string :code
       t.timestamps
     end
   end
