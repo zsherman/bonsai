@@ -26,24 +26,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.where(shopify_variant_id: product_params[:shopify_variant_id]).first_or_initialize
-
-    # Grab shopify variant and parent product
-    shopify_variant = ShopifyAPI::Variant.find(@product.shopify_variant_id)
-    shopify_product = ShopifyAPI::Product.find(shopify_variant.product_id)
-
-    # Merge shopify attrs into this model
-    @product.title = shopify_variant.title
-    @product.price = shopify_variant.price
-    @product.shopify_product_id = shopify_variant.product_id
-
-    # Create image models for each shopify image
-    shopify_product.images.each do |img|
-      image = Image.where(shopify_id: img.id).first_or_initialize
-      image.shopify_url = img.src
-      image.product_id = @product.id
-      image.save
-    end
+    product = Product.where(shopify_variant_id: product_params[:shopify_variant_id]).first_or_initialize
+    @product = product.resolve_shopify
 
     respond_to do |format|
       if @product.save
