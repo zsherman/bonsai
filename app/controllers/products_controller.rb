@@ -26,8 +26,11 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    product = Product.where(shopify_variant_id: product_params[:shopify_variant_id]).first_or_initialize
-    @product = product.resolve_shopify
+    # Find or initialize product with variant ID
+    @product = Product.where(shopify_variant_id: product_params[:shopify_variant_id]).first_or_initialize
+
+    # Delegate product & image pulling to the model
+    @product.resolve_shopify
 
     respond_to do |format|
       if @product.save
