@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 
   # GET /carts
   # GET /carts.json
@@ -10,6 +11,12 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+    @cart = Cart.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @cart }
+    end
   end
 
   # GET /carts/new
@@ -25,7 +32,6 @@ class CartsController < ApplicationController
   # POST /carts.json
   def create
     @cart = Cart.new(cart_params)
-
     respond_to do |format|
       if @cart.save
         format.html { redirect_to @cart, notice: 'Cart was successfully created.' }
@@ -70,5 +76,9 @@ class CartsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def cart_params
       params[:cart, :product_id, :line_item_id]
+    end
+
+    def record_not_found
+      redirect_to products_path, :notice => 'Invalid cart'
     end
 end

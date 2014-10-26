@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
     # Find or initialize product with variant ID
     @product = Product.where(shopify_variant_id: product_params[:shopify_variant_id]).first_or_initialize
 
-    # Delegate product & image pulling to the model
+    # Delegate product & image requests to the model
     @product.resolve_shopify
 
     respond_to do |format|
