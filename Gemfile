@@ -18,7 +18,7 @@ gem 'simple_form'
 gem 'upmin-admin'
 gem 'will_paginate-bootstrap'
 gem 'shopify_api'
-gem 'whenever'
+gem 'whenever', require: false
 gem 'pg'
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -41,7 +41,7 @@ group :development, :test do
   gem 'thin'
 end
 group :production do
-  gem 'pg'
+  #gem 'pg'
   gem 'rails_12factor'
   gem 'unicorn'
 end

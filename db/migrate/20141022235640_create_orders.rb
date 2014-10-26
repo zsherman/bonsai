@@ -4,6 +4,7 @@ class CreateOrders < ActiveRecord::Migration
       t.references :cart
       t.references :user
       t.integer :shopify_id
+      t.decimal :total_price
       t.timestamps
     end
   end

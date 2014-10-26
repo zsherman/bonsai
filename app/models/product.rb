@@ -25,6 +25,9 @@ class Product < ActiveRecord::Base
     return self
   end
 
+  def sync_products
+  end
+
   private
     def ensure_not_referenced_by_any_line_item
       if line_items.empty?

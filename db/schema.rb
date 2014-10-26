@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20141023000433) do
     t.integer  "cart_id"
     t.integer  "user_id"
     t.integer  "shopify_id"
+    t.decimal  "total_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
