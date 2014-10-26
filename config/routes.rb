@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   post 'purchase' => 'purchases#create', :as => 'purchased'
 
+  get 'cart' => 'carts#show', :as => 'current_cart'
+
   # Box routes
   # get 'products' => 'products#index', :as => 'products'
   # get 'product/:permalink' => 'products#show', :as => 'product'

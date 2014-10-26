@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20141023000433) do
   enable_extension "plpgsql"
 
   create_table "carts", force: true do |t|
+    t.datetime "purchased_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
