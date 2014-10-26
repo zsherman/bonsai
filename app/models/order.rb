@@ -14,6 +14,7 @@ class Order < ActiveRecord::Base
 
     # Find or create records for each order
     # Todo: handle errors so correct orders still get executed
+    # Todo: handle case where user_id is nil i.e. for gift purchase
     begin
       orders.each do |o|
         order_attributes = o.note_attributes
