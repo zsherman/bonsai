@@ -19,7 +19,6 @@ gem 'upmin-admin'
 gem 'will_paginate-bootstrap'
 gem 'shopify_api'
 gem 'whenever', require: false
-gem 'pg'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
@@ -37,11 +36,11 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
-  gem 'sqlite3'
+  gem 'pg'
   gem 'thin'
 end
 group :production do
-  #gem 'pg'
+  gem 'pg'
   gem 'rails_12factor'
   gem 'unicorn'
 end
