@@ -18,7 +18,7 @@
   </table>
 <% end %>
 
-<a href="http://bonsai-box.myshopify.com/cart/917108355:1?attributes[user-id]=1&attributes[cart-id]=1">Buy Now</a>
+<%= @shopify_cart_url.html_safe %>
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
 

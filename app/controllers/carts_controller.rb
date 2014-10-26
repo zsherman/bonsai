@@ -11,7 +11,9 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+    # Todo: lock down carts/:id
     @cart = current_cart
+    @shopify_cart_url = @cart.build_cart_url(current_user, current_cart)
     respond_to do |format|
       format.html
       format.json { render json: @cart }
