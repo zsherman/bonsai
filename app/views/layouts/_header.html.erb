@@ -1,15 +1,4 @@
-<!-- Admin Toolbar -->
-<% if user_signed_in? %>
-  <% if current_user.admin? %>
-    <div id="admin-bar" class="clearfix">
-      <ul>
-        <li class="nav-left">Welcome, <%= current_user.email %></li>
-        <li class="nav-right"><%= link_to 'Admin', '/admin' %></li>
-      </ul>
-    </div>
-  <% end %>
-<% end %>
-
+<%= render 'layouts/admin' %>
 <!-- Header -->
 <header class="clearfix">
   <%= render 'layouts/navigation' %>

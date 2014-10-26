@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post 'purchase' => 'purchases#create', :as => 'purchased'
 
   get 'cart' => 'carts#show', :as => 'current_cart'
+  get 'sync_orders' => 'orders#sync_orders', :as => 'sync_orders'
 
   # Box routes
   # get 'products' => 'products#index', :as => 'products'

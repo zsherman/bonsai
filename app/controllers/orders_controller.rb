@@ -61,6 +61,11 @@ class OrdersController < ApplicationController
     end
   end
 
+  def sync_orders
+    Order.sync_orders
+    redirect_to products_path, notice: "Orders Synced"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order

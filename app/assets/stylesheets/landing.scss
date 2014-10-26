@@ -7,43 +7,52 @@
   background-position: center center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
+  max-height: 500px !important;
   z-index: 1;
+
+  .row {
+    padding-top: 10%;
+  }
 
   h1 {
     text-align: center;
     font-size: 60px;
-    color: #3D4E59;
+    color: #fff;
     padding: 15px 15px 0px 15px;
   }
 
   .divider {
-    border-bottom: 1px solid #C3C6C7;
+    border-bottom: 1px solid #fff;
     width: 360px;
     margin: 0 auto;
   }
 
   h3 {
     text-align: center;
-    color: #646464;
+    color: #fff;
     font-size: 18px;
     padding: 10px;
     line-height: 1.8rem;
   }
 
   .center-wrapper {
+    position: absolute;
     top: 54%;
+    left: 50%;
 
     button {
       background: #A2C160;
       border: 1px solid #728D3B;
       border-radius: 50px;
       outline: none;
+      position: relative;
+      left: -50%;
     }
   }
 }
 
 #large-header {
-  background: image-url("hero.png");
+  background: image-url("landing.jpg");
 }
 
 .how-it-works {
