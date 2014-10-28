@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :courses
+
   mount Upmin::Engine => '/admin'
   resources :images
   resources :unlock_codes
