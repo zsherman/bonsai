@@ -1,31 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="product-page">
+  <!-- Hero Section -->
+  <div class="row product-hero">
+    <div class="large-6 columns product-gallery">
+      <div class="video"></div>
+      <ul class="clearfix">
+        <% @product.images.each do |img| %>
+          <li><img src="<%= img.shopify_url %>"/></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="large-6 columns product-info">
+      <h1><%= @product.title %></h1>
+      <h3><%= number_to_currency(@product.price) %></h3>
+      <p><%= @product.description %></p>
+      <p><%= @product.metadata["instructor"] %></p>
+      <p><%= @product.metadata["instructor_description"] %></p>
+      <%= button_to 'Add to Cart', line_items_path(product_id: @product) %>
+    </div>
+  </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+  <!-- Tools -->
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div class="tools row">
+    <div class="large-12 columns">
+      <ul>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+      </ul>
+    </div>
+  </div>
 
-<p>
-  <strong>Video url:</strong>
-  <%= @product.video_url %>
-</p>
+  <!-- Video -->
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <!-- Instructor -->
 
-<%= button_to 'Add to Cart', line_items_path(product_id: @product) %>
+  <!-- Reviews -->
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
+</div>
+
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>

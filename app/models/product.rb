@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
   has_many :images
   before_destroy :ensure_not_referenced_by_any_line_item
   validates :shopify_variant_id, presence: true
+  store :metadata, accessors: [:instructor, :instructor_description]
 
   def resolve_shopify
     # Grab shopify variant and parent product

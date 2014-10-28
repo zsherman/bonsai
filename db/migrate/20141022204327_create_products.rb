@@ -8,6 +8,7 @@ class CreateProducts < ActiveRecord::Migration
       t.decimal :price
       t.integer :shopify_product_id
       t.integer :shopify_variant_id
+      t.text :metadata
       t.timestamps
     end
   end

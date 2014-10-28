@@ -4,6 +4,7 @@ class CreateImages < ActiveRecord::Migration
       t.references :product
       t.string :shopify_url
       t.integer :shopify_id
+      t.boolean :featured
       t.timestamps
     end
   end
