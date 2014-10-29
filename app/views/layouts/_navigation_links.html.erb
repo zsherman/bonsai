@@ -1,8 +1,8 @@
 <%# add navigation links to this file %>
 <% if user_signed_in? %>
   <li class="nav-right"><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
-  <li class="nav-right"><%= link_to "View cart", current_cart_path %></li>
-  <li class="nav-right"><%= link_to 'Edit account', edit_user_registration_path %></li>
+  <li class="nav-right"><%= link_to "Cart", current_cart_path %></li>
+  <li class="nav-right"><%= link_to 'Account', edit_user_registration_path %></li>
 <% else %>
   <li class="nav-right"><%= link_to 'Sign in', new_user_session_path %></li>
   <li class="nav-right"><%= link_to 'Sign up', new_user_registration_path %></li>

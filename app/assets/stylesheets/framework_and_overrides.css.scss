@@ -84,8 +84,15 @@ section {
 .alert-box.alert {
   margin: 0;
 }
+.alert-box.notice, .alert-box.success {
+  border: none;
+  text-align: center;
+}
 .alert-box.notice {
-  background: #369CD9;
+  background: #00AEFF;
+}
+.alert-box.success {
+  background: #33C290;
 }
 .authform #error_explanation h2 {
   font-size: rem-calc(16);

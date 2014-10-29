@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ingredients
+
   resources :courses
 
   mount Upmin::Engine => '/admin'
