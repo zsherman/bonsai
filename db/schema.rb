@@ -33,13 +33,14 @@ ActiveRecord::Schema.define(version: 20141029010921) do
     t.integer  "product_id"
     t.string   "shopify_url"
     t.integer  "shopify_id"
+    t.boolean  "featured"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "ingredients", force: true do |t|
     t.string   "name"
-    t.integer  "product_id"
+    t.text     "description"
     t.integer  "shopify_variant_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -77,9 +78,9 @@ ActiveRecord::Schema.define(version: 20141029010921) do
     t.decimal  "price"
     t.integer  "shopify_product_id"
     t.integer  "shopify_variant_id"
+    t.text     "metadata"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "metadata"
   end
 
   create_table "purchases", force: true do |t|

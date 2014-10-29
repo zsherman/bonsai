@@ -1,6 +1,8 @@
 class Product < ActiveRecord::Base
   has_many :line_items
   has_many :images
+  has_many :product_ingredients, dependent: :destroy
+  has_many :ingredients, through: :product_ingredients
   before_destroy :ensure_not_referenced_by_any_line_item
   validates :shopify_variant_id, presence: true
   store :metadata, accessors: [:instructor, :instructor_description]
@@ -14,12 +16,14 @@ class Product < ActiveRecord::Base
     self.title = shopify_variant.title
     self.price = shopify_variant.price
     self.shopify_product_id = shopify_variant.product_id
+    product_id = self.id
 
     # Create image models for each shopify image
     shopify_product.images.each do |img|
       image = Image.where(shopify_id: img.id).first_or_initialize
       image.shopify_url = img.src
-      image.product_id = self.id
+      image.product_id = product_id
+      image.product = self
       image.save
     end
 
