@@ -13,8 +13,6 @@
       <h1><%= @product.title %></h1>
       <h3><%= number_to_currency(@product.price) %></h3>
       <p><%= @product.description %></p>
-      <p><%= @product.metadata["instructor"] %></p>
-      <p><%= @product.metadata["instructor_description"] %></p>
       <ul>
         <% @product.ingredients.each do |ing| %>
           <li><%= ing.name %></li>
@@ -25,29 +23,51 @@
 
   <!-- Tools -->
 
-  <div class="tools row">
+  <div class="ingredients row">
     <div class="large-12 columns">
       <ul>
-
+        <% @product.ingredients.each do |ing| %>
+          <li><%= ing.name %></li>
+        <% end %>
       </ul>
     </div>
   </div>
 
-  <!-- Video -->
+  <div class="video-preview row">
+    <div class="large-12 columns">
+      <p>Video here</p>
+    </div>
+  </div>
 
-  <!-- Instructor -->
+  <div class="instructor row">
+    <div class="large-12 columns">
+      <p>Instructor</p>
+      <p><%= @product.metadata["instructor"] %></p>
+      <p><%= @product.metadata["instructor_description"] %></p>
+    </div>
+  </div>
 
-  <!-- Reviews -->
+  <div class="syllabus row">
+    <div class="large-12 columns">
+      <p>What you'll learn</p>
+    </div>
+  </div>
+
+  <div class="photo-grid row">
+    <div class="large-12 columns">
+      <p>Photo Grid</p>
+    </div>
+  </div>
+
+  <div class="reviews row">
+    <div class="large-12 columns">
+      <p>Reviews here.</p>
+    </div>
+  </div>
 
 
 </div>
-<ul>
-  <li>Ingredients</li>
-  <li>Instructor</li>
-  <li>What you'll learn</li>
-  <li>Photo Grid</li>
-  <li>Reviews</li>
-<ul>
+
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
