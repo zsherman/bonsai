@@ -10,7 +10,7 @@
       </ul>
     </div>
     <div class="large-6 columns product-info">
-      <h1><%= @product.title %></h1>
+      <h1 id="cd-intro-tagline"><%= @product.title %></h1>
       <h3><%= number_to_currency(@product.price) %></h3>
       <p><%= @product.description %></p>
       <ul>
@@ -21,9 +21,11 @@
     </div>
   </div>
 
-  <!-- Tools -->
+  <!-- Secondary Nav -->
+  <%= render 'layouts/secondary_nav' %>
 
-  <div class="ingredients row">
+  <!-- Ingredients -->
+  <div class="ingredients row cd-section">
     <div class="large-12 columns">
       <ul>
         <% @product.ingredients.each do |ing| %>
@@ -33,13 +35,15 @@
     </div>
   </div>
 
-  <div class="video-preview row">
+  <!-- Video Preview -->
+  <div class="video-preview row cd-section">
     <div class="large-12 columns">
       <p>Video here</p>
     </div>
   </div>
 
-  <div class="instructor row">
+  <!-- Instructor -->
+  <div class="instructor row cd-section">
     <div class="large-12 columns">
       <p>Instructor</p>
       <p><%= @product.metadata["instructor"] %></p>
@@ -47,19 +51,22 @@
     </div>
   </div>
 
-  <div class="syllabus row">
+  <!-- Syllabus -->
+  <div class="syllabus row cd-section">
     <div class="large-12 columns">
       <p>What you'll learn</p>
     </div>
   </div>
 
-  <div class="photo-grid row">
+  <!-- Photo Grid -->
+  <div class="photo-grid row cd-section">
     <div class="large-12 columns">
       <p>Photo Grid</p>
     </div>
   </div>
 
-  <div class="reviews row">
+  <!-- Reviews -->
+  <div class="reviews row cd-section">
     <div class="large-12 columns">
       <p>Reviews here.</p>
     </div>

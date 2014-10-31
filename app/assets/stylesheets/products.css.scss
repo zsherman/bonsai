@@ -27,13 +27,17 @@
     }
 
     li {
-      height: 100px;
-      width: 100px;
+      height: 78px;
+      width: 78px;
       float: left;
       margin: 10px;
 
       &:first-child {
         margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
       }
     }
 
