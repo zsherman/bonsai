@@ -259,6 +259,7 @@ Modules - reusable parts of our design
 
   .cd-btn {
     display: inline-block;
+    z-index: 100;
     padding: 1em 1.8em;
     background-color: rgba(245, 72, 74, 0.9);
     margin-top: 1em;
@@ -289,6 +290,7 @@ Modules - reusable parts of our design
       /* slide in when the secondary nav gets fixed */
       right: 5%;
       opacity: 1;
+      font-size: 14px;
     }
   }
 
@@ -302,6 +304,8 @@ Modules - reusable parts of our design
     z-index: 3;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: #fff;
+    border: 1px solid #ccc;
   }
   .cd-secondary-nav ul {
     /* mobile first - secondary navigation hidden by default, triggered by tap/click on .cd-secondary-nav-trigger*/
@@ -311,7 +315,7 @@ Modules - reusable parts of our design
     right: 5%;
     bottom: 20px;
     border-radius: 0.25em;
-    background: rgba(3, 13, 24, 0.96);
+    //background: rgba(3, 13, 24, 0.96);
     visibility: hidden;
     z-index: 1;
     -webkit-backface-visibility: hidden;
@@ -354,7 +358,6 @@ Modules - reusable parts of our design
     .cd-secondary-nav {
       z-index: 1;
       height: 100px;
-      background-color: rgba(3, 13, 24, 0.96);
       -webkit-transition: height 0.3s;
       -moz-transition: height 0.3s;
       transition: height 0.3s;
@@ -395,7 +398,7 @@ Modules - reusable parts of our design
       font-size: 13px;
       font-size: 0.8125rem;
       font-weight: 700;
-      color: rgba(240, 238, 225, 0.3);
+      color: #424242;
     }
     .cd-secondary-nav li a span {
       position: absolute;

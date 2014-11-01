@@ -9,7 +9,8 @@
         <% end %>
       </ul>
     </div>
-    <div class="large-6 columns product-info">
+
+    <div class="large-6 columns product-info cd-intro">
       <h1 id="cd-intro-tagline"><%= @product.title %></h1>
       <h3><%= number_to_currency(@product.price) %></h3>
       <p><%= @product.description %></p>
@@ -17,7 +18,7 @@
         <% @product.ingredients.each do |ing| %>
           <li><%= ing.name %></li>
         <% end %>
-      <%= button_to 'Add to Cart', line_items_path(product_id: @product) %>
+      <%= button_to 'Add to Cart', line_items_path(product_id: @product), class: "cd-btn" %>
     </div>
   </div>
 
@@ -25,7 +26,7 @@
   <%= render 'layouts/secondary_nav' %>
 
   <!-- Ingredients -->
-  <div class="ingredients row cd-section">
+  <div class="row cd-section" id="ingredients">
     <div class="large-12 columns">
       <ul>
         <% @product.ingredients.each do |ing| %>
@@ -36,14 +37,14 @@
   </div>
 
   <!-- Video Preview -->
-  <div class="video-preview row cd-section">
+  <div class="row cd-section" id="preview-video">
     <div class="large-12 columns">
       <p>Video here</p>
     </div>
   </div>
 
   <!-- Instructor -->
-  <div class="instructor row cd-section">
+  <div class="row cd-section" id="instructor">
     <div class="large-12 columns">
       <p>Instructor</p>
       <p><%= @product.metadata["instructor"] %></p>
@@ -52,21 +53,21 @@
   </div>
 
   <!-- Syllabus -->
-  <div class="syllabus row cd-section">
+  <div class="row cd-section" id="syllabus">
     <div class="large-12 columns">
       <p>What you'll learn</p>
     </div>
   </div>
 
   <!-- Photo Grid -->
-  <div class="photo-grid row cd-section">
+  <div class="row cd-section" id="photo-grid">
     <div class="large-12 columns">
       <p>Photo Grid</p>
     </div>
   </div>
 
   <!-- Reviews -->
-  <div class="reviews row cd-section">
+  <div class="row cd-section" id="reviews">
     <div class="large-12 columns">
       <p>Reviews here.</p>
     </div>
