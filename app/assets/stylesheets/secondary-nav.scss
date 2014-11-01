@@ -291,7 +291,6 @@ Modules - reusable parts of our design
       right: 5%;
       opacity: 1;
       font-size: 14px;
-
     }
   }
 
@@ -399,7 +398,7 @@ Modules - reusable parts of our design
       font-size: 13px;
       font-size: 0.8125rem;
       font-weight: 700;
-      color: #424242;
+      color: #BBB;
     }
     .cd-secondary-nav li a span {
       position: absolute;
@@ -409,6 +408,8 @@ Modules - reusable parts of our design
       top: 18px;
       left: 50%;
       right: auto;
+      font-size: 34px;
+      color: #BBB;
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -420,8 +421,8 @@ Modules - reusable parts of our design
       -moz-transition: opacity 0.2s;
       transition: opacity 0.2s;
     }
-    .cd-secondary-nav li a:hover b, .cd-secondary-nav li a.active b {
-      color: #f0eee1;
+    .cd-secondary-nav li a:hover b, .cd-secondary-nav li a.active b, .cd-secondary-nav li a:hover span {
+      color: #424242;
     }
     .cd-secondary-nav li:nth-child(1) a span {
       background-position: 0 0;
