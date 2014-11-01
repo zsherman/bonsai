@@ -39,8 +39,8 @@ class Cart < ActiveRecord::Base
     end
 
     # Pass along the user and cart ids
-    url += "?attributes[user_id]=#{current_user.id.to_s}"
-    url += "&attributes[cart_id]=#{current_cart.id.to_s}"
+    url += current_user ? "?attributes[user_id]=#{current_user.id.to_s}" : "?"
+    url += current_cart ? "&attributes[cart_id]=#{current_cart.id.to_s}" : ""
 
     # Format and return the final url
     shopify_cart_url = "<a href=#{url}>Check Out</a>"
