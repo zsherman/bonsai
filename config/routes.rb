@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   get 'cart' => 'carts#show', :as => 'current_cart'
   get 'sync_orders' => 'orders#sync_orders', :as => 'sync_orders'
+  get 'unlock' => 'unlock_codes#unlock', :as => 'unlock'
+  post 'validate' => 'unlock_codes#validate_code', :as => 'validated'
 
   # Box routes
   # get 'products' => 'products#index', :as => 'products'

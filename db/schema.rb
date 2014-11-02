@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 20141029010921) do
     t.integer  "user_id"
     t.integer  "product_id"
     t.string   "code"
+    t.boolean  "used"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

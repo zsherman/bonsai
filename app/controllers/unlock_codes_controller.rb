@@ -21,6 +21,23 @@ class UnlockCodesController < ApplicationController
   def edit
   end
 
+  def unlock
+  end
+
+  def validate_code
+    code = params[:code][:unlock_code]
+    unlock_code = UnlockCode.where(code: code).first
+    if unlock_code.blank?
+      redirect_to products_path, notice: "Sorry. #{code} is invalid."
+    else
+      unlock_code.user_id = current_user.id
+      unlock_code.used = true
+      unlock_code.save!
+      # redirect to the product's course
+      redirect_to product_path(unlock_code.product), success: "Got the code. #{code}"
+    end
+  end
+
   # POST /unlock_codes
   # POST /unlock_codes.json
   def create
@@ -69,6 +86,6 @@ class UnlockCodesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def unlock_code_params
-      params[:unlock_code]
+      params.require(:unlock_code).permit(:code, :unlock_code)
     end
 end

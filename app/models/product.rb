@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
   has_many :images
   has_many :product_ingredients, dependent: :destroy
   has_many :ingredients, through: :product_ingredients
+  has_many :unlock_codes
   before_destroy :ensure_not_referenced_by_any_line_item
   validates :shopify_variant_id, presence: true
   store :metadata, accessors: [:instructor, :instructor_description]

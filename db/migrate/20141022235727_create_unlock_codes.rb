@@ -4,6 +4,7 @@ class CreateUnlockCodes < ActiveRecord::Migration
       t.references :user
       t.references :product
       t.string :code
+      t.boolean :used, default: false
       t.timestamps
     end
   end
