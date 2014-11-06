@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
+<h1><%= @course.title %></h1>
+<ul>
+  <% @course.videos.each do |v| %>
+    <li><%= v.title %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

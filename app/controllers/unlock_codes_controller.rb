@@ -29,12 +29,14 @@ class UnlockCodesController < ApplicationController
     unlock_code = UnlockCode.where(code: code).first
     if unlock_code.blank?
       redirect_to products_path, notice: "Sorry. #{code} is invalid."
+    elsif(unlock_code.used == true)
+      redirect_to products_path, notice: "Sorry. That code has already been used."
     else
       unlock_code.user_id = current_user.id
       unlock_code.used = true
       unlock_code.save!
       # redirect to the product's course
-      redirect_to product_path(unlock_code.product), success: "Got the code. #{code}"
+      redirect_to unlock_code.product.courses.first, notice: "Got the code. #{code}"
     end
   end
 
