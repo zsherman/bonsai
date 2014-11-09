@@ -1,0 +1,8 @@
+<div class="dashboard">
+  <p>Welcome to your dashboard, <%= @user.email %></p>
+  <ul>
+    <% @courses.each do |course| %>
+      <li><%= course.title %></li>
+    <% end %>
+  </ul>
+</div>

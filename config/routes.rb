@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   post 'purchase' => 'purchases#create', :as => 'purchased'
 
   get 'cart' => 'carts#show', :as => 'current_cart'
+  get 'dashboard' => 'users#dashboard', :as => 'dashboard'
   get 'sync_orders' => 'orders#sync_orders', :as => 'sync_orders'
   get 'unlock' => 'unlock_codes#unlock', :as => 'unlock'
   post 'validate' => 'unlock_codes#validate_code', :as => 'validated'

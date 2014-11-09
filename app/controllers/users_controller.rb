@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
-  after_action :verify_authorized
+  after_action :verify_authorized, except: [:dashboard]
 
   def index
     @users = User.all
@@ -20,6 +20,15 @@ class UsersController < ApplicationController
     else
       redirect_to users_path, :alert => "Unable to update user."
     end
+  end
+
+  def dashboard
+    @user = current_user
+    @courses = []
+    @user.unlock_codes.each do |code|
+      @courses << code.product.courses.first
+    end
+    @courses = @courses.uniq{|x| x.id}
   end
 
   def destroy
