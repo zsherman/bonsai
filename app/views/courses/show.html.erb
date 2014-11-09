@@ -1,10 +1,32 @@
-<p id="notice"><%= notice %></p>
-<h1><%= @course.title %></h1>
-<ul>
-  <% @course.videos.each do |v| %>
-    <li><%= v.title %></li>
-  <% end %>
-</ul>
+<div class="course-page">
+  <div id="wrapper">
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li class="sidebar-brand"><a href="#">Home</a></li>
+              <li><a href="#">Another link</a></li>
+              <li><a href="#">Next link</a></li>
+              <li><a href="#">Last link</a></li>
+          </ul>
+      </div>
+      <div id="page-content-wrapper">
+          <div class="page-content">
+              <div class="container">
+                  <div class="row">
+                      <div class="large-12 columns">
+                          <p id="notice"><%= notice %></p>
+                          <h1><%= @course.title %></h1>
+                          <ul>
+                            <% @course.videos.each do |v| %>
+                              <li><%= v.title %></li>
+                            <% end %>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

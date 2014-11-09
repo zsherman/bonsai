@@ -1,8 +1,10 @@
-<div class="dashboard">
+<div class="dashboard-page">
+
   <p>Welcome to your dashboard, <%= @user.email %></p>
+  <h3>Your available courses:</h3>
   <ul>
     <% @courses.each do |course| %>
-      <li><%= course.title %></li>
+      <li><%= link_to(course.title, course_path(course)) %></li>
     <% end %>
   </ul>
 </div>
