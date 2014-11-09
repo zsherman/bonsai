@@ -16,6 +16,7 @@
 //= require landing
 //= require modal
 //= require sweet-alert
+//= require walkway
 //= require_tree .
 $(function() {
   // Initialize foundation

@@ -29,4 +29,8 @@ $(function() {
     }
   }
 
+  // Add scrollspy
+  var svg = new Walkway('.step svg');
+  svg.draw(function() {});
+
 });
