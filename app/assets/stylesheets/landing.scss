@@ -12,6 +12,7 @@
   background-repeat: no-repeat !important;
   max-height: 500px !important;
   z-index: 1;
+  border-top: 1px solid #1B1C1C;
 
   .dark-overlay {
     position: absolute;
@@ -124,13 +125,17 @@
     background: #fff;
     height: 300px;
     text-align: center;
-    padding: 25px;
+    padding: 35px 25px 25px 25px;
   }
   h3 {
-
+    font-family: "Open Sans", sans-serif;
+    color: #44555F;
+    font-size: 1.2rem;
+    margin-top: 30px;
   }
   p {
-
+    font-family: "Open Sans", sans-serif;
+    color: #99A7B0;
   }
   .image {
     background: image-url("icon-1.png");
@@ -141,6 +146,71 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+}
 
+.featured-box {
+  background: #EEF5F8;
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #49868E;
+    padding: 15px;
+  }
+
+  .divider {
+    border-bottom: 1px solid #49868E;
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-family: "Merriweather", sans-serif;
+    font-size: 14px;
+    color: #596982;
+    padding: 15px;
+    max-width: 482px;
+    margin: 0 auto;
+    line-height: 30px;
+  }
+
+  .box-container {
+    background: image-url("box.png");
+    margin: 20px auto;
+    background-size: cover;
+    height: 390px;
+    width: 268px;
+    padding: 25px 15px;
+  }
+}
+
+.get-started {
+  text-align: center;
+  padding: 30px;
+
+  h1 {
+    color: #44555F;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+
+  h3 {
+    color: #B6B7B8;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  button {
+    margin: 10px 0;
+    background: #3D938C;
+    border: 1px solid #133734;
+    border-radius: 3px;
+  }
 
 }

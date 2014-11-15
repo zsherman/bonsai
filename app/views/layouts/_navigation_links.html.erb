@@ -1,10 +1,10 @@
 <%# add navigation links to this file %>
 <% if user_signed_in? %>
-  <li class="nav-right nav-cart"><%= link_to "Cart", current_cart_path %></li>
+  <li class="nav-right nav-cart"><i class="fa fa-shopping-cart"></i><%= link_to "Cart", current_cart_path %></li>
   <li class="nav-right"><%= link_to 'Account', edit_user_registration_path %></li>
   <li class="nav-right"><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
-  <li class="nav-right nav-cart"><%= link_to "Cart", current_cart_path %></li>
+  <li class="nav-right nav-cart"><i class="fa fa-shopping-cart"></i><%= link_to "Cart", current_cart_path %></li>
   <li class="nav-right"><%= link_to 'Tour', new_user_session_path %></li>
   <li class="nav-right"><%= link_to 'Login', new_user_registration_path %></li>
 

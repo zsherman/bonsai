@@ -69,10 +69,24 @@ header {
   width: 100%;
 }
 
+.nav-collapse li.nav-cart {
+  min-width: 115px;
+  position: relative;
+
+  i {
+    color: #fff;
+    @include vertical-align;
+    position: absolute;
+    top: 49%;
+    left: 24px;
+  }
+}
+
 .nav-collapse li.nav-cart a {
   background: #5AB8EC;
   color: #fff;
   border-right: none;
+  padding-left: 4.5em;
 }
 
 .nav-wrapper .logo {
@@ -132,6 +146,11 @@ header {
   .nav-collapse li.nav-cart a {
     color: #354754;
     background: #fff;
+    padding: 0.7em 1em;
+  }
+
+  .nav-collapse li.nav-cart i {
+    display: none;
   }
 }
 
