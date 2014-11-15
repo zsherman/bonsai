@@ -120,6 +120,11 @@ header {
 }
 
 @media screen and (min-width: 40em) {
+
+  .nav-collapse {
+    border-bottom: 1px solid #DEDEDE;
+  }
+
   .nav-collapse li.nav-left {
     float: left;
     width: auto;
@@ -128,6 +133,10 @@ header {
   .nav-collapse li.nav-right {
     float: right;
     width: auto;
+  }
+
+  .landing .nav-collapse {
+    border-bottom: none;
   }
 
 }

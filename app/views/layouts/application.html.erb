@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body class="<%= @classes %>">
     <%= render 'layouts/header' unless @header == false %>
     <main role="main">
       <%= render 'layouts/messages' %>
