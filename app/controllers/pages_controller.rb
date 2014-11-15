@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   end
 
   def boxes
+    redirect_to products_path
   end
 
 end

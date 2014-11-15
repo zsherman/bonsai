@@ -30,7 +30,9 @@ $(function() {
   }
 
   // Add scrollspy
-  var svg = new Walkway('.step svg');
-  svg.draw(function() {});
+  setTimeout(function() {
+    var svg = new Walkway('.step svg');
+    svg.draw(function() {});
+  }, 2000);
 
 });

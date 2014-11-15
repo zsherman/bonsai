@@ -1,3 +1,5 @@
+@import 'colors';
+@import 'mixins';
 ///////////////////////////////////////////////
 ////////////// Navigation Styles //////////////
 ///////////////////////////////////////////////
@@ -33,7 +35,7 @@ section {
 
 header {
   background: #fff;
-  border-bottom: 1px solid #C7C7C7;
+  //border-bottom: 1px solid #C7C7C7;
 }
 
 /* ------------------------------------------
@@ -67,25 +69,39 @@ header {
   width: 100%;
 }
 
+.nav-collapse li.nav-cart a {
+  background: #5AB8EC;
+  color: #fff;
+  border-right: none;
+}
+
 .nav-wrapper .logo {
   display: block;
   margin: 0 auto;
-  height: 30px;
-  width: 30px;
-  background: #000;
-  background: image-url("logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  //height: 30px;
+  height: 61px;
+  //width: 30px;
+  width: 89px;
+  //background: #000;
+  //background: image-url("logo.png");
+  //background-size: contain;
+  //background-repeat: no-repeat;
   position: relative;
-  top: 7px;
+  //top: 7px;
 
   span {
     position: absolute;
-    left: -2px;
-    top: 33px;
-    font-size: 9px;
+    //left: -2px;
+    //top: 33px;
+    //font-size: 9px;
+    top: 28%;
+    left: 0;
+    //@include vertical-align;
+    letter-spacing: 1px;
+    font-size: 20px;
     text-transform: uppercase;
-    color: #354754;
+    color: #1B1C1C;
+    font-family: "Hei";
   }
 }
 
@@ -107,6 +123,15 @@ header {
     float: left;
     top: 5px;
     left: 7px;
+  }
+
+  .nav-wrapper .logo span {
+    top: 20%;
+  }
+
+  .nav-collapse li.nav-cart a {
+    color: #354754;
+    background: #fff;
   }
 }
 
@@ -182,7 +207,7 @@ header {
 }
 
 .nav-toggle:before {
-  color: #A2C160; /* Edit this to change the icon color */
+  color: #1B1C1C; /* Edit this to change the icon color */
   font-family: "responsivenav", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -196,7 +221,7 @@ header {
   line-height: 55px;
   speak: none;
   width: 100%;
-  top: 0;
+  top: 4px;
   left: 0;
 }
 
