@@ -124,6 +124,7 @@
     background: #fff;
     height: 300px;
     text-align: center;
+    padding: 25px;
   }
   h3 {
 
@@ -132,7 +133,7 @@
 
   }
   .image {
-    background: image-url("store.png");
+    background: image-url("icon-1.png");
     height: 200px;
     width: 300px;
     margin: 0 auto;
@@ -141,21 +142,5 @@
     background-repeat: no-repeat;
   }
 
-  svg {
-    path, line {
-      stroke: #000;
-      stroke-width: 3px;
-    }
-
-    path {
-      fill: transparent;
-    }
-  }
-
-  svg {
-    font-size: 15px;
-    height: 75px;
-    width: 75px;
-  }
 
 }
