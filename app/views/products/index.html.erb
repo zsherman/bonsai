@@ -1,13 +1,56 @@
 <div class="catalogue">
-  <h2>Products</h2>
-
-    <ul>
+  <div id="large-header">
+    <div class="dark-overlay"></div>
+    <div class="large-8 small-12 columns large-centered hero-container">
+      <h1>Learn By Doing.</h1>
+      <div class="divider"></div>
+      <!-- <h3>Fully loaded kits that help you master new skills,</br> delivered to your door.</h3> -->
+      <h3>Check out our featured boxes below.</h3>
+      <button class="md-trigger" data-id="2">
+         Get Started
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 products">
       <% @products.each do |product| %>
-      <li>
-        <h4><%= link_to product.title, product_path(product) %></h4>
-        <p><%= product.description %></p>
-        <p><b>Price:</b> <%= number_to_currency product.price %></p>
-      </li>
+        <!-- <li catalogue-product">
+          <h4><%= link_to product.title, product_path(product) %></h4>
+          <p><%= product.description %></p>
+          <p><b>Price:</b> <%= number_to_currency product.price %></p>
+        </li> -->
       <% end %>
-    </ul>
+      <li class="catalogue-product">
+        <div class="product-wrapper">
+          <div class="overlay">
+            <div class="product-info">
+              <h3>Coffee Box</h3>
+              <p>Learn how to brew the perfect cup of coffee with this amazing box.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="catalogue-product">
+        <div class="product-wrapper">
+          <div class="overlay">
+            <div class="product-info">
+              <h3>Coffee Box</h3>
+              <p>Learn how to brew the perfect cup of coffee.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="catalogue-product">
+        <div class="product-wrapper">
+          <div class="overlay">
+            <div class="product-info">
+              <h3>Coffee Box</h3>
+              <p>Learn how to brew the perfect cup of coffee.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </div>
+  </div>
 </div>
