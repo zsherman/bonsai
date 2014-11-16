@@ -14,18 +14,17 @@
   }
 
   .products {
-    padding-top: 20px;
+
   }
 
   .products .catalogue-product {
     background: #fff;
     height: 250px;
-    padding: 15px;
+    padding: 0;
   }
 
   .products .product-wrapper {
     position: relative;
-    background: image-url('bee-keeper.jpg');
     background-size: cover;
     position: relative;
     height: 100%;
@@ -60,6 +59,22 @@
       padding: 10px;
       background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.05) 5%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.7) 100%);
     }
+
+    &:nth-child(2) {
+      background: image-url('baker.jpg');
+    }
+  }
+
+  .products:first-child {
+    background: image-url('bee-keeper.jpg');
+  }
+
+  .products:nth-child(2) {
+    background: image-url('baker.jpg');
+  }
+
+  .products:last-child {
+    background: image-url('gardener.jpg');
   }
 
 }

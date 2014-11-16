@@ -7,11 +7,11 @@
       <!-- <h3>Fully loaded kits that help you master new skills,</br> delivered to your door.</h3> -->
       <h3>Check out our featured boxes below.</h3>
       <button class="md-trigger" data-id="2">
-         Get Started
+         View Box
       </button>
     </div>
   </div>
-  <div class="row">
+  <div class="row full-width">
     <div class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 products">
       <% @products.each do |product| %>
         <!-- <li catalogue-product">
@@ -21,7 +21,17 @@
         </li> -->
       <% end %>
       <li class="catalogue-product">
-        <div class="product-wrapper">
+        <div class="product-wrapper" style="background: url(<%= asset_path 'bee-keeper.jpg' %>)">
+          <div class="overlay">
+            <div class="product-info">
+              <h3>Honey Box</h3>
+              <p>Learn how to brew the perfect cup of coffee with this amazing box.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="catalogue-product">
+        <div class="product-wrapper" style="background: url(<%= asset_path 'baker.jpg' %>)">
           <div class="overlay">
             <div class="product-info">
               <h3>Coffee Box</h3>
@@ -31,21 +41,11 @@
         </div>
       </li>
       <li class="catalogue-product">
-        <div class="product-wrapper">
+        <div class="product-wrapper" style="background: url(<%= asset_path 'gardener.jpg' %>)">
           <div class="overlay">
             <div class="product-info">
-              <h3>Coffee Box</h3>
-              <p>Learn how to brew the perfect cup of coffee.</p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="catalogue-product">
-        <div class="product-wrapper">
-          <div class="overlay">
-            <div class="product-info">
-              <h3>Coffee Box</h3>
-              <p>Learn how to brew the perfect cup of coffee.</p>
+              <h3>Garden Box</h3>
+              <p>Learn how to brew the perfect cup of coffee with this amazing box.</p>
             </div>
           </div>
         </div>
