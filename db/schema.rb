@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 20141102194104) do
     t.decimal  "price"
     t.integer  "shopify_product_id"
     t.integer  "shopify_variant_id"
+    t.string   "instructor_name"
+    t.string   "instructor_description"
     t.text     "metadata"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -93,7 +95,7 @@ ActiveRecord::Schema.define(version: 20141102194104) do
     t.integer  "user_id"
     t.integer  "product_id"
     t.string   "code"
-    t.boolean  "used"
+    t.boolean  "used",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
