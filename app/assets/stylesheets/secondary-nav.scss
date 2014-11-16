@@ -306,7 +306,7 @@ Modules - reusable parts of our design
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #E2E2E2;
   }
   .cd-secondary-nav ul {
     /* mobile first - secondary navigation hidden by default, triggered by tap/click on .cd-secondary-nav-trigger*/
@@ -381,15 +381,13 @@ Modules - reusable parts of our design
       background-color: transparent;
     }
 
-    .cd-secondary-nav li.nav-ingredients {
-
-    }
-
     .cd-secondary-nav li a {
       position: relative;
       text-align: center;
       display: block;
-      padding: 58px 40px 0 40px;
+      padding: 63px 40px 0 40px;
+      font-weight: 400;
+      font-family: "Raleway";
       border-bottom: none;
       -webkit-transition: padding 0.2s;
       -moz-transition: padding 0.2s;
@@ -412,6 +410,7 @@ Modules - reusable parts of our design
       right: auto;
       font-size: 34px;
       color: #BBB;
+      padding-bottom: 5px;
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -429,9 +428,26 @@ Modules - reusable parts of our design
       margin-left: -4px;
     }
 
-    .cd-secondary-nav li a span {
-      background: image-url("icon-box.svg");
-      background-size: cover;
+    .cd-secondary-nav li a span svg {
+      //background: image-url("icon-box.svg");
+      //background-size: cover;
+      width: 100%;
+
+      g > g{
+        fill: #ddd;
+      }
+    }
+
+    .cd-secondary-nav li a {
+      &:hover {
+        svg g > g {
+          fill: #000;
+        }
+      }
+    }
+
+    .cd-secondary-nav li a span svg {
+      height: 100%;
     }
 
     .cd-secondary-nav li a:hover b, .cd-secondary-nav li a.active b, .cd-secondary-nav li a:hover span {
