@@ -1,32 +1,37 @@
 <div class="row">
-  <div class="cart_title">Your Cart</div>
-  <% if @cart.line_items.empty? %>
-    <p>Your cart is empty</p>
-  <% else %>
-    <table>
-      <% @cart.line_items.each do |item| %>
-        <tr>
-          <td><img src="<%= item.product.images.first.shopify_url %>" style="height: 100px; width: 100px;"/></td>
-          <td><%= item.quantity %>&times;</td>
-          <td><%= item.product.title %></td>
-          <td class="item_price"><%= number_to_currency(item.total_price) %></td>
-          <td><%= button_to 'Remove item', item, :method => :delete %></td>
-        </tr>
-      <% end %>
-      <tr class="total_line">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="2">Total</td>
-        <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
-      </tr>
-    </table>
-  <% end %>
+  <div class="large-12 small-12 columns cart">
+    <div class="cart-title">Your Cart</div>
+    <% if @cart.line_items.empty? %>
+      <p class="empty-cart-message">Your cart is empty</p>
+    <% else %>
+      <table>
+        <% @cart.line_items.each do |item| %>
+          <thead>
+            <tr>
+              <td>Item</td>
+              <td></td>
+              <td>Unit Price</td>
+              <td>Quantity</td>
+              <td>Total</td>
+            </tr>
+          </thead>
+          <tr>
+            <td class="item-image"><img src="<%= item.product.images.first.shopify_url %>" style="height: 100px; width: 100px;"/></td>
+            <td class="item-description"><%= item.product.title %></td>
+            <td class="item-price"><%= number_to_currency(item.total_price) %></td>
+            <td class="item-quantity"><%= item.quantity %>&times;</td>
+            <td class="item-total"><%= number_to_currency(item.quantity*item.total_price) %></td>
+            <!-- <td><%= button_to 'Remove item', item, :method => :delete %></td> -->
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
+    <div class="cart-buttons">
+      <div class="sub-total">Subtotal <%= number_to_currency(@cart.total_price) %></div>
+      <%= @shopify_cart_url.html_safe %>
+    </div>
 
-  <%= @shopify_cart_url.html_safe %>
-  <%= link_to 'Edit', edit_cart_path(@cart) %> |
-  <%= link_to 'Back', carts_path %>
-
-  <%= button_to 'Empty cart', @cart, :method => :delete,
-              :confirm => 'Are you sure?' %>
+    <%# button_to 'Empty cart', @cart, :method => :delete,
+                :confirm => 'Are you sure?' %>
+  </div>
 </div>

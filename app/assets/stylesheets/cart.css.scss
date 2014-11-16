@@ -5,11 +5,61 @@
   margin-top: 25px;
   border: none;
 
-  tr, td, thead {
+  .cart-title {
+    font-weight: 500;
+    font-family: "Raleway";
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 0;
   }
 
-  thead:nth-child(1) {
-    border-bottom: 1px solid #ccc;
+  table {
+    background: #FAFAFB;
+    border: 1px solid #E8E8E8;
+  }
+
+  thead {
+    background: #FFF;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  table thead tr td {
+    font-weight: 500;
+    font-family: "Raleway";
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: right;
+    color: #848A92;
+    padding: 15px;
+  }
+
+  thead tr td:first-child {
+    text-align: left;
+  }
+
+  table tr td {
+    text-align: right;
+    font-weight: 500;
+    font-family: "Raleway";
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #677683;
+    padding: 20px;
+  }
+
+  table tr td:first-child, table tr td:nth-child(2) {
+    text-align: left;
+  }
+
+  .item-description {
+    color: #677683;
+    font-weight: 500;
+    font-family: "Raleway";
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   tfoot {
@@ -20,11 +70,31 @@
 }
 
 .cart-buttons {
+  float: right;
+
+  .sub-total {
+    text-align: right;
+    font-weight: 500;
+    font-family: "Raleway";
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    color: #677683;
+  }
+
   a {
     float: right;
-    padding: 10px 20px;
+    padding: 20px 45px;
     background: #5D7082;
     color: #fff;
     margin: 5px;
+    border-radius: 3px;
+    background: #5AB8EC;
+    font-weight: 500;
+    font-family: "Raleway";
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }
