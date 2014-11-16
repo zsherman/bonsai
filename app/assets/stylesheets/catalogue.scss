@@ -36,17 +36,21 @@
     }
 
     h3 {
-      font-family: "Merriweather";
+      text-transform: uppercase;
+      font-family: "Raleway";
+      letter-spacing: 2px;
       font-size: 32px;
       color: #fff;
+
     }
 
     p {
       font-family: "lato";
       font-size: 16px;
       color: #fff;
-      font-family: "raleway";
       line-height: 28px;
+      letter-spacing: 1px;
+      font-weight: 300;
     }
 
     .overlay {
