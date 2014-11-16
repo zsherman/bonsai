@@ -380,10 +380,11 @@ Modules - reusable parts of our design
       text-align: center;
       background-color: transparent;
     }
-    .cd-secondary-nav li {
-      display: inline-block;
-      margin-left: -4px;
+
+    .cd-secondary-nav li.nav-ingredients {
+
     }
+
     .cd-secondary-nav li a {
       position: relative;
       text-align: center;
@@ -422,6 +423,17 @@ Modules - reusable parts of our design
       -moz-transition: opacity 0.2s;
       transition: opacity 0.2s;
     }
+
+    .cd-secondary-nav li {
+      display: inline-block;
+      margin-left: -4px;
+    }
+
+    .cd-secondary-nav li a span {
+      background: image-url("icon-box.svg");
+      background-size: cover;
+    }
+
     .cd-secondary-nav li a:hover b, .cd-secondary-nav li a.active b, .cd-secondary-nav li a:hover span {
       color: #424242;
     }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" fill="#0A0B09">
+            <path d="M2.03,2.04 L58.03,2.04 L58.03,58.04 L2.03,58.04 L2.03,2.04 Z M59.03,0.041 L1.03,0.041 C0.48,0.041 0.03,0.491 0.03,1.04 L0.03,59.04 C0.03,59.59 0.48,60.041 1.03,60.041 L59.03,60.041 C59.58,60.041 60.03,59.59 60.03,59.04 L60.03,1.04 C60.03,0.491 59.58,0.041 59.03,0.041 L59.03,0.041 Z" id="Fill-4771" sketch:type="MSShapeGroup"></path>
+            <path d="M17.03,14.04 L51.03,14.04 C51.58,14.04 52.03,13.59 52.03,13.04 C52.03,12.491 51.58,12.041 51.03,12.041 L17.03,12.041 C16.48,12.041 16.03,12.491 16.03,13.04 C16.03,13.59 16.48,14.04 17.03,14.04" id="Fill-4772" sketch:type="MSShapeGroup"></path>
+            <path d="M9.03,22.04 L51.03,22.04 C51.58,22.04 52.03,21.59 52.03,21.041 C52.03,20.49 51.58,20.04 51.03,20.04 L9.03,20.04 C8.48,20.04 8.03,20.49 8.03,21.041 C8.03,21.59 8.48,22.04 9.03,22.04" id="Fill-4773" sketch:type="MSShapeGroup"></path>
+            <path d="M9.03,30.041 L51.03,30.041 C51.58,30.041 52.03,29.59 52.03,29.04 C52.03,28.491 51.58,28.04 51.03,28.04 L9.03,28.04 C8.48,28.04 8.03,28.491 8.03,29.04 C8.03,29.59 8.48,30.041 9.03,30.041" id="Fill-4774" sketch:type="MSShapeGroup"></path>
+            <path d="M9.03,38.04 L51.03,38.04 C51.58,38.04 52.03,37.59 52.03,37.04 C52.03,36.491 51.58,36.041 51.03,36.041 L9.03,36.041 C8.48,36.041 8.03,36.491 8.03,37.04 C8.03,37.59 8.48,38.04 9.03,38.04" id="Fill-4775" sketch:type="MSShapeGroup"></path>
+            <path d="M9.03,46.04 L43.03,46.04 C43.58,46.04 44.03,45.59 44.03,45.041 C44.03,44.49 43.58,44.04 43.03,44.04 L9.03,44.04 C8.48,44.04 8.03,44.49 8.03,45.041 C8.03,45.59 8.48,46.04 9.03,46.04" id="Fill-4776" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

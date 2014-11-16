@@ -48,37 +48,65 @@
   }
 
   .product-info {
-    h1 {
+    position: relative;
+
+    h1, h3, p {
       font-size: 2em;
+      color: #2E3133;
+      font-weight: 400;
+      font-family: "Raleway";
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      font-size: 1em;
     }
 
     p {
+      color: #969C9D;
+      font-size: .85em;
+      font-family: "Lato";
+      font-weight: 300;
+      line-height: 25px;
+    }
 
+    ul {
+      margin-left: 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      min-height: 30px;
+      list-style-type: disc;
+      padding-left: 10px;
+    }
+
+    ul li {
+      color: #969C9D;
+      font-size: .85em;
+      font-family: "Lato";
+      font-weight: 300;
+      line-height: 25px;
+      float: left;
+      margin: 6px;
+      width: 47%;
     }
 
     input {
-      background: #1D3236;
+      background: #5AB8EC;
       color: #fff;
       outline: none;
-      padding: 20px 170px;
-      font-size: 20px;
+      padding: 20px 50px;
+      font-size: 14px;
       border: none;
       border-radius: 4px;
+      position: absolute;
+      top: -14px;
+      right: 0px;
     }
   }
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.catalogue {
 
 }
