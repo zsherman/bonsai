@@ -1,25 +1,27 @@
 <div class="product-page">
   <!-- Hero Section -->
-  <div class="row product-hero">
-    <div class="large-6 columns product-gallery">
+  <div class="row product-hero full-width">
+    <!-- <div class="large-6 columns product-gallery">
       <div class="video"></div>
       <ul class="clearfix">
         <% @product.images.each do |img| %>
           <li><img src="<%= img.shopify_url %>"/></li>
         <% end %>
       </ul>
-    </div>
+    </div> -->
 
-    <div class="large-6 columns product-info cd-intro">
-      <h1 id="cd-intro-tagline"><%= @product.title %></h1>
-      <h3><%= number_to_currency(@product.price) %></h3>
-      <p><%= @product.description %></p>
-      <ul class="clearfix">
-        <% @product.ingredients.each do |ing| %>
-          <li><%= ing.name %></li>
-        <% end %>
-      </ul>
-      <%= button_to 'Add to Cart', line_items_path(product_id: @product), class: "cd-btn" %>
+    <div class="large-12 columns centered product-info cd-intro">
+      <div class="product-info-inner large-5 large-offset-7 medium-6 medium-offset-6 columns">
+        <h1 id="cd-intro-tagline"><%= @product.title %></h1>
+        <h3><%= number_to_currency(@product.price) %></h3>
+        <p><%= @product.description %></p>
+        <ul class="clearfix">
+          <% @product.ingredients.each do |ing| %>
+            <li><%= ing.name %></li>
+          <% end %>
+        </ul>
+        <%= button_to 'Add to Cart', line_items_path(product_id: @product), class: "cd-btn" %>
+      </div>
     </div>
   </div>
 
