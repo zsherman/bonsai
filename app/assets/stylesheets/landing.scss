@@ -120,7 +120,75 @@
   }
 }
 
+.headline {
+  padding: 20px;
+  background: #37B8B7;
+  text-align: center;
+  padding: 30px;
+
+  p {
+    font-family: "Brandon Grotesque";
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+  }
+}
+
+.box-list {
+  .columns {
+    padding: 30px;
+    max-width: auto;
+    height: 300px;
+  }
+
+  .ingredients {
+    background: #0C4057;
+    text-align: center;
+
+    h1 {
+      font-family: "Raleway";
+      text-decoration: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    p {
+      font-family: "Lato";
+      line-height: 20px;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    ul {
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    li {
+      float: left;
+      padding: 10px 11%;
+    }
+
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+
+    svg g g {
+      fill: #fff;
+    }
+  }
+
+  .instructor {
+    border: 1px solid #ccc;
+    background: image-url('josh-green.png');
+    background-size: cover;
+  }
+}
+
 .how-it-works {
+  display: none;
   .step {
     background: #fff;
     height: 300px;
@@ -149,6 +217,7 @@
 }
 
 .featured-box {
+  display: none;
   background: #EEF5F8;
   text-align: center;
   padding: 20px;
