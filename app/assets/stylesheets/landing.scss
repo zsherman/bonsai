@@ -333,11 +333,17 @@
 
 .testimonials {
   border-bottom: 1px solid #ddd;
+  background: #f7f7f7;
+  padding-bottom: 30px;
 
   h2 {
-    margin-top: 40px;
-    font-weight: 200;
+    margin: 40px 0;
+    font-weight: 400;
     color: #333;
+    font-family: "Brandon Grotesque";
+    text-decoration: uppercase;
+    letter-spacing: 2px;
+    font-size: 28px;
   }
 
   .centered-text {
@@ -345,7 +351,7 @@
   }
 
   .quote {
-    background: #ebf3f5;
+    background: #fff;
     padding: 15px 20px 5px 15px;
     border-radius: 5px;
     margin-bottom: 30px;
@@ -356,7 +362,7 @@
     height: 0px;
     border-style: solid;
     border-width: 20px 18px 0 18px;
-    border-color: #ebf3f5 transparent transparent transparent;
+    border-color: #fff transparent transparent transparent;
     position: relative;
     top: 37px;
     left: 20px;
