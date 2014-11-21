@@ -11,12 +11,15 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="<%= @classes %>">
-    <%= render 'layouts/header' unless @header == false %>
-    <main role="main">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
-    </main>
+    <div class="wrap">
+      <%= render 'layouts/header' unless @header == false %>
+      <main role="main">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </main>
+    </div>
     <%= render 'layouts/modal' %>
     <%= render 'layouts/cart' %>
+    <%= render 'layouts/footer' unless @header == false %>
   </body>
 </html>
