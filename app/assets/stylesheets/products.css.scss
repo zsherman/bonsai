@@ -11,7 +11,6 @@
 
   .product-hero {
     padding: 20px 0;
-    border-top: 1px solid #333;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #1B655F;
@@ -23,18 +22,23 @@
         ),
         /* bottom, image */
         image-url('kettle-pour.jpg');
+    background: #fff;
     background-size: contain;
     min-height: inherit;
     padding: 42px 0;
   }
 
-  .product-info {
+  .product-wrapper {
     position: relative;
 
     .product-info-inner {
       background: #fff;
       position: relative;
       padding: 10px 20px;
+    }
+
+    .product-image {
+      text-align: center;
     }
 
     h1, h3, p {

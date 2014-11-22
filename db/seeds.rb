@@ -38,7 +38,7 @@ Image.create!([
   {product_id: 1, shopify_url: "https://cdn.shopify.com/s/files/1/0678/3049/products/c1dc6aacb161e474f3a15e56fb244160.jpg?v=1414465882", shopify_id: 916590791, featured: nil}
 ])
 
-puts 'CREATED IMAGES:'
+puts 'CREATED IMAGES'
 
 Ingredient.create!([
   {name: "Irving Coffee", description: "The Salaverria family has been producing coffee in the northwest of El Salvador for almost 100 years. Their original farms and mill are just outside of the village of Concepción de Ataco at the northern end of the Ahuachapán-Ilamatepec mountain range. El Molino is a part of this farm group and a source of great pride for the family.", shopify_variant_id: nil, image_url: "http://cdn2.bigcommerce.com/server100/9184b/products/80/images/338/El_Molino__07202.1405351888.460.386.jpg?c=2"},

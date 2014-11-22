@@ -1,8 +1,10 @@
 <div class="product-page">
   <!-- Hero Section -->
-  <div class="row product-hero full-width">
-    <div class="large-12 columns centered product-info cd-intro">
-      <div class="product-info-inner large-5 large-offset-7 medium-6 medium-offset-6 columns">
+  <div class="row product-hero product-wrapper cd-intro">
+      <div class="product-image large-6 columns">
+        <%= image_tag('box.png') %>
+      </div>
+      <div class="product-info-inner large-6 columns">
         <h1 id="cd-intro-tagline"><%= @product.title %></h1>
         <h3><%= number_to_currency(@product.price) %></h3>
         <p><%= @product.description %></p>
@@ -13,7 +15,6 @@
         </ul>
         <%= button_to 'Add to Cart', line_items_path(product_id: @product), class: "cd-btn" %>
       </div>
-    </div>
   </div>
 
   <!-- Secondary Nav -->
