@@ -16,16 +16,14 @@
     background-repeat: no-repeat;
     background-color: #1B655F;
     // background-image: image-url("josh-green-flipped.png");
-    background-image: image-url("table.jpg");
     background:
         linear-gradient(
           rgba(0, 0, 0, 0.1),
           rgba(0, 0, 0, 0.5)
         ),
         /* bottom, image */
-        image-url('table.jpg');
-    background-position-x: 90%;
-    background-position-y: 80%;
+        image-url('kettle-pour.jpg');
+    background-size: contain;
     min-height: inherit;
     padding: 42px 0;
   }
