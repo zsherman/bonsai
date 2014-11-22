@@ -75,6 +75,7 @@ header {
 
   i {
     color: #fff;
+    color: #333;
     @include vertical-align;
     position: absolute;
     top: 49%;
@@ -85,8 +86,11 @@ header {
 .nav-collapse li.nav-cart a {
   // background: #5AB8EC;
   // background: #0251AE; // darker blue
-  background: #0D62C5;
+  // background: #0D62C5;
+  // background: #fff;
+  border-left: 1px solid #ddd;
   color: #fff;
+  color: #333;
   border-right: none;
   padding-left: 4.5em;
 }

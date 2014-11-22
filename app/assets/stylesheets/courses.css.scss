@@ -5,7 +5,7 @@
 // Course Page Styles
 .course-show-page {
   .wrap, main {
-    background: #eee;
+    background: #fff;
   }
 
   main {
@@ -21,15 +21,35 @@
     transition: all 0.4s ease 0s;
   }
 
+  .video-container {
+    background: #eee;
+  }
+
   .video-container, .description-container {
-    background: #fff;
     min-height: 450px;
-    border: 1px solid #ddd;
     color: #202020;
     margin-bottom: 20px;
 
     h1 {
 
+    }
+  }
+
+  .description-container {
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 1px;
+
+    h3 {
+      font-weight: 700;
+      font-size: 36px;
+    }
+
+    p {
+      color: #484848;
+      font-family: "Lato";
+      font-size: 15px;
+      line-height: 27px;
     }
   }
 
@@ -65,7 +85,7 @@
     font-weight: 400;
     letter-spacing: .5px;
     border-bottom: 1px solid #ddd;
-    padding: 20px;
+    padding: 15px 20px;
 
     .course-name {
       color: #7ABB3A;
@@ -85,6 +105,7 @@
       font-size: 13px;
       line-height: 22px;
       padding: 5px 0;
+      margin: 0;
     }
 
     &:last-of-type {

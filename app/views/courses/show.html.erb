@@ -18,9 +18,11 @@
                       <div class="large-12 columns">
                           <p id="notice"><%= notice %></p>
                           <div class="large-12 columns video-container">
-                            <h1><%= @course.title %></h1>
                           </div>
-                          <div class="large-12 columns description-container"></div>
+                          <div class="large-12 columns description-container">
+                            <h3><%= @course.lessons.first.name %></h3>
+                            <p><%= @course.lessons.first.content %></p>
+                          </div>
                           <!-- Video Here -->
                           <!-- Content Here -->
                       </div>

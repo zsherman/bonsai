@@ -5,6 +5,7 @@ class CreateLessons < ActiveRecord::Migration
       t.string :video_url
       t.text :short_description
       t.text :description
+      t.text :content
       t.references :course
       t.timestamps
     end

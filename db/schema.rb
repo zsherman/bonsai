@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20141122171148) do
     t.string   "video_url"
     t.text     "short_description"
     t.text     "description"
+    t.text     "content"
     t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
