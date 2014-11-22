@@ -14,6 +14,14 @@ Product.create!([
   {title: "Default Title", description: "One of the best things about making a job out of something as fun as coffee is that everyone understands how important the toys are. We won’t deny it—getting our hands on the newest and sleekest equipment sends a little thrill up the collective spines of everyone at Irving Farm, and even more so when we’re part of a select few stores able to put new coffee equipment to the real-world tests of demanding NYC customers.", image_url: "", video_url: "", price: "1.0", shopify_product_id: 391421063, shopify_variant_id: 917108355, story_headline: "Made in El Salvador", story_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.", instructor_name: "Josh Littlefield", instructor_description: "Josh Littlefield is the head of education at irving farms coffe and something as fun as coffee is that everyone understands how important the toys are. ", metadata: {"instructor"=>"", "instructor_description"=>"Josh Littlefield is the head of education at irving farms coffee and something as fun as coffee is that everyone understands how important the toys are."}}
 ])
 
+Course.create!([
+  {title: "Coffee Course", product_id: 1}
+])
+
+Lesson.create!([
+  {name: "Grinding", course_id: 1, short_description: "Learn how to grind", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum."}
+])
+
 puts 'CREATED PRODUCTS: ' << user.email
 
 Image.create!([

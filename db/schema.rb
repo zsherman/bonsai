@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20141122171148) do
   create_table "lessons", force: true do |t|
     t.string   "name"
     t.string   "video_url"
+    t.text     "short_description"
     t.text     "description"
     t.integer  "course_id"
     t.datetime "created_at"
@@ -138,7 +139,7 @@ ActiveRecord::Schema.define(version: 20141122171148) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "videos", force: true do |t|
-    t.integer  "course_id"
+    t.integer  "lesson_id"
     t.string   "title"
     t.string   "url"
     t.datetime "created_at"

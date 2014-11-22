@@ -64,7 +64,7 @@
 
   <div class="row cd-section" id="syllabus">
     <div class="large-12 columns">
-      <% @product.course.lessons.each do |lesson| %>
+      <% @product.courses.first.lessons.each do |lesson| %>
         <p><%= lesson.name %></p>
         <p><%= lesson.short_description %></p>
       <% end %>
