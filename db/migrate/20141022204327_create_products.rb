@@ -10,7 +10,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :shopify_variant_id
       t.string :instructor_name
       t.text :instructor_description
-      t.string :store_headline
+      t.string :story_headline
       t.string :story_image_url
       t.text :story_description
       t.text :metadata

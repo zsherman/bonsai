@@ -1,13 +1,25 @@
 footer {
   background: #fff;
   color: #ddd;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #DEDEDE;
   padding: 20px;
+  overflow: hidden;
 
-  ul {
+  li.title {
+    font-family: "Lato";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    padding: 10px 0;
   }
 
   li {
+    padding: 5px 0;
+    font-family: "Lato";
+    color: #333;
+    font-size: 13px;
   }
 
 

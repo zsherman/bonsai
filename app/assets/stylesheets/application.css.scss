@@ -58,13 +58,13 @@ html, body {height: 100%;}
 
 main {
   overflow:auto;
-  padding-bottom: 150px;
+  padding-bottom: 250px;
 }  /* must be same height as the footer */
 
 footer {
   position: relative;
-  top: -150px; /* negative value of footer height */
-  height: 150px;
+  top: -250px; /* negative value of footer height */
+  height: 250px;
   clear:both;
 }
 
