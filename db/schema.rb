@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20141102194104) do
     t.integer  "shopify_variant_id"
     t.string   "instructor_name"
     t.text     "instructor_description"
-    t.string   "store_headline"
+    t.string   "story_headline"
     t.string   "story_image_url"
     t.text     "story_description"
     t.text     "metadata"
