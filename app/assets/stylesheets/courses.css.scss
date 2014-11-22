@@ -3,19 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // Course Page Styles
+.course-show-page {
+  .wrap, main {
+    background: #eee;
+  }
+
+  main {
+    padding: 0;
+  }
+}
+
 
 .course-page {
 
   #wrapper {
-    padding-left: 250px;
+    padding-left: 300px;
     transition: all 0.4s ease 0s;
   }
 
+  .video-container, .description-container {
+    background: #fff;
+    min-height: 450px;
+    border: 1px solid #ddd;
+    color: #202020;
+    margin-bottom: 20px;
+
+    h1 {
+
+    }
+  }
+
   #sidebar-wrapper {
-    margin-left: -250px;
-    left: 250px;
-    width: 250px;
-    background: #000;
+    margin-left: -300px;
+    left: 300px;
+    width: 300px;
+    background: #fff;
+    border-right: 1px solid #ddd;
     position: fixed;
     height: 100%;
     overflow-y: auto;
@@ -30,10 +53,43 @@
   .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 300px;
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .sidebar-nav li {
+
+    font-family: "Lato";
+    font-weight: 400;
+    letter-spacing: .5px;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+
+    .course-name {
+      color: #7ABB3A;
+      display: block;
+      font-size: 11px;
+    }
+
+    .lesson-name {
+      color: #020202;
+      display: block;
+      font-size: 20px;
+      padding: 5px 0;
+    }
+
+    p {
+      color: #747474;
+      font-size: 13px;
+      line-height: 22px;
+      padding: 5px 0;
+    }
+
+    &:last-of-type {
+      //border-bottom: none;
+    }
   }
 
   @media (max-width:767px) {
@@ -48,12 +104,12 @@
 
       #wrapper.active {
         position: relative;
-        left: 250px;
+        left: 300px;
       }
 
       #wrapper.active #sidebar-wrapper {
-        left: 250px;
-        width: 250px;
+        left: 300px;
+        width: 300px;
         transition: all 0.4s ease 0s;
       }
 

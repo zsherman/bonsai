@@ -1,4 +1,4 @@
 class Course < ActiveRecord::Base
   belongs_to :product
-  has_many :videos
+  has_many :lessons
 end

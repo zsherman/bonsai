@@ -12,6 +12,7 @@ class CoursesController < ApplicationController
   def show
     @header = false
     @footer = false;
+    @classes = "course-show-page"
   end
 
   # GET /courses/new

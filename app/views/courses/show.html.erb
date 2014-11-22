@@ -2,10 +2,13 @@
   <div id="wrapper">
       <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
-              <li class="sidebar-brand"><a href="#">Home</a></li>
-              <li><a href="#">Another link</a></li>
-              <li><a href="#">Next link</a></li>
-              <li><a href="#">Last link</a></li>
+              <% @course.lessons.each do |l| %>
+                <li>
+                  <span class="course-name"><%= @course.title %></span>
+                  <span class="lesson-name"><%= l.name %></span>
+                  <p><%= l.description %></p>
+                </li>
+              <% end %>
           </ul>
       </div>
       <div id="page-content-wrapper">
@@ -14,12 +17,12 @@
                   <div class="row">
                       <div class="large-12 columns">
                           <p id="notice"><%= notice %></p>
-                          <h1><%= @course.title %></h1>
-                          <ul>
-                            <% @course.videos.each do |v| %>
-                              <li><%= v.title %></li>
-                            <% end %>
-                          </ul>
+                          <div class="large-12 columns video-container">
+                            <h1><%= @course.title %></h1>
+                          </div>
+                          <div class="large-12 columns description-container"></div>
+                          <!-- Video Here -->
+                          <!-- Content Here -->
                       </div>
                   </div>
               </div>
