@@ -39,4 +39,16 @@ $(function() {
     close: function(){}               // Function: Close callback
   });
 
+  $('#photo-grid').photosetGrid({
+    // Set the gutter between columns and rows
+      gutter: '5px',
+      // Wrap the images in links
+      highresLinks: true,
+      // Asign a common rel attribute
+      rel: 'print-gallery',
+
+      onInit: function(){},
+      onComplete: function(){}
+  });
+
 });

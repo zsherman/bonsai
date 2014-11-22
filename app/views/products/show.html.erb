@@ -1,15 +1,6 @@
 <div class="product-page">
   <!-- Hero Section -->
   <div class="row product-hero full-width">
-    <!-- <div class="large-6 columns product-gallery">
-      <div class="video"></div>
-      <ul class="clearfix">
-        <% @product.images.each do |img| %>
-          <li><img src="<%= img.shopify_url %>"/></li>
-        <% end %>
-      </ul>
-    </div> -->
-
     <div class="large-12 columns centered product-info cd-intro">
       <div class="product-info-inner large-5 large-offset-7 medium-6 medium-offset-6 columns">
         <h1 id="cd-intro-tagline"><%= @product.title %></h1>
@@ -30,28 +21,44 @@
 
   <!-- Ingredients -->
   <div class="row cd-section" id="ingredients">
-    <div class="large-12 columns">
-      <ul>
-        <% @product.ingredients.each do |ing| %>
-          <li><%= ing.name %></li>
-        <% end %>
-      </ul>
-    </div>
+    <ul class="ingredient-slider" data-orbit>
+      <% @product.ingredients.each do |ing| %>
+        <li>
+          <div class="large-6 columns ingredient-image"><img src="<%= ing.image_url %>"/></div>
+          <div class="large-6 columns ingredient-description">
+            <p>
+              <%= ing.description %>
+            </p>
+          </div>
+        </li>
+      <% end %>
+    </ul>
   </div>
 
   <!-- Video Preview -->
-  <div class="row cd-section" id="preview-video">
-    <div class="large-12 columns">
-      <p>Video here</p>
+  <div class="row cd-section full-width" id="preview-video">
+    <div class="large-12 large-centered columns">
+      <div class="large-6 medium-6 small-12 video-wrapper columns">
+        <div class="video">
+          <iframe width="400" height="245" src="//www.youtube.com/embed/UxRrhYVT1Sw" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="large-6 medium-6 small-12 video-description columns">
+        <h3>Video Teaser</h3>
+        <p>Watch a short teaser of Josh Littlefield showing you how to do stuff.</p>
+      </div>
     </div>
   </div>
 
   <!-- Instructor -->
   <div class="row cd-section" id="instructor">
-    <div class="large-12 columns">
+    <div class="large-6 columns instructor-description">
       <p>Instructor</p>
-      <p><%= @product.metadata["instructor"] %></p>
-      <p><%= @product.metadata["instructor_description"] %></p>
+      <p><%= @product.instructor_name %></p>
+      <p><%= @product.instructor_description %></p>
+    </div>
+    <div class="large-6 columns instructor-image">
+
     </div>
   </div>
 
@@ -63,22 +70,49 @@
   </div>
 
   <!-- Photo Grid -->
-  <div class="row cd-section" id="photo-grid">
+  <div class="row cd-section" id="photo-grid" data-layout="221">
     <div class="large-12 columns">
-      <p>Photo Grid</p>
+      <% @product.images.each do |img| %>
+        <img width="500" height="375" class="box-photo" src="<%= img.shopify_url %>"/>
+      <% end %>
     </div>
   </div>
 
   <!-- Reviews -->
-  <div class="row cd-section" id="reviews">
-    <div class="large-12 columns">
-      <p>Reviews here.</p>
+  <div class="full-width row cd-section" id="reviews">
+    <h2 class="centered-text">See what these awesome people have to say!</h2>
+    <div class="large-4 columns testimonial">
+          <div class="quote">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.</p>
+          </div>
+          <div class="student">
+            <div class="photo"> </div>
+            <p>John Doe</p>
+            <p>Important person, some Company</p>
+          </div>
+    </div>
+    <div class="large-4 columns testimonial">
+      <div class="quote">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.  </p>
+      </div>
+      <div class="student">
+        <div class="photo"> </div>
+        <p>John Doe</p>
+        <p>Important person, some Company</p>
+      </div>
+    </div>
+    <div class="large-4 columns testimonial">
+      <div class="quote">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.  </p>
+      </div>
+      <div class="student">
+        <div class="photo"> </div>
+        <p>John Doe</p>
+        <p>Important person, some Company</p>
+      </div>
     </div>
   </div>
 
 
+
 </div>
-
-
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>

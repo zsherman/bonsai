@@ -30,41 +30,6 @@
     padding: 42px 0;
   }
 
-  .product-gallery {
-    display: none;
-
-    .video {
-      height: 300px;
-      background: #E4E4E4;
-    }
-
-    ul {
-      list-style: none;
-      margin: 0;
-    }
-
-    li {
-      height: 78px;
-      width: 78px;
-      float: left;
-      margin: 10px;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-
-  }
-
   .product-info {
     position: relative;
 
@@ -126,6 +91,135 @@
       position: absolute;
       top: -7px;
       right: 16px;
+    }
+  }
+
+  #ingredients {
+    padding-top: 10em;
+
+    .ingredient-slider li{
+      min-height: 300px;
+    }
+
+    .ingredient-slider li p {
+      font-size: 1.15rem;
+      font-family: "raleway";
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: .2px;
+      color: #373737;
+    }
+
+  }
+
+  #photo-grid {
+
+
+  }
+
+  #preview-video {
+    background: #074058;
+    height: 400px;
+
+    .large-12 {
+      max-width: 62.5em;
+    }
+
+    .columns {
+      min-height: 300px;
+    }
+
+    .video-wrapper {
+
+    }
+
+    .video-description {
+      h3, p {
+        color: #fff;
+      }
+    }
+
+  }
+
+  #instructor {
+    .columns {
+      min-height: 400px;
+    }
+    .instructor-description {
+
+    }
+
+    .instructor-image {
+      background: image-url('josh.png');
+      background-size: cover;
+      background-position-x: 50%;
+      position: relative;
+    }
+  }
+
+  #reviews {
+    border-bottom: 1px solid #ddd;
+    background: #f7f7f7;
+    padding-bottom: 30px;
+
+    h2 {
+      margin: 40px 0;
+      font-weight: 400;
+      color: #333;
+      font-family: "Brandon Grotesque";
+      text-decoration: uppercase;
+      letter-spacing: 2px;
+      font-size: 28px;
+    }
+
+    .centered-text {
+      text-align: center;
+    }
+
+    .quote {
+      background: #fff;
+      padding: 15px 20px 5px 15px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      color: #7A7D7F;
+    }
+    .quote:after {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 20px 18px 0 18px;
+      border-color: #fff transparent transparent transparent;
+      position: relative;
+      top: 37px;
+      left: 20px;
+    }
+
+    .student {
+      margin-left: 25px;
+      margin-bottom: 80px;
+    }
+    .student .photo {
+      background-color: #ccc;
+      border-radius: 100px;
+      width: 60px;
+      height: 60px;
+      float: left;
+      margin-right: 10px;
+    }
+    .student p {
+      position: relative;
+      top: 5px;
+      text-transform: uppercase;
+    }
+    .student p:nth-child(2) {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .student p:nth-child(3) {
+      font-size: 14px;
+      color: #777;
     }
   }
 
