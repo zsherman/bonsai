@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121205323) do
+ActiveRecord::Schema.define(version: 20141102194104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 20141121205323) do
     t.string   "name"
     t.text     "description"
     t.integer  "shopify_variant_id"
+    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_url"
   end
 
   create_table "line_items", force: true do |t|
@@ -80,7 +80,10 @@ ActiveRecord::Schema.define(version: 20141121205323) do
     t.integer  "shopify_product_id"
     t.integer  "shopify_variant_id"
     t.string   "instructor_name"
-    t.string   "instructor_description"
+    t.text     "instructor_description"
+    t.string   "store_headline"
+    t.string   "story_image_url"
+    t.text     "story_description"
     t.text     "metadata"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -96,6 +99,8 @@ ActiveRecord::Schema.define(version: 20141121205323) do
     t.integer  "user_id"
     t.integer  "product_id"
     t.string   "code"
+    t.integer  "uses"
+    t.integer  "max_uses"
     t.boolean  "used",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"

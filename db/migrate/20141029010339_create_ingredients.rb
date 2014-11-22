@@ -4,6 +4,7 @@ class CreateIngredients < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.integer :shopify_variant_id
+      t.string :image_url
       t.timestamps
     end
   end
