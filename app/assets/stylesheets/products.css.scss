@@ -126,7 +126,6 @@
     .story-description {
       position: absolute;
       height: 50%;
-      width: 35%;
       background: #fff;
       color: #000;
       top: 100px;
@@ -170,19 +169,47 @@
     }
 
     .video-description {
+
+      h3 {
+        padding: 10px 0;
+      }
+
       h3, p {
         color: #fff;
+      }
+
+      p {
+        font-size: 1.15rem;
+        font-family: "raleway";
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: .2px;
       }
     }
 
   }
 
   #instructor {
+    padding: 2em 0;
+
     .columns {
       min-height: 400px;
     }
+
     .instructor-description {
 
+    }
+
+    .instructor-description h3 {
+      padding: 10px 0;
+    }
+
+    .instructor-description p {
+      font-size: 1.15rem;
+      font-family: "raleway";
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: .2px;
     }
 
     .instructor-image {
