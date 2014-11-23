@@ -36,7 +36,14 @@ $(function() {
   });
 
   $('.register-submit').on('click', function(e) {
-    $('#new_user').submit();
+    // If the unhappy class is there throw an error and don't submit
+    var form = $('#new_user');
+    if(form.find('.unhappy').length !== 0) {
+      form.find('.unhappy').closest('label').find('span').css({'color': 'red'});
+      return false;
+    } else {
+      $('#new_user').submit();
+    }
   });
 
   $('#new_user').keypress(function (e) {

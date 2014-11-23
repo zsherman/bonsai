@@ -17,6 +17,7 @@
 //= require modal
 //= require sweet-alert
 //= require walkway
+//= require happy
 //= require_tree .
 $(function() {
   // Initialize foundation
@@ -37,6 +38,45 @@ $(function() {
     init: function(){},               // Function: Init callback
     open: function(){},               // Function: Open callback
     close: function(){}               // Function: Close callback
+  });
+
+  $('#new_user').isHappy({
+      fields: {
+        // reference the field you're talking about, probably by `id`
+        // but you could certainly do $('[name=name]') as well.
+        '#user_first_name': {
+          required: true,
+          message: '',
+          test: happy.minLength,
+          arg: 2
+        },
+        '#user_last_name': {
+          required: true,
+          message: '',
+          test: happy.minLength,
+          arg: 2
+        },
+        '#user_email': {
+          required: true,
+          message: '',
+          test: happy.email
+        },
+        '#user_password': {
+          required: true,
+          message: '',
+          test: happy.minLength,
+          arg: 8
+        },
+        '#user_password_confirmation': {
+          required: true,
+          message: '',
+          test: happy.equal,
+          arg: 'stuff'
+        }
+      },
+      happy: function() {
+        console.log('happy');
+      }
   });
 
   $('#photo-grid').photosetGrid({
