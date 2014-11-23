@@ -4,9 +4,12 @@ $(function() {
   var overlay = $('.md-overlay');
   var modal;
   var close = $('.md-close');
+  var register = $('.register');
 
   function removeModal( hasPerspective ) {
     modal.removeClass('md-show');
+    console.log("remove");
+    $('.md-show').removeClass('md-show');
     overlay.removeClass('md-show');
   }
 
@@ -25,6 +28,22 @@ $(function() {
   close.on( 'click', function( ev ) {
     ev.stopPropagation();
     removeModalHandler();
+  });
+
+  register.on('click', function(e) {
+    modal.removeClass('md-show');
+    $('#modal-3').addClass('md-show');
+  });
+
+  $('.register-submit').on('click', function(e) {
+    $('#new_user').submit();
+  });
+
+  $('#new_user').keypress(function (e) {
+    if (e.which == 13) {
+      $('#new_user').submit();
+      return false;
+    }
   });
 
   $('.md-content input').on('focus', function () {
