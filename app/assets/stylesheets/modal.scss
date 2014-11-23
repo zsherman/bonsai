@@ -23,7 +23,9 @@ perspective effects (not including the modals and the overlay).
 }
 
 #new_user {
-
+  .unhappy-message {
+    color: red;
+  }
 }
 
 .md-modal {
@@ -181,6 +183,18 @@ perspective effects (not including the modals and the overlay).
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.md-content .row .columns label span.unhappyMessage {
+  color: red;
+  position: absolute;
+  top: 8px;
+  background: #fff;
+  left: 12px;
+}
+
+.md-content .row .columns label.active span.unhappyMessage {
+  background: #F1F6F9;
 }
 
 .md-content button {

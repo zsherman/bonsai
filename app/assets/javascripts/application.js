@@ -46,32 +46,32 @@ $(function() {
         // but you could certainly do $('[name=name]') as well.
         '#user_first_name': {
           required: true,
-          message: '',
+          message: 'First name required',
           test: happy.minLength,
           arg: 2
         },
         '#user_last_name': {
           required: true,
-          message: '',
+          message: 'Last name required',
           test: happy.minLength,
           arg: 2
         },
         '#user_email': {
           required: true,
-          message: '',
+          message: 'Please enter a valid email address',
           test: happy.email
         },
         '#user_password': {
           required: true,
-          message: '',
+          message: '8 Character Min',
           test: happy.minLength,
           arg: 8
         },
         '#user_password_confirmation': {
           required: true,
-          message: '',
+          message: 'Passwords Must Match',
           test: happy.equal,
-          arg: 'stuff'
+          arg: ''
         }
       },
       happy: function() {
