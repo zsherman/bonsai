@@ -47,9 +47,14 @@ $(function() {
   });
 
   $('#new_user').keypress(function (e) {
-    if (e.which == 13 && $(this).find('.unhappy').length !== 0) {
-      $('#new_user').submit();
-      return false;
+    if (e.which == 13) {
+      $('#new_user input').blur();
+      var inputs = $(this).find('input');
+      inputs.eq( inputs.index(this)+ 1 ).focus();
+      var happy = $('#new_user').find('.unhappy').length == 0;
+      if(happy) {
+        $('#new_user').submit();
+      }
     }
   });
 
