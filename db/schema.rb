@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20141123020517) do
 
   create_table "ingredients", force: true do |t|
     t.string   "name"
+    t.decimal  "price"
     t.text     "description"
     t.integer  "shopify_variant_id"
     t.string   "image_url"
