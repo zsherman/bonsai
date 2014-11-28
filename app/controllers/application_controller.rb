@@ -39,6 +39,10 @@ class ApplicationController < ActionController::Base
       cart
   end
 
+  def pundit_user
+    return current_user
+  end
+
   # def current_cart
   #   https://github.com/railscasts/145-integrating-active-merchant
   #   if session[:cart_id]

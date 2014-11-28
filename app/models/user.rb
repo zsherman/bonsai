@@ -44,6 +44,7 @@ class User < ActiveRecord::Base
     end
   end
 
+
   protected
 
   def user_params

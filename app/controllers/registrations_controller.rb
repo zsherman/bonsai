@@ -6,6 +6,11 @@ class RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  def edit
+    @header = false
+    @footer = false
+    super
+  end
   private
 
   def sign_up_params

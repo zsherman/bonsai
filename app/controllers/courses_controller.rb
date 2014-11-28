@@ -10,6 +10,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+    authorize @course
     @header = false
     @footer = false;
     @classes = "course-show-page"
