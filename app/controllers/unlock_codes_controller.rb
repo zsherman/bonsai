@@ -22,6 +22,7 @@ class UnlockCodesController < ApplicationController
   end
 
   def unlock
+    @classes = "unlock-page"
   end
 
   def validate_code
