@@ -4,6 +4,8 @@ class CreateVideos < ActiveRecord::Migration
       t.references :lesson
       t.string :title
       t.string :url
+      t.text :content
+      t.string :instructor
       t.timestamps
     end
   end
