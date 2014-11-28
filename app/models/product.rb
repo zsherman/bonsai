@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
   has_many :line_items
   has_many :images
   has_many :product_ingredients, dependent: :destroy
@@ -8,6 +10,7 @@ class Product < ActiveRecord::Base
   before_destroy :ensure_not_referenced_by_any_line_item
   validates :shopify_variant_id, presence: true
   store :metadata, accessors: [:instructor, :instructor_description]
+
 
   def resolve_shopify
     # Grab shopify variant and parent product

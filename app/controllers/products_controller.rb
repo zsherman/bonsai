@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :set_shopify, only: [:create]
+  before_filter :admin_only, only: [:new, :create, :update, :destroy]
   #before_action :authenticate_admin!, :except => [:show, :index]
 
   # GET /products
@@ -17,7 +18,6 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    authorize @product
     @product = Product.new
   end
 
@@ -29,7 +29,6 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    authorize @product
     # Find or initialize product with variant ID
     @product = Product.where(shopify_variant_id: product_params[:shopify_variant_id]).first_or_initialize
 
@@ -82,7 +81,7 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      @product = Product.friendly.find(params[:id])
     end
 
     def set_shopify

@@ -31,7 +31,6 @@ class Order < ActiveRecord::Base
     rescue ActiveModel::MissingAttributeError
       logger.info "Mismatched attributes"
     end
-
   end
 
 end

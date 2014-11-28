@@ -24,6 +24,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'kaminari', '~> 0.15.1'
 gem 'font-awesome-sass'
+gem 'friendly_id'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
