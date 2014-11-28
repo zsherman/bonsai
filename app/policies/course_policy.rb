@@ -7,8 +7,6 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def show?
-    puts "Course:"
-    puts @course
     @current_user.admin? or @course.unlocked?(@current_user)
   end
 
