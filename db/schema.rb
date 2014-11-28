@@ -134,7 +134,7 @@ ActiveRecord::Schema.define(version: 20141123020517) do
     t.string   "name"
     t.integer  "role"
     t.string   "provider"
-    t.integer  "uid"
+    t.string   "uid"
     t.string   "first_name"
     t.string   "last_name"
   end
@@ -146,6 +146,8 @@ ActiveRecord::Schema.define(version: 20141123020517) do
     t.integer  "lesson_id"
     t.string   "title"
     t.string   "url"
+    t.text     "content"
+    t.string   "instructor"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

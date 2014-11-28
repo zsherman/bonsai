@@ -123,9 +123,30 @@
 }
 
 .register {
+  .authform #error_explanation {
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+  }
 
+  .authform #error_explanation ul {
+    margin: 0;
+  }
+
+  .authform #error_explanation h2 {
+    margin: 0;
+  }
 }
 
-.register .authform form .button {
-  //width: 100%;
+.from-twitter .register .authform form .button {
+  width: 100%;
+}
+
+.from-twitter .register .authform #error_explanation {
+  background-color: #33C6F4;
+  border-color: #0B2C36;
+}
+
+.from-twitter .register .authform form .twitter {
+  display: none;
 }

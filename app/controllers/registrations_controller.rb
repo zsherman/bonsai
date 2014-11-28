@@ -4,6 +4,9 @@ class RegistrationsController < Devise::RegistrationsController
     @header = false
     @footer = false
     @classes = "register-wrapper"
+    if params[:from_twitter]
+      @classes += " from-twitter"
+    end
     super
   end
 
