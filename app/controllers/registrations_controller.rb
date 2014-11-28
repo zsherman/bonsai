@@ -3,6 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
   def new
     @header = false
     @footer = false
+    @classes = "register-wrapper"
     super
   end
 

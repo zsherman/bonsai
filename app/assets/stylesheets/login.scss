@@ -8,16 +8,15 @@
   font-weight: 300;
 }
 
-.sign-in {
+.sign-in, .register-wrapper{
   main {
     background: #21393e;
+    margin-top: 250px;
   }
   background: #21393e;
 }
 
 .login-wrapper, .register {
-  height: 100%;
-  width: 100%;
   background: $nordic;
   text-align: center;
 

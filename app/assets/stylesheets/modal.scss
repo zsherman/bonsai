@@ -30,6 +30,7 @@ perspective effects (not including the modals and the overlay).
 
 .md-modal {
   position: fixed;
+  display: none;
   top: 50%;
   left: 50%;
   width: 380px;
@@ -49,6 +50,7 @@ perspective effects (not including the modals and the overlay).
 
 .md-show {
   visibility: visible;
+  display: block;
 }
 
 .md-overlay {
