@@ -35,11 +35,11 @@ class ProductsController < ApplicationController
     # Delegate product & image requests to the model
     @product.resolve_shopify
 
-    if params[:ad_fields]
-      params[:metadata].each do |key,value|
-        @product.metadata[key.to_sym] = value
-      end
-    end
+    # if params[:ad_fields]
+    #   params[:metadata].each do |key,value|
+    #     @product.metadata[key.to_sym] = value
+    #   end
+    # end
 
     respond_to do |format|
       if @product.save

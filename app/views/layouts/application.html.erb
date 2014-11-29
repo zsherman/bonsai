@@ -23,6 +23,6 @@
     </div>
     <%= render 'layouts/footer' unless @header == false %>
     <%= render 'layouts/intercom' if current_user %>
-    <%= render 'layouts/olark' %>
+    <%= render 'layouts/olark' unless current_user %>
   </body>
 </html>

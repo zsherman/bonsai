@@ -99,7 +99,6 @@ ActiveRecord::Schema.define(version: 20141128231441) do
     t.string   "story_headline"
     t.string   "story_image_url"
     t.text     "story_description"
-    t.text     "metadata"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"

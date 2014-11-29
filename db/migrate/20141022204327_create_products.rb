@@ -13,7 +13,6 @@ class CreateProducts < ActiveRecord::Migration
       t.string :story_headline
       t.string :story_image_url
       t.text :story_description
-      t.text :metadata
       t.timestamps
     end
   end
