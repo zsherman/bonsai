@@ -1,10 +1,20 @@
 <div class="dashboard-page">
-
-  <p>Welcome to your dashboard, <%= @user.email %></p>
-  <h3>Your available courses:</h3>
-  <ul>
-    <% @courses.each do |course| %>
-      <li><%= link_to(course.title, course_path(course)) %></li>
-    <% end %>
-  </ul>
+  <div class="row">
+    <p>Your available courses:</p>
+    <div class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 products">
+      <% @courses.each do |course| %>
+        <li class="catalogue-product">
+          <div class="product-image"></div>
+          <div class="product-info">
+            <h3><%= course.title %></h3>
+            <div class="divider"></div>
+            <p>Learn how to brew the perfect cup of coffee with this amazing box, led by Irving Farm's head of education, Josh Littlefield.</p>
+            <div class="view-more">
+              <%= link_to("Go to Course", course_path(course)) %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </div>
+  </div>
 </div>

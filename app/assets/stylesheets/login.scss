@@ -9,9 +9,16 @@
 }
 
 .sign-in, .register-wrapper{
+  .alert-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+  }
+
   main {
     background: #21393e;
-    margin-top: 250px;
+    padding-top: 250px;
   }
   background: #21393e;
 }

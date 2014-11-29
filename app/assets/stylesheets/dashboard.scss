@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.dashboard-page {
+  padding: 20px;
+
+  .catalogue-product {
+    @include product-card;
+  }
+}
