@@ -22,6 +22,7 @@
       <%= render 'layouts/cart' %>
     </div>
     <%= render 'layouts/footer' unless @header == false %>
-    <%= render 'layouts/intercom' %>
+    <%= render 'layouts/intercom' if current_user %>
+    <%= render 'layouts/olark' %>
   </body>
 </html>
