@@ -225,11 +225,25 @@
     background-size: cover;
     background-position-x: 50%;
     position: relative;
+    text-align: center;
+
+    svg {
+      cursor: pointer;
+      height: 110px;
+      width: 110px;
+      position: relative;
+      top: 180px;
+
+      g {
+        fill: #fff;
+      }
+    }
 
     .instructor-info {
       position: absolute;
       top: 6%;
       left: 6%;
+      text-align: left;
     }
 
     .instructor-info p {
