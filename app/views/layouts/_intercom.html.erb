@@ -1,11 +1,11 @@
 <script>
   window.intercomSettings = {
     // TODO: The current logged in user's full name
-    name: "<%= current_user.formatted_name %>",
+    name: "<%= current_user.formatted_name if current_user %>",
     // TODO: The current logged in user's email address.
-    email: "<%= current_user.email %>",
+    email: "<%= current_user.email if current_user %>",
     // TODO: The current logged in user's sign-up date as a Unix timestamp.
-    created_at: "<%= current_user.created_at %>",
+    created_at: "<%= current_user.created_at if current_user %>",
     app_id: "y413uk0n"
   };
 </script>
