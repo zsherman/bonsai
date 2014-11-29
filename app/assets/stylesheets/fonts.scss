@@ -3,6 +3,7 @@ $open-sans: "Open Sans", sans-serif;
 $merriweather: 'Merriweather', serif;
 $lato: 'Lato', sans-serif;
 $raleway: 'Raleway', sans-serif;
+$brandon: 'Brandon-Grotesque', sans-serif;
 
 
 // @font-face {
@@ -59,3 +60,36 @@ $raleway: 'Raleway', sans-serif;
 //     font-weight: 200;
 //     font-style: normal;
 // }
+
+@font-face {
+    font-family: 'Brandon-Grotesque';
+    src: font-url('Brandon-Grotesque-Bold.otf');
+    // src: font-url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    //      font-url('OpenSans-Regular-webfont.woff') format('woff'),
+    //      font-url('OpenSans-Regular-webfont.ttf') format('truetype'),
+    //      font-url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon-Grotesque';
+    src: font-url('Brandon-Grotesque-Regular.otf');
+    // src: font-url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    //      font-url('OpenSans-Regular-webfont.woff') format('woff'),
+    //      font-url('OpenSans-Regular-webfont.ttf') format('truetype'),
+    //      font-url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon-Grotesque';
+    src: font-url('Brandon-Grotesque-Medium.otf');
+    // src: font-url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    //      font-url('OpenSans-Regular-webfont.woff') format('woff'),
+    //      font-url('OpenSans-Regular-webfont.ttf') format('truetype'),
+    //      font-url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
