@@ -382,6 +382,18 @@ perspective effects (not including the modals and the overlay).
       width: 94%;
     }
   }
+
+  .box-link {
+    background: #5AB8EC;
+    color: #fff;
+    padding: 16px;
+    border-radius: 5px;
+    display: block;
+    margin-top: 100px;
+    width: 170px;
+    text-align: center;
+    margin: 30px auto;
+  }
 }
 
 @-webkit-keyframes fadeOutText {
