@@ -7,6 +7,16 @@ class User < ActiveRecord::Base
     self.role ||= :user
   end
 
+  def formatted_name
+    if !name.blank?
+      return name
+    elsif !first_name.blank?
+      return "#{first_name} #{last_name}"
+    else
+      return email
+    end
+  end
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -48,7 +58,7 @@ class User < ActiveRecord::Base
   protected
 
   def user_params
-    params.require(:user).permit(:id, :email, :name, :role, :provider, :uid)
+    params.require(:user).permit(:id, :email, :name, :first_name, :last_name, :role, :provider, :uid)
   end
 
 end
