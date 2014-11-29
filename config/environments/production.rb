@@ -65,8 +65,11 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => 'http://trybonsai.com' }
-  ActionMailer::Base.smtp_settings = {
+  config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }
+  config.action_mailer.smtp_settings = {
     :address        => "smtp.sendgrid.net",
     :port           => "25",
     :authentication => :plain,
@@ -82,20 +85,20 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  config.action_mailer.smtp_settings = {
-    address: "smtp.mandrillapp.com",
-    port: 587,
-    domain: Rails.application.secrets.domain_name,
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: Rails.application.secrets.email_provider_username,
-    password: Rails.application.secrets.email_provider_apikey
-  }
+  # config.action_mailer.smtp_settings = {
+  #   address: "smtp.mandrillapp.com",
+  #   port: 587,
+  #   domain: Rails.application.secrets.domain_name,
+  #   authentication: "plain",
+  #   enable_starttls_auto: true,
+  #   user_name: Rails.application.secrets.email_provider_username,
+  #   password: Rails.application.secrets.email_provider_apikey
+  # }
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = false
 
 
   # Disable automatic flushing of the log to improve performance.
