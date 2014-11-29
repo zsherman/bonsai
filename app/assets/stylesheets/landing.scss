@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'mixins';
+@import 'fonts';
 /* Header */
 // Todo: convert to ems so text resizes automatically
 #large-header {
@@ -65,6 +66,7 @@
       background: #E85C41;
       border: 1px solid #133734;
       border-radius: 3px;
+      font-family: $lato;
     }
   }
 
