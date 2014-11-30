@@ -10,8 +10,20 @@ $(function() {
       var wistiaUrl = "http://fast.wistia.net/oembed?url=";
       wistiaUrl += encodeURIComponent(url);
       // Grab the video from Wistia's API & Insert it
-      $.get(wistiaUrl).done(function(resp) {
-        $('.video-container').html(resp.html);
+      // $.get(wistiaUrl).done(function(resp) {
+      //   $('.video-container').html(resp.html);
+      // });
+
+      $.ajax({
+        type: 'GET',
+        url: wistiaUrl,
+        data: {},
+        contentType: 'jsonp',
+        dataType: 'jsonp',
+        crossDomain: 'true',
+        success: function (resp) {
+         $('.video-container').html(resp.html);
+        }
       });
     }
 
