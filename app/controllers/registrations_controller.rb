@@ -13,8 +13,17 @@ class RegistrationsController < Devise::RegistrationsController
   def edit
     @header = false
     @footer = false
+    @classes = "register-wrapper"
     super
   end
+
+  def create
+    @header = false
+    @footer = false
+    @classes = "register-wrapper"
+    super
+  end
+
   private
 
   def sign_up_params
