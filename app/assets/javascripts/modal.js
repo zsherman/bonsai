@@ -19,6 +19,9 @@ $(function() {
 
   $('.md-trigger').on( 'click', function(ev) {
     var id = $(ev.target).data('id');
+    if(id === undefined) {
+      id = $(ev.target).parent().data('id');
+    }
     modal = $(".md-modal[data-id='" + id +"']");
     overlay.addClass('md-show');
     modal.addClass('md-show');

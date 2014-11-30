@@ -141,6 +141,13 @@ header {
     width: auto;
   }
 
+  .nav-collapse li.nav-right span {
+    background: #37B8B7;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 4px;
+  }
+
   .landing .nav-collapse {
     border-bottom: none;
   }

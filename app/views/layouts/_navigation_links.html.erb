@@ -6,7 +6,7 @@
 <% else %>
   <li class="nav-right nav-cart"><i class="fa fa-shopping-cart"></i><%= link_to "Cart", current_cart_path %></li>
   <!-- Make it blue if there's an item in the cart to draw attention -->
-  <li class="nav-right"><%= link_to 'Tour', new_user_session_path %></li>
+  <li class="nav-right"><a class="md-trigger" data-id="1" href="#"><span>Signup</span></a></li>
   <li class="nav-right"><%= link_to 'Login', new_user_session_path %></li>
 
 <% end %>
