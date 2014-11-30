@@ -151,6 +151,7 @@ ActiveRecord::Schema.define(version: 20141128231441) do
     t.integer  "lesson_id"
     t.string   "title"
     t.string   "url"
+    t.string   "wistia_id"
     t.text     "content"
     t.string   "instructor"
     t.datetime "created_at"

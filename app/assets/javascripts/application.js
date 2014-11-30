@@ -18,6 +18,7 @@
 //= require sweet-alert
 //= require walkway
 //= require happy
+//= require course
 //= require_tree .
 $(function() {
   // Initialize foundation

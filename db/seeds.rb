@@ -30,6 +30,14 @@ Lesson.create!([
 
 puts 'CREATED LESSONS'
 
+Video.create!([
+  {title: "First Video", lesson_id: 1, wistia_id: "tcw7e29o1o", url: "http://trybonsai.wistia.com/medias/tcw7e29o1o?embedType=api&videoWidth=640", content: "Here's some content"},
+  {title: "Second Video", lesson_id: 2, wistia_id: "tcw7e29o1o", url: "http://trybonsai.wistia.com/medias/tcw7e29o1o?embedType=api&videoWidth=640", content: "Here's some content"},
+  {title: "Third Video", lesson_id: 3, wistia_id: "tcw7e29o1o", url: "http://trybonsai.wistia.com/medias/tcw7e29o1o?embedType=api&videoWidth=640", content: "Here's some content"},
+])
+
+puts 'CREATED VIDEOS'
+
 Image.create!([
   {product_id: 1, shopify_url: "https://cdn.shopify.com/s/files/1/0678/3049/products/beans.png?v=1414463368", shopify_id: 907928611, featured: nil},
   {product_id: 1, shopify_url: "https://cdn.shopify.com/s/files/1/0678/3049/products/b560603671b45f2111c231e4bbd944d8.jpg?v=1414463368", shopify_id: 916560719, featured: nil},

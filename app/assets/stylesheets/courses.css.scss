@@ -21,8 +21,28 @@
     transition: all 0.4s ease 0s;
   }
 
+  .lesson-wrapper {
+    padding: 0;
+  }
+
+  .previous, .next {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    cursor: pointer;
+    text-align: center;
+    color: #333;
+  }
+
+  .previous {
+    border-right: none;
+    border-left: none;
+  }
+
   .video-container {
     background: #eee;
+    padding: 0;
   }
 
   .video-container, .description-container {
@@ -33,6 +53,10 @@
     h1 {
 
     }
+  }
+
+  .video-container {
+    min-height: inherit;
   }
 
   .description-container {
@@ -86,6 +110,11 @@
     letter-spacing: .5px;
     border-bottom: 1px solid #ddd;
     padding: 15px 20px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f7f7f7;
+    }
 
     .course-name {
       color: #7ABB3A;

@@ -1,9 +1,21 @@
+<script src="http://fast.wistia.net/static/E-v1.js"></script>
+<script src="//fast.wistia.com/static/embed_shepherd-v1.js"></script>
+<script>
+  var course = <%= @course.to_json(:include => { :lessons => { :include => :video } }).html_safe %>;
+  var currentLesson = course.lessons[0].id;
+  wistiaEmbeds.onFind(function(video) {
+    video.videoFoam(true);
+  });
+
+  console.log(course);
+</script>
+
 <div class="course-page">
   <div id="wrapper">
       <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
               <% @course.lessons.each do |l| %>
-                <li>
+                <li class="lesson" data-lesson-id="<%= l.id %>" data-video-url="<%= l.video.url %>" data-lesson-title="<%= l.name %>" data-video-content="<%= l.video.content %>">
                   <span class="course-name"><%= @course.title %></span>
                   <span class="lesson-name"><%= l.name %></span>
                   <p><%= l.description %></p>
@@ -15,13 +27,15 @@
           <div class="page-content">
               <div class="container">
                   <div class="row">
-                      <div class="large-12 columns">
-                          <p id="notice"><%= notice %></p>
+                      <div class="large-12 columns lesson-wrapper">
+                          <div class="large-6 columns previous">Previous</div>
+                          <div class="large-6 columns next">Next</div>
                           <div class="large-12 columns video-container">
+                            <!-- Wistia video gets inserted here -->
                           </div>
                           <div class="large-12 columns description-container">
                             <h3><%= @course.lessons.first.name %></h3>
-                            <p><%= @course.lessons.first.content %></p>
+                            <p><%= @course.lessons.first.video.content %></p>
                           </div>
                           <!-- Video Here -->
                           <!-- Content Here -->
