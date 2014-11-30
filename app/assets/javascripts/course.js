@@ -1,7 +1,7 @@
 // Reference http://wistia.com/doc/construct-an-embed-code
 $(function() {
 
-  if($('.course-page')) {
+  if($('.course-page').length) {
 
     function getVideo(url) {
       // Clear existing video
