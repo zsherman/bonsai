@@ -74,6 +74,10 @@
       padding-bottom: 1.0625rem;
       padding-left: 2rem;
     }
+
+    .view-boxes {
+      display: inline-block;
+    }
   }
 
   h1 {
@@ -123,7 +127,7 @@
 #large-header {
   background-image: image-url("elepath.jpg");
   background: image-url("coffee-counter.jpg");
-  background: image-url("sonny.jpg");
+  background: image-url("sonny-1.jpg");
   background-position: 50% 85% !important;
 }
 
@@ -296,16 +300,15 @@
   text-align: center;
   padding: 20px;
   min-height: 600px;
-  background-image: image-url('table.jpg');
-  background-image: image-url('table-2.jpg');
-  // background:
-  //     /* top, transparent red */
-  //     linear-gradient(
-  //       rgba(0, 0, 0, 0.1),
-  //       rgba(0, 0, 0, 0.5)
-  //     ),
-  //     /* bottom, image */
-  //     image-url('table.jpg');
+  background-image: image-url('box-spread.jpg');
+  background:
+      /* top, transparent red */
+      linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.8)
+      ),
+      /* bottom, image */
+      image-url('box-spread.jpg');
   background-size: cover;
   background-position-x: 50%;
   position: relative;
@@ -315,7 +318,7 @@
     font-weight: 600;
     font-size: 24px;
     color: #fff;
-    color: #074058;
+    //color: #074058;
     line-height: 29px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -323,7 +326,7 @@
   }
 
   .divider {
-    border-bottom: 1px solid #074058; //#fff;
+    border-bottom: 1px solid #fff;
     width: 70px;
     margin: 0 auto;
   }
@@ -331,9 +334,9 @@
   p {
     font-family: "Lato";
     font-weight: 400;
-    font-size: 16px;
-    color: #074058; //#fff;
-    line-height: 27px;
+    font-size: 18px;
+    color: #fff; //#fff;
+    line-height: 40px;
     letter-spacing: 1px;
     max-width: 660px;
     margin: 0 auto;

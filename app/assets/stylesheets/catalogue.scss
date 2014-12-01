@@ -36,6 +36,16 @@
     background-size: cover;
   }
 
+  .products .product-image.coffee {
+    background: image-url('box-shot.jpg');
+    background-size: cover;
+  }
+
+  .products .product-image.fly-fishing {
+    background: image-url('bartender.jpg');
+    background-size: cover;
+  }
+
   .products .product-info {
     background: #fff;
     padding: 20px 0 0 0;
@@ -47,6 +57,7 @@
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 2px;
+      padding: 0 5px;
     }
 
     .divider {
