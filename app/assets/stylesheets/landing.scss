@@ -383,6 +383,10 @@
     border-radius: 5px;
     margin-bottom: 30px;
     color: #7A7D7F;
+    min-height: 190px;
+    p {
+      font-size: 20px;
+    }
   }
   .quote:after {
     content: '';
@@ -402,12 +406,29 @@
   }
   .student .photo {
     background-color: #ccc;
+    background-size: cover;
     border-radius: 100px;
     width: 60px;
     height: 60px;
     float: left;
     margin-right: 10px;
   }
+
+  .photo.jerome {
+    background: image-url('jerome.jpg');
+    background-size: cover;
+  }
+
+  .photo.katie {
+    background: image-url('katie.png');
+    background-size: cover;
+  }
+
+  .photo.jonathan {
+    background: image-url('jonathan.png');
+    background-size: cover;
+  }
+
   .student p {
     position: relative;
     top: 5px;
