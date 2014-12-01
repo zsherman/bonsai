@@ -14,4 +14,13 @@ class PagesController < ApplicationController
   def team
   end
 
+  def terms
+  end
+
+  def privacy
+  end
+
+  def refund
+  end
+
 end
