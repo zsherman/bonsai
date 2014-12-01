@@ -60,13 +60,19 @@
       padding: 0;
     }
 
-    button {
+    button, .view-boxes {
       margin: 10px 0;
       background: #3D938C;
       background: #E85C41;
       border: 1px solid #133734;
       border-radius: 3px;
       font-family: $lato;
+      color: #fff;
+      text-decoration: none;
+      padding-top: 1rem;
+      padding-right: 2rem;
+      padding-bottom: 1.0625rem;
+      padding-left: 2rem;
     }
   }
 
