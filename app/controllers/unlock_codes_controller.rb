@@ -37,7 +37,7 @@ class UnlockCodesController < ApplicationController
       unlock_code.used = true
       unlock_code.save!
       # redirect to the product's course
-      redirect_to unlock_code.product.courses.first, notice: "Got the code. #{code}"
+      redirect_to unlock_code.product.courses.first, notice: "Welcome to your pour over coffee guide, click the videos on the left to follow along with Josh."
     end
   end
 
