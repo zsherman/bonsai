@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   resources :products
   root to: 'pages#home'
 
+  get 'mission' => 'pages#mission'
+  get 'team' => 'pages#team'
+
   # Setup Devise
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks", sessions: "sessions", registrations: "registrations"}
   resources :users
