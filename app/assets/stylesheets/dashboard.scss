@@ -6,4 +6,10 @@
   .catalogue-product {
     @include product-card;
   }
+
+  .catalogue-product .product-image.coffee {
+    background: image-url('box-shot.jpg');
+    background-size: cover;
+  }
+
 }
