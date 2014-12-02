@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    flash.notice = "Sweet Deal!"
+    flash.notice = "All orders in December include a FREE sample of Ethiopian Yirgacheffe coffee!"
   end
 
   # GET /products/new

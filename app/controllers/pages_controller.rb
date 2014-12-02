@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def home
     @classes = 'landing'
+    flash.notice = "All orders in December include a FREE sample of Ethiopian Yirgacheffe coffee!"
   end
 
   def boxes
