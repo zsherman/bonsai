@@ -15,6 +15,8 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     flash.notice = "All orders in December include a FREE sample of Ethiopian Yirgacheffe coffee!"
+    @classes="box-page"
+    render 'box'
   end
 
   # GET /products/new

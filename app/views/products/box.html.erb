@@ -1,0 +1,58 @@
+ <div class="row box-section box-hero">
+  <div class="large-4 large-offset-8 columns box-info">
+    <h3>The kit that <em>will</em> teach you how to pour better coffee than your friends.</h3>
+    <div class="divider"></div>
+    <p>Have a look at exactly what's in the Bonsai pour over coffee box, and see the setting of Josh's instructional videos that expertly guide you through the process.</p>
+    <%= button_to 'Start Brewing', line_items_path(product_id: @product), class: "check-out" %>
+  </div>
+</div>
+
+<div class="row box-section box-video-wrapper">
+  <div class="large-5 columns box-video-info">
+    <h3><em>Why</em> should you be using the pour over coffee method – isn't that for snobs?</h3>
+    <div class="divider"></div>
+    <ul>
+      <li>Pour over coffee isn’t for hipsters and coffee snobs, it’s for everyone, and it’s fun.</li>
+      <li>Pour over gives you complete control of exactly how your coffee tastes. You have never tasted coffee as good as your own pour over, <em>GUARANTEED.</em></li>
+      <li>Just for one day, forget your K-cup, or your pot of ill-extracted drip. And try your own hand pour over.</li>
+    </ul>
+  </div>
+  <div class="large-7 columns box-video">
+    <iframe src="//fast.wistia.net/embed/iframe/zfs1nbyaes?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="650" height="366"></iframe>
+    <script src='//fast.wistia.com/static/iframe-api-v1.js'></script>
+  </div>
+</div>
+
+<div class="row box-section why-help-wrapper">
+  <div class="large-7 columns box-photo">
+    <%= image_tag("kettle-pour.jpg", :alt => "kettle pour") %>
+  </div>
+  <div class="large-5 columns why-help">
+    <h3><em>Why</em> do I need help?</h3>
+    <div class="divider"></div>
+    <p>Don’t waste your time reading trillions of shitty coffee blogs from 2003 to learn how to make coffee. You’re going to need some help, so we’re providing a barista for you.</p>
+    <p>Insanely good coffee takes some specific knowledge and instruction. Don’t sell yourself short, let our expert barista show you everything you need to know. Videos included free with the box.</p>
+    <p>There’s nothing worse than a shitty cup of coffee, to spare you any hardship or anguish as we guide you through the process.</p>
+  </div>
+</div>
+
+<div class="row box-section why-this-box-wrapper">
+  <div class="large-5 columns why-this-box">
+    <h3><em>Why</em> this box?</h3>
+    <div class="divider"></div>
+    <p>If you bought all the stuff in this box yourself, it’s would easily cost $80 or more. Plus we put a professional barista IN YOUR KITCHEN with you to teach you the process.</p>
+    <p>The experts from Irving Farm Coffee Roasters and Bonsai tested and vetted everything in this kit for several months.</p>
+    <p>Guaran-fucking-teed, there is no better, faster, and easier way to learn to brew stupidly good coffee, and have fun doing it. The supplies in this box are world class, expert tested, and cheaper than you can get them anywhere else, period.</p>
+  </div>
+  <div class="large-7 columns box-photo">
+    <%= image_tag("full-box-items.jpg", :alt => "kettle pour") %>
+  </div>
+</div>
+
+<div class="row box-section lets-do-this">
+  <div class="large-12 columns">
+    <h3>Ok, Let's Do This.</h3>
+    <%= button_to 'Start Brewing', line_items_path(product_id: @product), class: "check-out" %>
+    <a class="md-trigger" data-id="1">I like my Dunkin' Donuts Coffee, but sign me up for updates about other boxes.</a>
+  </div>
+</div>

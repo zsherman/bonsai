@@ -1,0 +1,149 @@
+@import 'mixins';
+
+.box-page main {
+  background: #F4F3F1;
+  padding-bottom: 20px;
+
+  h3 {
+    font-family: "Brandon-Grotesque";
+  }
+
+  p, ul, li {
+    font-family: "Lato";
+    font-size: 16px;
+    letter-spacing: .5px;
+    line-height: 26px;
+  }
+
+  .check-out {
+    margin: 10px 0;
+    background: #3D938C;
+    background: #E85C41;
+    border: 1px solid #133734;
+    border-radius: 3px;
+    font-family: "Lato";
+    color: #fff;
+    text-decoration: none;
+    padding-top: 1rem;
+    padding-right: 6rem;
+    padding-bottom: 1.0625rem;
+    padding-left: 6rem;
+    font-size: 16px;
+
+    &:active {
+      outline: none;
+      background: #C94E36;
+    }
+  }
+
+  .box-section {
+    background: #fff;
+    padding: 0;
+    min-height: 300px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+  }
+
+  .box-hero {
+    margin-top: 20px;
+    padding: 0;
+    height: 450px;
+    background:
+        /* top, transparent red */
+        linear-gradient(
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.2)
+        ),
+        /* bottom, image */
+        image-url('sonny-2.jpg');
+    background-size: cover;
+  }
+
+  .box-info {
+    padding: 15px;
+    background: #fff;
+    margin-top: 20px;
+
+    h3 {
+      font-family: "Brandon-Grotesque";
+    }
+
+    p {
+      font-family: "Lato";
+      font-size: 16px;
+      letter-spacing: .5px;
+      line-height: 26px;
+    }
+
+  }
+
+  .divider {
+    border-top: 3px solid #333;
+    width: 30%;
+    margin: 20px 0;
+  }
+
+  .box-video-wrapper {
+    //margin-top: 20px;
+  }
+
+
+  .box-video {
+    padding: 10% 0 0 0;
+  }
+
+  .box-video-info {
+    padding: 25px;
+
+    ul {
+
+    }
+
+    li {
+      list-style-type: disc;
+      padding: 8px 0;
+    }
+
+
+  }
+
+  .why-help-wrapper {
+    .box-photo {
+      padding: 10% 20px 20px 20px;
+    }
+
+    .why-help {
+      padding: 20px;
+    }
+  }
+
+  .why-this-box-wrapper {
+
+    .why-this-box {
+      padding: 20px;
+    }
+
+    .box-photo {
+      padding: 20px;
+    }
+  }
+
+  .lets-do-this {
+    text-align: center;
+    padding: 50px;
+    min-height: auto;
+
+    h3 {
+      padding: 15px;
+    }
+
+    .md-trigger {
+      padding-top: 10px;
+      display: block;
+    }
+  }
+
+
+
+}
+
