@@ -23,6 +23,19 @@
   </div>
 </div>
 
+<div class="row box-section ingredients-wrapper">
+  <% @product.ingredients.each do |ing| %>
+    <div class="large-3 columns ingredient ">
+      <img src="<%= ing.image_url %>"/>
+      <div class="ingredient-description">
+        <h4><%= ing.name %></h4>
+        <div class="divider"></div>
+        <p><%= ing.description %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 <div class="row box-section why-help-wrapper">
   <div class="large-7 columns box-photo">
     <%= image_tag("kettle-pour.jpg", :alt => "kettle pour") %>

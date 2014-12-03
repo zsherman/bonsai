@@ -4,7 +4,7 @@
   background: #F4F3F1;
   padding-bottom: 20px;
 
-  h3 {
+  h3, h4 {
     font-family: "Brandon-Grotesque";
   }
 
@@ -40,7 +40,7 @@
     background: #fff;
     padding: 0;
     min-height: 300px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     position: relative;
   }
 
@@ -140,6 +140,34 @@
     .md-trigger {
       padding-top: 10px;
       display: block;
+    }
+  }
+
+  .ingredients-wrapper {
+
+    .ingredient {
+      padding: 0px;
+    }
+
+    .divider {
+      border-top: 3px solid #fff;
+      width: 30%;
+      margin: 20px 0;
+    }
+
+    .ingredient-description {
+      color: #fff;
+      background: #072B48;
+      padding: 12px;
+    }
+
+    .ingredient-description h4 {
+      color: #fff;
+    }
+
+    .ingredient-description p {
+      font-family: "Lato";
+      font-size: 13px;
     }
   }
 
