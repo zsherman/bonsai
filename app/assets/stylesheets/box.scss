@@ -140,6 +140,26 @@
 
   }
 
+  .faq {
+    min-height: auto;
+  }
+
+  .question {
+    padding: 30px;
+
+    .question-wrapper {
+      margin: 0 auto;
+      width: 220px;
+
+    }
+
+    li {
+      list-style-type: disc;
+      line-height: 35px;
+      font-family: "Lato";
+    }
+  }
+
   .why-this-box {
     padding: 20px;
   }
