@@ -480,3 +480,43 @@
   }
 
 }
+
+@media only screen and (max-width: 40em) {
+  #large-header {
+    height: 570px !important;
+    max-height: inherit !important;
+  }
+
+  .dark-overlay {
+    padding: 20px 0;
+  }
+
+  .video-modal {
+    width: 100%;
+
+    .video {
+      float: none;
+    }
+  }
+
+  .box-list .whats-in-the-box {
+    svg {
+      display: none;
+    }
+
+    ul li {
+      height: 200px;
+    }
+
+    ul li:nth-child(2) {
+      height: 160px;
+    }
+
+    .box-item-wrapper {
+      padding: 20px 0;
+    }
+  }
+  footer {
+    height: 420px !important;
+  }
+}
