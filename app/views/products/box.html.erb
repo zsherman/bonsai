@@ -1,9 +1,9 @@
  <div class="row box-section box-hero">
   <div class="large-4 large-offset-8 columns box-info">
-    <h3>Make the best cup of coffee you've <em>ever</em> tasted with our hands-on kit.</h3>
+    <h3>Make the best cup of coffee you've <em>ever</em> tasted with our hands-on kit - $65.00</h3>
     <div class="divider"></div>
     <p>The kit includes all the supplies required to brew delicious coffee, along with how-to guides from Irving Farm Coffee Roaster's Josh Littlefield.</p>
-    <%= button_to 'Start Brewing - $65.00', line_items_path(product_id: @product), class: "check-out" %>
+    <%= button_to 'Start Brewing', line_items_path(product_id: @product), class: "check-out" %>
   </div>
 </div>
 
@@ -47,7 +47,22 @@
   </div>
 </div>
 
+<div class="row box-section instructor-wrapper">
+  <div class="large-5 columns instructor-description">
+    <h3>Josh knows coffee</h3>
+    <div class="divider"></div>
+    <p>Don’t waste your time reading trillions of shitty coffee blogs from 2003 to learn how to make coffee. You’re going to need some help, so we’re providing a barista for you.</p>
+    <p>Insanely good coffee takes some specific knowledge and instruction. Don’t sell yourself short, let our expert barista show you everything you need to know. Videos included free with the box.</p>
+  </div>
+  <div class="large-7 columns instructor">
+    <%= image_tag("josh-grab.png", :alt => "josh littlefield") %>
+  </div>
+</div>
+
 <div class="row box-section box-video-wrapper">
+  <div class="large-7 columns box-photo">
+    <%= image_tag("full-box-items.jpg", :alt => "kettle pour") %>
+  </div>
   <div class="large-5 columns box-video-info">
     <h3><em>Why</em> should you be using the pour over coffee method – isn't that for snobs?</h3>
     <div class="divider"></div>
@@ -57,16 +72,13 @@
       <li>Just for one day, forget your K-cup, or your pot of ill-extracted drip. And try your own hand pour over.</li>
     </ul>
   </div>
-  <div class="large-7 columns box-photo">
-    <%= image_tag("full-box-items.jpg", :alt => "kettle pour") %>
-  </div>
 </div>
 
 
 <div class="row box-section lets-do-this">
   <div class="large-12 columns">
     <h3>Ok, Let's Do This.</h3>
-    <%= button_to 'Start Brewing - $65.00', line_items_path(product_id: @product), class: "check-out" %>
+    <%= button_to 'Start Brewing', line_items_path(product_id: @product), class: "check-out" %>
     <a class="md-trigger" data-id="1">I like my Dunkin' Donuts Coffee, but sign me up for updates about other boxes.</a>
   </div>
 </div>

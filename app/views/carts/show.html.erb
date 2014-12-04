@@ -31,7 +31,7 @@
       <%= @shopify_cart_url.html_safe %>
     </div>
 
-    <%# button_to 'Empty cart', @cart, :method => :delete,
+    <%= button_to 'Empty cart', @cart, class: "empty-cart", :method => :delete,
                 :confirm => 'Are you sure?' %>
   </div>
 </div>
