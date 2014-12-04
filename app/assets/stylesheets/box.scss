@@ -48,6 +48,9 @@
     margin-top: 20px;
     padding: 0;
     height: 450px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #212121;
+    border-bottom: 1px solid #EEE;
     background:
         /* top, transparent red */
         linear-gradient(
@@ -63,6 +66,8 @@
     padding: 15px;
     background: #fff;
     margin-top: 20px;
+    position: relative;
+    right: 15px;
 
     h3 {
       font-family: "Brandon-Grotesque";
@@ -73,6 +78,7 @@
       font-size: 16px;
       letter-spacing: .5px;
       line-height: 26px;
+      color: #444444;
     }
 
   }
@@ -108,24 +114,26 @@
   }
 
   .why-help-wrapper {
-    .box-photo {
-      padding: 10% 20px 20px 20px;
-    }
+  }
 
-    .why-help {
-      padding: 20px;
-    }
+  .box-photo {
+    padding: 10% 20px 20px 20px;
+  }
+
+  .why-help {
+    padding: 20px;
   }
 
   .why-this-box-wrapper {
 
-    .why-this-box {
-      padding: 20px;
-    }
+  }
 
-    .box-photo {
-      padding: 20px;
-    }
+  .why-this-box {
+    padding: 20px;
+  }
+
+  .box-photo {
+    padding: 20px;
   }
 
   .lets-do-this {
@@ -146,6 +154,7 @@
   .ingredients-wrapper {
 
     background: #072B48;
+    background: #B9C1C9;
 
     .ingredient {
       padding: 0px;
@@ -160,6 +169,7 @@
     .ingredient-description {
       color: #fff;
       background: #072B48;
+      background: #B9C1C9;
       padding: 12px;
     }
 

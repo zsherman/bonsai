@@ -84,6 +84,9 @@ section {
 
 .alert-box {
   margin: 0;
+  font-family: "brandon-grotesque";
+  font-size: 16px;
+  letter-spacing: .5px;
 }
 
 .alert-box.alert {
@@ -97,7 +100,10 @@ section {
   background: #00AEFF;
 }
 .alert-box.success {
-  background: #33C290;
+  background: #37B8B7;
+}
+.alert-box .close {
+  top: 55%;
 }
 .authform #error_explanation h2 {
   font-size: rem-calc(16);
