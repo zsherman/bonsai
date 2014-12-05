@@ -7,6 +7,7 @@ class Product < ActiveRecord::Base
   has_many :ingredients, through: :product_ingredients
   has_many :courses
   has_many :unlock_codes
+  has_many :variants
   before_destroy :ensure_not_referenced_by_any_line_item
   validates :shopify_variant_id, presence: true
 

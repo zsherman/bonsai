@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128231441) do
+ActiveRecord::Schema.define(version: 20141205183429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,9 +65,10 @@ ActiveRecord::Schema.define(version: 20141128231441) do
   create_table "line_items", force: true do |t|
     t.integer  "product_id"
     t.integer  "cart_id"
-    t.integer  "quantity",   default: 1
+    t.integer  "quantity",           default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "shopify_variant_id"
   end
 
   create_table "orders", force: true do |t|
@@ -146,6 +147,17 @@ ActiveRecord::Schema.define(version: 20141128231441) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "variants", force: true do |t|
+    t.integer  "product_id"
+    t.string   "shopify_variant_id"
+    t.decimal  "price"
+    t.string   "title"
+    t.string   "description"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "videos", force: true do |t|
     t.integer  "lesson_id"

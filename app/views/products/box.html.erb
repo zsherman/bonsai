@@ -1,9 +1,21 @@
  <div class="row box-section box-hero">
   <div class="large-4 large-offset-8 columns box-info">
-    <h3>Make the best cup of coffee you've <em>ever</em> tasted with our hands-on kit.</br><span><strike>Retail $90</strike>$65</span></h3>
+    <!-- <h3>Learn to make the best coffee you've ever tasted with an interactive kit.</br><span><strike>Retail $90</strike>$65</span></h3>
     <div class="divider"></div>
-    <p>Everything you need to brew coffeeshop level coffee at home, plus how-to videos from Irving Farm Coffee Roaster's expert barista.</p>
-    <%= button_to 'Start Brewing', line_items_path(product_id: @product), class: "check-out" %>
+    <p>Everything you need to brew coffeeshop level coffee at home, plus how-to videos from Irving Farm Coffee Roaster's expert barista.</p> -->
+    <%= simple_form_for(@line_item) do |f| %>
+      <% @product.variants.each do |variant| %>
+        <div class="product-variant">
+          <span><%= variant.title %></span>
+          <span><%= variant.description %></span>
+          <span><%= variant.price %></span>
+        </div>
+      <% end %>
+      <%= f.input :shopify_variant_id, as: :radio_buttons, collection: @product.variants.map(&:shopify_variant_id), checked: 2 %>
+      <%= f.input :product_id, as: :hidden, input_html: { value: @product.id } %>
+      <%#  'Start Brewing', line_items_path(product_id: @product, variant_id: ), class: "check-out" %>
+      <%= f.button :submit, class: "check-out" %>
+    <% end %>
   </div>
 </div>
 

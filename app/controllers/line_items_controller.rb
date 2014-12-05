@@ -25,8 +25,9 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     @cart = current_cart
-    product = Product.friendly.find(params[:product_id])
-    @line_item = @cart.add_product(product.id)
+    product = Product.friendly.find(params[:line_item][:product_id])
+    shopify_variant_id = params[:line_item][:shopify_variant_id]
+    @line_item = @cart.add_product(product.id, shopify_variant_id)
 
     respond_to do |format|
       if @line_item.save
@@ -73,6 +74,6 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:product_id, :cart_id) if params[:line_item]
+      params.require(:line_item).permit(:product_id, :cart_id, :shopify_variant_id) if params[:line_item]
     end
 end

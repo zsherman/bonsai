@@ -48,6 +48,7 @@
     margin-top: 20px;
     padding: 0 15px 0 0;
     height: 450px;
+    height: 800px;
     border-radius: 5px 5px 0 0;
     border: 1px solid #212121;
     border-bottom: 1px solid #EEE;
@@ -66,6 +67,7 @@
     padding: 15px;
     background: #fff;
     margin-top: 20px;
+
     h3 {
       font-family: "Brandon-Grotesque";
     }
@@ -84,6 +86,18 @@
 
     span {
       padding: 5px 0;
+    }
+
+    .product-variant {
+      background: #f7f7f7;
+      border: 1px solid #eee;
+      padding: 5px;
+      border-radius: 4px;
+
+      span {
+        display: block;
+        font-family: "Lato";
+      }
     }
 
   }

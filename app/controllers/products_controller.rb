@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
   def show
     flash.notice = "All orders in December include a FREE sample of Ethiopian Yirgacheffe coffee!"
     @classes="box-page"
+    @line_item = LineItem.new
     render 'box'
   end
 

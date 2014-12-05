@@ -5,23 +5,33 @@
       <p class="empty-cart-message">Your cart is empty</p>
     <% else %>
       <table>
-        <% @cart.line_items.each do |item| %>
-          <thead>
-            <tr>
-              <td>Item</td>
-              <td></td>
-              <td>Unit Price</td>
-              <td>Quantity</td>
-              <td>Total</td>
-            </tr>
-          </thead>
+        <thead>
           <tr>
-            <td class="item-image"><img src="<%= item.product.images.first.shopify_url %>" style="height: 100px; width: 100px;"/></td>
-            <td class="item-description"><%= item.product.title %></td>
-            <td class="item-price"><%= number_to_currency(item.product.price) %></td>
-            <td class="item-quantity"><%= item.quantity %>&times;</td>
-            <td class="item-total"><%= number_to_currency(item.quantity*item.product.price) %></td>
-            <!-- <td><%= button_to 'Remove item', item, :method => :delete %></td> -->
+            <td>Item</td>
+            <td></td>
+            <td>Unit Price</td>
+            <td>Quantity</td>
+            <td>Total</td>
+          </tr>
+        </thead>
+        <% @cart.line_items.each do |item| %>
+          <tr>
+            <% if item.shopify_variant_id != nil %>
+              <% variant = Variant.find_by_shopify_variant_id(item.shopify_variant_id) %>
+              <td class="item-image"><img src="<%= variant.image_url %>" style="height: 100px; width: 100px;"/></td>
+              <td class="item-description"><%= variant.title %></td>
+              <td class="item-price"><%= number_to_currency(variant.price) %></td>
+              <td class="item-quantity"><%= item.quantity %>&times;</td>
+              <td class="item-total"><%= number_to_currency(item.quantity*variant.price) %></td>
+              <!-- <td><%= button_to 'Remove item', item, :method => :delete %></td> -->
+            <% else %>
+              <td class="item-image"><img src="<%= item.product.images.first.shopify_url %>" style="height: 100px; width: 100px;"/></td>
+              <td class="item-description"><%= item.product.title %></td>
+              <td class="item-price"><%= number_to_currency(item.product.price) %></td>
+              <td class="item-quantity"><%= item.quantity %>&times;</td>
+              <td class="item-total"><%= number_to_currency(item.quantity*item.product.price) %></td>
+              <!-- <td><%= button_to 'Remove item', item, :method => :delete %></td> -->
+            <% end %>
           </tr>
         <% end %>
       </table>

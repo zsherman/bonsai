@@ -2,22 +2,28 @@ class Cart < ActiveRecord::Base
   has_many :line_items, :dependent => :destroy
   attr_accessor :shopify_cart_url
 
-  def add_product(product_id)
-    current_item = line_items.find_by_product_id(product_id)
+  def add_product(product_id, shopify_variant_id)
+    if(shopify_variant_id != nil)
+      current_item = line_items.find_by_shopify_variant_id(shopify_variant_id)
+    else
+      current_item = line_items.find_by_product_id(product_id)
+    end
     if current_item
       current_item.quantity += 1
     else
-      current_item = line_items.build(:product_id => product_id)
+      current_item = line_items.build(:product_id => product_id, :shopify_variant_id => shopify_variant_id)
     end
     current_item
   end
 
   def remove_product(product_id)
+    # todo handle variant id
     current_item = line_items.find_by_product_id(product_id)
     current_item.destroy
   end
 
   def decrement_product(product_id)
+    # todo handle variant id
   end
 
   def total_price
@@ -34,7 +40,7 @@ class Cart < ActiveRecord::Base
 
     # Add the info & quantity for each product
     line_items.each do |item|
-      url += item.product.shopify_variant_id.to_s
+      url += item.shopify_variant_id != nil ? item.shopify_variant_id.to_s : item.product.shopify_variant_id.to_s
       url += ":#{item.quantity.to_s},"
     end
 
