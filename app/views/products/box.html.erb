@@ -9,11 +9,10 @@
           <span><%= variant.title %></span>
           <span><%= variant.description %></span>
           <span><%= variant.price %></span>
+          <%= radio_button_tag(:shopify_variant_id, variant.shopify_variant_id) %>
         </div>
       <% end %>
-      <%= f.input :shopify_variant_id, as: :radio_buttons, collection: @product.variants.map(&:shopify_variant_id), checked: 2 %>
       <%= f.input :product_id, as: :hidden, input_html: { value: @product.id } %>
-      <%#  'Start Brewing', line_items_path(product_id: @product, variant_id: ), class: "check-out" %>
       <%= f.button :submit, class: "check-out" %>
     <% end %>
   </div>
