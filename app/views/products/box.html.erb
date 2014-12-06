@@ -11,16 +11,18 @@
         <div class="large-12 columns why-this-box">
           <h3><em>Why</em> Bonsai?</h3>
           <div class="divider"></div>
-          <p>Fastest, easiest, and most fun way to learn an interesting skill, become a coffee whiz, and brew crazy good cups at home.</p>
-          <p>Cost effective. You’ll brew $5 cups of coffee for $0.20 cents, every day.</p>
-          <p>Irving Farm’s expert barista shares everything you need to know in how-to videos.</p>
+          <ul>
+            <li>It's the fastest, easiest, and most fun way to learn an interesting skill, become a coffee whiz, and brew crazy good cups at home.</li>
+            <li>Cost effective. You’ll brew $5 cups of coffee for $0.20 cents, every day.</li>
+            <li>Irving Farm’s expert barista shares everything you need to know in how-to videos.</li>
+          </ul>
         </div>
         <div class="large-12 columns box-video">
           <%= image_tag("sonny-2.jpg", :alt => "pour over coffee") %>
         </div>
 
       <% @product.ingredients.each do |ing| %>
-        <div class="large-3 columns ingredient ">
+        <div class="large-<%= 12/@product.ingredients.length %> columns ingredient">
           <img src="<%= ing.image_url %>"/>
           <div class="ingredient-description">
             <h4><%= ing.name %></h4>
@@ -64,51 +66,53 @@
           </ul>
         </div>
 
-        <div class="large-6 columns question">
-          <div class="question-wrapper">
-            <h3>Who it's for:</h3>
-            <ul>
-              <li>Foodies</li>
-              <li>Coffee <strike>Addicts</strike> Lovers</li>
-              <li>Hobbyists, DIY’ers, Crafty People</li>
-              <li>Beginners</li>
-              <li>Morning Sippers, Afternoon Fiends</li>
-            </ul>
+        <div class="faq clearfix">
+          <div class="large-4 columns question">
+            <div class="question-wrapper">
+              <h3>Who it's for:</h3>
+              <ul>
+                <li>Foodies</li>
+                <li>Coffee <strike>Addicts</strike> Lovers</li>
+                <li>Hobbyists, DIY’ers, Crafty People</li>
+                <li>Beginners</li>
+                <li>Morning Sippers, Afternoon Fiends</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="large-4 columns question">
+            <div class="question-wrapper">
+              <h3>What you'll get:</h3>
+              <ul>
+                <li>Stainless Steel Yami Kettle</li>
+                <li>Irving Farm Guadalupe Coffee</li>
+                <li>Ceramic Pour Over Dripper</li>
+                <li>Premium Micro-perforated Filters</li>
+                <li>Sample of Ethiopian Yirgacheffe Coffee</li>
+                <li>Mobile-Friendly, Short, Expert Videos</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="large-4 columns question">
+            <div class="question-wrapper">
+              <h3>What you'll learn:</h3>
+              <ul>
+                <li>Water Control, Pouring Skills</li>
+                <li>The Bloom, Preparation</li>
+                <li>Ideal Extraction</li>
+                <li>How to Taste and Correct Your Brewing</li>
+                <li>Grind Size, and Tons More!</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="large-6 columns question">
-          <div class="question-wrapper">
-            <h3>What you'll get:</h3>
-            <ul>
-              <li>Stainless Steel Yami Kettle</li>
-              <li>Irving Farm Guadalupe Coffee</li>
-              <li>Ceramic Pour Over Dripper</li>
-              <li>Premium Micro-perforated Filters</li>
-              <li>Sample of Ethiopian Yirgacheffe Coffee</li>
-              <li>Mobile-Friendly, Short, Expert Videos</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="large-6 columns question">
-          <div class="question-wrapper">
-            <h3>What you'll learn:</h3>
-            <ul>
-              <li>Water Control, Pouring Skills</li>
-              <li>The Bloom, Preparation</li>
-              <li>Ideal Extraction</li>
-              <li>How to Taste and Correct Your Brewing</li>
-              <li>Grind Size, and Tons More!</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="large-12 columns" style="height: 400px">
-          <!-- <h3>Ok, Let's Do This.</h3>
+        <!-- <div class="large-12 columns" style="height: 400px">
+          <h3>Ok, Let's Do This.</h3>
           <%= button_to 'Start Brewing', line_items_path(product_id: @product), class: "check-out" %>
-          <a class="md-trigger" data-id="1">I like my Dunkin' Donuts Coffee, but sign me up for updates about other boxes.</a> -->
-        </div>
+          <a class="md-trigger" data-id="1">I like my Dunkin' Donuts Coffee, but sign me up for updates about other boxes.</a>
+        </div> -->
 
   </div>
   <div class="large-4 medium-12 columns box-info">
