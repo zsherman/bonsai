@@ -19,6 +19,7 @@
 //= require walkway
 //= require happy
 //= require course
+//= require scrollspy
 //= require_tree .
 $(function() {
   // Initialize foundation

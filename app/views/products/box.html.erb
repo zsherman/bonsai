@@ -1,6 +1,118 @@
+<!--  <div class="row">
+   <div class="large-8 columns"></div>
+ </div> -->
  <div class="row box-section box-hero">
-  <div class="large-4 large-offset-8 columns box-info">
-    <h3>Learn to make the best coffee you've ever tasted with an interactive kit.</h3>
+    <div class="large-8 columns box-media left-wrapper">
+      <div class="box-video-wrapper">
+        <iframe src="//fast.wistia.net/embed/iframe/zfs1nbyaes?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="650" height="366"></iframe>
+      </div>
+      <script src='//fast.wistia.com/static/iframe-api-v1.js'></script>
+
+        <div class="large-12 columns why-this-box">
+          <h3><em>Why</em> Bonsai?</h3>
+          <div class="divider"></div>
+          <p>Fastest, easiest, and most fun way to learn an interesting skill, become a coffee whiz, and brew crazy good cups at home.</p>
+          <p>Cost effective. You’ll brew $5 cups of coffee for $0.20 cents, every day.</p>
+          <p>Irving Farm’s expert barista shares everything you need to know in how-to videos.</p>
+        </div>
+        <div class="large-12 columns box-video">
+          <%= image_tag("sonny-2.jpg", :alt => "pour over coffee") %>
+        </div>
+
+      <% @product.ingredients.each do |ing| %>
+        <div class="large-3 columns ingredient ">
+          <img src="<%= ing.image_url %>"/>
+          <div class="ingredient-description">
+            <h4><%= ing.name %></h4>
+            <div class="divider"></div>
+            <p><%= ing.description %></p>
+          </div>
+        </div>
+      <% end %>
+
+        <div class="large-12 columns box-photo">
+          <%= image_tag("kettle-pour.jpg", :alt => "kettle pour") %>
+        </div>
+        <div class="large-12 columns why-help">
+          <h3><em>What</em> do I need to learn?</h3>
+          <div class="divider"></div>
+          <p>Coffee takes specific knowledge to do correctly. From water control, to fixing bitterness or sourness, to blooming your grinds, and much more.</p>
+          <p>Let expert barista, Josh Littlefield, teach you everything you need to know. Videos included with the box.</p>
+        </div>
+
+        <div class="large-12 columns instructor-description">
+          <h3>Meet Josh! He’s a real pro.</h3>
+          <div class="divider"></div>
+          <p>Josh Littlefield is the Director of Education for Irving Farm Coffee Roasters. He trains their baristas and competes nationally. </p>
+          <p>He joined Bonsai to make this the best coffee brewing experience possible.</p>
+          <p>He’s your expert barista in a box!</p>
+        </div>
+        <div class="large-12 columns instructor">
+          <%= image_tag("josh-grab.png", :alt => "josh littlefield") %>
+        </div>
+
+        <div class="large-12 columns box-photo">
+          <%= image_tag("full-box-items.jpg", :alt => "kettle pour") %>
+        </div>
+        <div class="large-12 columns box-video-info">
+          <h3><em>Why</em> learn the pour over method – isn't that for snobs?</h3>
+          <div class="divider"></div>
+          <ul>
+            <li>Hand pour over gives you the ultimate control over your brew - you’ll taste the difference, guaranteed.</li>
+            <li>It’s a historical tradition and fun skill to learn - lots of new coffee knowledge!</li>
+            <li>Impress yourself and everyone else with your barista-caliber cuppings.</li>
+          </ul>
+        </div>
+
+        <div class="large-6 columns question">
+          <div class="question-wrapper">
+            <h3>Who it's for:</h3>
+            <ul>
+              <li>Foodies</li>
+              <li>Coffee <strike>Addicts</strike> Lovers</li>
+              <li>Hobbyists, DIY’ers, Crafty People</li>
+              <li>Beginners</li>
+              <li>Morning Sippers, Afternoon Fiends</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="large-6 columns question">
+          <div class="question-wrapper">
+            <h3>What you'll get:</h3>
+            <ul>
+              <li>Stainless Steel Yami Kettle</li>
+              <li>Irving Farm Guadalupe Coffee</li>
+              <li>Ceramic Pour Over Dripper</li>
+              <li>Premium Micro-perforated Filters</li>
+              <li>Sample of Ethiopian Yirgacheffe Coffee</li>
+              <li>Mobile-Friendly, Short, Expert Videos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="large-6 columns question">
+          <div class="question-wrapper">
+            <h3>What you'll learn:</h3>
+            <ul>
+              <li>Water Control, Pouring Skills</li>
+              <li>The Bloom, Preparation</li>
+              <li>Ideal Extraction</li>
+              <li>How to Taste and Correct Your Brewing</li>
+              <li>Grind Size, and Tons More!</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="large-12 columns" style="height: 400px">
+          <!-- <h3>Ok, Let's Do This.</h3>
+          <%= button_to 'Start Brewing', line_items_path(product_id: @product), class: "check-out" %>
+          <a class="md-trigger" data-id="1">I like my Dunkin' Donuts Coffee, but sign me up for updates about other boxes.</a> -->
+        </div>
+
+  </div>
+  <div class="large-4 medium-12 columns box-info">
+    <h3>Learn to make the best coffee you've ever tasted with our interactive kit.</h3>
     <div class="divider"></div>
     <p>Everything you need to brew coffeeshop level coffee at home, plus how-to videos from Irving Farm Coffee Roaster's expert barista.</p>
     <%= simple_form_for(@line_item) do |f| %>
@@ -11,7 +123,7 @@
           </div>
           <div class="variant-info">
             <span><%= variant.title %></span>
-            <span><%= variant.description %></span>
+            <!-- <span><%= variant.description %></span> -->
           </div>
           <div class="price-wrapper">
             <span class="price"><%= number_to_currency(variant.price, precision: 0) %></span>
@@ -19,122 +131,8 @@
         </div>
       <% end %>
       <%= f.input :product_id, as: :hidden, input_html: { value: @product.id } %>
-      <%= f.button :submit, class: "check-out" %>
+      <%= f.button :submit, 'Add to Cart', class: "check-out" %>
     <% end %>
   </div>
-</div>
 
-<div class="row box-section why-this-box-wrapper">
-  <div class="large-5 columns why-this-box">
-    <h3><em>Why</em> Bonsai?</h3>
-    <div class="divider"></div>
-    <p>Fastest, easiest, and most fun way to learn an interesting skill, become a coffee whiz, and brew crazy good cups at home.</p>
-    <p>Cost effective. You’ll brew $5 cups of coffee for $0.20 cents, every day.</p>
-    <p>Irving Farm’s expert barista shares everything you need to know in how-to videos.</p>
-  </div>
-  <div class="large-7 columns box-video">
-    <iframe src="//fast.wistia.net/embed/iframe/zfs1nbyaes?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="650" height="366"></iframe>
-    <script src='//fast.wistia.com/static/iframe-api-v1.js'></script>
-  </div>
-</div>
-
-<div class="row box-section ingredients-wrapper">
-  <% @product.ingredients.each do |ing| %>
-    <div class="large-3 columns ingredient ">
-      <img src="<%= ing.image_url %>"/>
-      <div class="ingredient-description">
-        <h4><%= ing.name %></h4>
-        <div class="divider"></div>
-        <p><%= ing.description %></p>
-      </div>
-    </div>
-  <% end %>
-</div>
-
-<div class="row box-section why-help-wrapper">
-  <div class="large-7 columns box-photo">
-    <%= image_tag("kettle-pour.jpg", :alt => "kettle pour") %>
-  </div>
-  <div class="large-5 columns why-help">
-    <h3><em>What</em> do I need to learn?</h3>
-    <div class="divider"></div>
-    <p>Coffee takes specific knowledge to do correctly. From water control, to fixing bitterness or sourness, to blooming your grinds, and much more.</p>
-    <p>Let expert barista, Josh Littlefield, teach you everything you need to know. Videos included with the box.</p>
-  </div>
-</div>
-
-<div class="row box-section instructor-wrapper">
-  <div class="large-5 columns instructor-description">
-    <h3>Meet Josh! He’s a real pro.</h3>
-    <div class="divider"></div>
-    <p>Josh Littlefield is the Director of Education for Irving Farm Coffee Roasters. He trains their baristas and competes nationally. </p>
-    <p>He joined Bonsai to make this the best coffee brewing experience possible.</p>
-    <p>He’s your expert barista in a box!</p>
-  </div>
-  <div class="large-7 columns instructor">
-    <%= image_tag("josh-grab.png", :alt => "josh littlefield") %>
-  </div>
-</div>
-
-<div class="row box-section box-video-wrapper">
-  <div class="large-7 columns box-photo">
-    <%= image_tag("full-box-items.jpg", :alt => "kettle pour") %>
-  </div>
-  <div class="large-5 columns box-video-info">
-    <h3><em>Why</em> learn the pour over method – isn't that for snobs?</h3>
-    <div class="divider"></div>
-    <ul>
-      <li>Hand pour over gives you the ultimate control over your brew - you’ll taste the difference, guaranteed.</li>
-      <li>It’s a historical tradition and fun skill to learn - lots of new coffee knowledge!</li>
-      <li>Impress yourself and everyone else with your barista-caliber cuppings.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="row box-section faq">
-  <div class="large-4 columns question">
-    <div class="question-wrapper">
-      <h3>Who it's for:</h3>
-      <ul>
-        <li>Foodies</li>
-        <li>Coffee <strike>Addicts</strike> Lovers</li>
-        <li>Hobbyists, DIY’ers, Crafty People</li>
-        <li>Beginners</li>
-        <li>Morning Sippers, Afternoon Fiends</li>
-      </ul>
-    </div>
-  </div>
-  <div class="large-4 columns question">
-    <div class="question-wrapper">
-      <h3>What you'll get:</h3>
-      <ul>
-        <li>Stainless Steel Yami Kettle</li>
-        <li>Irving Farm Guadalupe Coffee</li>
-        <li>Ceramic Pour Over Dripper</li>
-        <li>Premium Micro-perforated Filters</li>
-        <li>Sample of Ethiopian Yirgacheffe Coffee</li>
-        <li>Mobile-Friendly, Short, Expert Videos</li>
-      </ul>
-    </div>
-  </div>
-  <div class="large-4 columns question">
-    <div class="question-wrapper">
-      <h3>What you'll learn:</h3>
-      <ul>
-        <li>Water Control, Pouring Skills</li>
-        <li>The Bloom, Preparation</li>
-        <li>Ideal Extraction</li>
-        <li>How to Taste and Correct Your Brewing</li>
-        <li>Grind Size, and Tons More!</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="row box-section lets-do-this">
-  <div class="large-12 columns">
-    <h3>Ok, Let's Do This.</h3>
-    <%= button_to 'Start Brewing', line_items_path(product_id: @product), class: "check-out" %>
-    <a class="md-trigger" data-id="1">I like my Dunkin' Donuts Coffee, but sign me up for updates about other boxes.</a>
-  </div>
 </div>
