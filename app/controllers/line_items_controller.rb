@@ -26,8 +26,8 @@ class LineItemsController < ApplicationController
   def create
     @cart = current_cart
     product = Product.friendly.find(params[:line_item][:product_id])
-    shopify_variant_id = params[:line_item][:shopify_variant_id]
-    @line_item = @cart.add_product(product.id, shopify_variant_id)
+    variant = Variant.find_by_shopify_variant_id(params[:shopify_variant_id])
+    @line_item = @cart.add_product(product.id, variant.id)
 
     respond_to do |format|
       if @line_item.save

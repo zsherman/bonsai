@@ -16,15 +16,15 @@
         </thead>
         <% @cart.line_items.each do |item| %>
           <tr>
-            <% if item.shopify_variant_id != nil %>
-              <% variant = Variant.find_by_shopify_variant_id(item.shopify_variant_id) %>
-              <td class="item-image"><img src="<%= variant.image_url %>" style="height: 100px; width: 100px;"/></td>
-              <td class="item-description"><%= variant.title %></td>
-              <td class="item-price"><%= number_to_currency(variant.price) %></td>
+            <% if item.variant != nil %>
+              <td class="item-image"><img src="<%= item.variant.image_url %>" style="height: 100px; width: 100px;"/></td>
+              <td class="item-description"><%= item.variant.title %></td>
+              <td class="item-price"><%= number_to_currency(item.variant.price) %></td>
               <td class="item-quantity"><%= item.quantity %>&times;</td>
-              <td class="item-total"><%= number_to_currency(item.quantity*variant.price) %></td>
+              <td class="item-total"><%= number_to_currency(item.quantity*item.variant.price) %></td>
               <!-- <td><%= button_to 'Remove item', item, :method => :delete %></td> -->
             <% else %>
+            <h3><%=item.product.shopify_variant_id%></h3>
               <td class="item-image"><img src="<%= item.product.images.first.shopify_url %>" style="height: 100px; width: 100px;"/></td>
               <td class="item-description"><%= item.product.title %></td>
               <td class="item-price"><%= number_to_currency(item.product.price) %></td>
