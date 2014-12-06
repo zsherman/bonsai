@@ -120,7 +120,7 @@
     <div class="divider"></div>
     <p>Everything you need to brew coffeeshop level coffee at home, plus how-to videos from Irving Farm Coffee Roaster's expert barista.</p>
     <%= simple_form_for(@line_item) do |f| %>
-      <% @product.variants.reverse.each do |variant| %>
+      <% @product.variants.sort_by{|variant| variant.price}.each do |variant| %>
         <div class="product-variant clearfix">
           <div class="input-wrapper">
             <%= radio_button_tag(:shopify_variant_id, variant.shopify_variant_id, checked: true) %>
