@@ -7,6 +7,7 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def show?
+    return false unless !current_user.blank?
     @current_user.admin? or @course.unlocked?(@current_user)
   end
 
