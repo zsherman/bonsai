@@ -49,7 +49,7 @@ class Cart < ActiveRecord::Base
     url += current_cart ? "&attributes[cart_id]=#{current_cart.id.to_s}" : ""
 
     # Format and return the final url
-    shopify_cart_url = "<a href=#{url}>Check Out</a>"
+    shopify_cart_url = "<a class='cart-check-out' href=#{url}>Check Out</a>"
   end
 
 end

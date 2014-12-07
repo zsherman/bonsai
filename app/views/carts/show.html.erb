@@ -1,6 +1,6 @@
 <div class="row">
   <div class="large-12 small-12 columns cart">
-    <div class="cart-title">Your Cart</div>
+    <div class="cart-title">Your Cart <%= button_to 'Empty cart', @cart, class: "empty-cart", :method => :delete, :confirm => 'Are you sure?' %></div>
     <% if @cart.line_items.empty? %>
       <p class="empty-cart-message">Your cart is empty</p>
     <% else %>
@@ -41,7 +41,9 @@
       <%= @shopify_cart_url.html_safe %>
     </div>
 
-    <%= button_to 'Empty cart', @cart, class: "empty-cart", :method => :delete,
-                :confirm => 'Are you sure?' %>
+    <div class="gift-options">
+      <p>Is this a gift?</p>
+      <textarea cols="40" rows="5" placeholder="Enter a message to be delivered with your box"></textarea>
+    </div>
   </div>
 </div>

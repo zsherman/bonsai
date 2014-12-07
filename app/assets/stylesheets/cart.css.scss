@@ -13,6 +13,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 15px 0;
+    position: relative;
   }
 
   .empty-cart {
@@ -23,6 +24,11 @@
     color: #333;
     font-family: "Lato";
     outline: none;
+    position: absolute;
+    right: 0;
+    top: 14px;
+    font-size: 11px;
+    cursor: pointer;
   }
 
   table {
@@ -107,5 +113,18 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
+  }
+
+}
+
+.gift-options {
+  float: left;
+  border: 1px solid #eee;
+  padding: 20px;
+  width: 342px;
+  margin: 10px 0;
+
+  textarea {
+    width: 300px;
   }
 }
