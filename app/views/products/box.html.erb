@@ -128,7 +128,7 @@
           </div>
           <div class="variant-info">
             <span><%= variant.title %></span>
-            <!-- <span><%= variant.description %></span> -->
+            <span class="variant-description"><%= variant.description %></span>
           </div>
           <div class="price-wrapper">
             <span class="price"><%= number_to_currency(variant.price, precision: 0) %></span>
@@ -136,7 +136,7 @@
         </div>
       <% end %>
       <%= f.input :product_id, as: :hidden, input_html: { value: @product.id } %>
-      <%= f.button :submit, 'Add to Cart', class: "check-out" %>
+      <%= f.button :submit, 'Start Brewing', class: "check-out" %>
     <% end %>
   </div>
 

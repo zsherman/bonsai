@@ -105,7 +105,7 @@
       position: fixed;
       top: 15px;
       width: 332px;
-      margin-left: 667px !important;
+      margin-left: 666.5px !important;
       z-index: 1000;
     }
 
@@ -154,8 +154,15 @@
       span {
         display: block;
         font-family: "Lato";
-        padding: 17px;
+        padding: 7px 17px 0 17px;
         float: left;
+      }
+
+      .variant-description {
+        font-size: 11px;
+        color: #1D98D4;
+        padding-top: 3px;
+        padding-bottom: 3px;
       }
 
       input {
