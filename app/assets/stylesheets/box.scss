@@ -236,6 +236,27 @@
   }
 
   .box-photo {
+    height: 400px;
+    padding: 0;
+    background:
+            /* top, transparent red */
+            linear-gradient(
+              rgba(0, 0, 0, 0.4),
+              rgba(0, 0, 0, 0.7)
+            ),
+            /* bottom, image */
+            image-url('kettle-pour.jpg');
+    background-size: cover;
+
+    p {
+      @include vertical-align;
+      position: absolute;
+      color: #fff;
+      font-size: 54px;
+      line-height: 79px;
+      padding: 30px 30px 30px 35px;
+      font-family: "Merriweather";
+    }
   }
 
   .why-help {
