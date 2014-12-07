@@ -121,10 +121,16 @@
   float: left;
   border: 1px solid #eee;
   padding: 20px;
-  width: 342px;
+  width: 60%;
   margin: 10px 0;
 
   textarea {
-    width: 300px;
+
   }
 }
+
+@media only screen and (max-width: 40em) {
+    .gift-options {
+      width: 100%;
+    }
+  }
