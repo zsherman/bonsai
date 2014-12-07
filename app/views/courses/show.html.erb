@@ -6,15 +6,13 @@
   wistiaEmbeds.onFind(function(video) {
     video.videoFoam(true);
   });
-
-  console.log(course);
 </script>
 
 <div class="course-page">
   <div id="wrapper">
       <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
-              <% @course.lessons.each do |l| %>
+              <% @lessons.each do |l| %>
                 <li class="lesson" data-lesson-id="<%= l.id %>" data-video-url="<%= l.video.url %>" data-lesson-title="<%= l.name %>" data-video-content="<%= l.video.content %>">
                   <span class="course-name"><%= @course.title %></span>
                   <span class="lesson-name"><%= l.name %></span>
@@ -34,8 +32,8 @@
                             <!-- Wistia video gets inserted here -->
                           </div>
                           <div class="large-12 columns description-container">
-                            <h3><%= @course.lessons.first.name %></h3>
-                            <p><%= @course.lessons.first.video.content %></p>
+                            <h3><%= @lessons.first.name %></h3>
+                            <p><%= @lessons.first.video.content %></p>
                           </div>
                           <!-- Video Here -->
                           <!-- Content Here -->

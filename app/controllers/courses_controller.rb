@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
   # GET /courses/1.json
   def show
     authorize @course
+    @lessons = @course.lessons.sort_by{|lesson| lesson.order}
     @header = false
     @footer = false;
     @classes = "course-show-page"
