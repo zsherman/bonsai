@@ -20,6 +20,7 @@
 //= require happy
 //= require course
 //= require scrollspy
+//= require jquery.ajaxchimp
 //= require_tree .
 $(function() {
   // Initialize foundation
@@ -92,5 +93,50 @@ $(function() {
       onInit: function(){},
       onComplete: function(){}
   });
+
+
+  if($('#mc-embedded-subscribe-form').length > 0) {
+
+    $('#mc-embedded-subscribe-form').scrollspy({
+        min: $('footer').offset().top-500,
+        max: 99999,
+        onEnter: function(element, position) {
+          $('.email-modal-wrapper .md-trigger').click();
+        },
+        onLeave: function(element, position) {
+
+        }
+    });
+
+    $('#mc-embedded-subscribe-form').ajaxChimp();
+  }
+
+  if($('.catalogue-page').length > 0) {
+
+    $('#mc-embedded-subscribe-form').scrollspy({
+        min: $('footer').offset().top-500,
+        max: 99999,
+        onEnter: function(element, position) {
+          $('.email-modal-wrapper .md-trigger').click();
+        },
+        onLeave: function(element, position) {
+
+        }
+    });
+
+    function removeEmailModal(resp) {
+      if (resp.result === 'success') {
+        console.log("success")
+        setTimeout(function(e) {
+          $('.email-modal-wrapper').remove();
+          $('.md-overlay').hide();
+        }, 3000);
+      }
+    }
+
+    $('#mc-embedded-subscribe-form').ajaxChimp({
+      callback: removeEmailModal
+    });
+  }
 
 });

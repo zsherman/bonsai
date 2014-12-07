@@ -72,6 +72,34 @@ html, body {height: 100%;}
   display: block;
 }
 
+.email-modal {
+
+  h2 {
+    padding: 15px 5px 0 10px;
+    font-family: "Brandon-Grotesque";
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  input[type="email"] {
+    padding: 1.5rem;
+  }
+
+  label {
+    padding: 0 10px 10px 10px;
+    display: none;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    background: #37B8B7;
+    font-family: "Lato";
+  }
+
+}
+
 footer, .page-wrap:after {
   height: 250px;
 }
