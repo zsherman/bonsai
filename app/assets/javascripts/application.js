@@ -130,7 +130,7 @@ $(function() {
         setTimeout(function(e) {
           $('.email-modal-wrapper').remove();
           $('.md-overlay').hide();
-        }, 3000);
+        }, 3500);
       }
     }
 
