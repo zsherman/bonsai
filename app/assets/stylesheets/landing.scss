@@ -368,6 +368,22 @@
 
 }
 
+.home-products {
+  .catalogue-product {
+    @include product-card;
+  }
+
+  .catalogue-product .product-image.coffee {
+    background: image-url('box-shot.jpg');
+    background-size: cover;
+  }
+
+  .catalogue-product .product-image.fly-fishing {
+    background: image-url('bartender.jpg');
+    background-size: cover;
+  }
+}
+
 .testimonials {
   border-bottom: 1px solid #ddd;
   background: #f7f7f7;
