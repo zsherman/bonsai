@@ -22,7 +22,11 @@ class UnlockCodesController < ApplicationController
   end
 
   def unlock
-    @classes = "unlock-page"
+    if current_user == nil
+      redirect_to new_user_registration_path, notice: "Please sign up before unlocking so we can add that course to your account."
+    else
+      @classes = "unlock-page"
+    end
   end
 
   def validate_code
