@@ -22,6 +22,7 @@
 //= require scrollspy
 //= require jquery.ajaxchimp
 //= require cart
+//= require analytics
 //= require_tree .
 $(function() {
   // Initialize foundation

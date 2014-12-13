@@ -23,6 +23,8 @@ class @GoogleAnalytics
       ), true
     else
       GoogleAnalytics.trackPageview()
+      GoogleAnalytics.trackAddToCart()
+      GoogleAnalytics.trackEmptyCart()
 
   @trackPageview: (url) ->
     unless GoogleAnalytics.isLocalRequest()
@@ -31,6 +33,32 @@ class @GoogleAnalytics
       else
         window._gaq.push ["_trackPageview"]
       window._gaq.push ["_trackPageLoadTime"]
+
+  @trackAddToCart: () ->
+    unless GoogleAnalytics.isLocalRequest()
+      $(document).on('click', '.check-out', ( ->
+        window._gaq.push ['_trackEvent', 'cart', 'added']
+      ));
+
+  @trackEmptyCart: () ->
+    unless GoogleAnalytics.isLocalRequest()
+      # on click
+      $(document).on('click', '.empty-cart', ( ->
+        window._gaq.push ['_trackEvent', 'cart', 'empty']
+      ));
+
+  @trackCheckOut: () ->
+    unless GoogleAnalytics.isLocalRequest()
+      $(document).on('click', '.cart-check-out', ( ->
+        window._gaq.push ['_trackEvent', 'Cart', 'check-out']
+      ));
+
+  @trackAddToCart: (url) ->
+    unless GoogleAnalytics.isLocalRequest()
+      if url
+        window._gaq.push ["_addToCart", url]
+      else
+        window._gaq.push ["_addToCart"]
 
   @isLocalRequest: ->
     GoogleAnalytics.documentDomainIncludes "local"
