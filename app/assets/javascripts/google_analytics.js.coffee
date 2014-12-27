@@ -42,7 +42,6 @@ class @GoogleAnalytics
 
   @trackEmptyCart: () ->
     unless GoogleAnalytics.isLocalRequest()
-      # on click
       $(document).on('click', '.empty-cart', ( ->
         window._gaq.push ['_trackEvent', 'cart', 'empty']
       ));

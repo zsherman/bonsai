@@ -4,7 +4,11 @@ class LineItem < ActiveRecord::Base
   belongs_to :variant
 
   def total_price
-    product.price * quantity
+    if variant != nil
+      variant.price * quantity
+    else
+      product.price * quantity
+    end
   end
 
 end
