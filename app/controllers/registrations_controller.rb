@@ -24,6 +24,13 @@ class RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  protected
+
+  def after_sign_up_path_for(resource)
+    flash.notice = "Your account is saved! Try the coffee brewing kit to get the full Bonsai experience."
+    '/products/coffee-box'
+  end
+
   private
 
   def sign_up_params
