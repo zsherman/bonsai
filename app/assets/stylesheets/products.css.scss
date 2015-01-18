@@ -240,7 +240,10 @@
   }
 
   .ingredients img {
-
+    height: 150px;
+    width: 150px;
+    float: left;
+    padding-right: 20px;
   }
 
   .ingredients h1 {
@@ -252,17 +255,27 @@
     width: 60%;
     text-align: center;
     margin: 0 auto;
+    padding-bottom: 20px;
   }
 
-  .ingredients p {
+  .ingredient {
+    padding-top: 20px;
+  }
+
+  .ingredient h3 {
+    font-family: ProximaNova-Semibold;
+    font-size: 18px;
+    color: #191919;
+    line-height: 21px;
+    letter-spacing: 0px;
+  }
+
+  .ingredient p {
     font-family: ProximaNova-Regular;
     font-size: 16px;
     color: #5A5A5A;
     line-height: 25px;
   }
-
-
-
 
 
 }
