@@ -1,5 +1,5 @@
 @import 'mixins';
-
+@import 'fonts';
 .product-page {
 
   .product-hero-wrap {
@@ -7,7 +7,7 @@
   }
 
   .product-hero {
-    height: 500px;
+    height: 515px;
   }
 
   .product-hero-image {
@@ -48,14 +48,16 @@
 
     span {
       display: block;
-      font-family: "Lato";
+      font-family: "Brandon-Grotesque";
       padding: 7px 17px 0 17px;
       float: left;
+      font-size: 15px;
+      color: #7D7D7D;
     }
 
     .variant-description {
-      font-size: 11px;
-      color: #1D98D4;
+      font-size: 12px;
+      color: #B6B6B6;
       padding-top: 3px;
       padding-bottom: 3px;
     }
@@ -91,6 +93,174 @@
       position: relative;
     }
   }
+
+  .product-hero-info .check-out {
+    outline: none;
+    background: #000;
+    border-radius: 0;
+    color: #fff;
+    width: 100%;
+  }
+
+  .about-this-box {
+    padding: 40px 0;
+  }
+
+  .about-this-box-description {
+    padding: 0 20px;
+
+    h2 {
+      font-family: $lato;
+      font-size: 32px;
+      color: #324141;
+      line-height: 42px;
+      letter-spacing: 1px;
+      font-family: ProximaNova-Bold;
+    }
+
+    .sub-header {
+      font-family: $lato;
+      font-size: 16px;
+      color: #9FAEAE;
+      line-height: 27px;
+    }
+
+    blockquote {
+      font-family: Adelle-Italic;
+      font-size: 15px;
+      color: #959595;
+      line-height: 26px;
+      letter-spacing: 0px;
+    }
+
+    p.description {
+      font-family: Adelle-Light;
+      font-size: 15px;
+      color: #454545;
+      line-height: 26px;
+      letter-spacing: 0px;
+    }
+  }
+
+  .about-this-box-image {
+    height: 470px;
+    background: image-url('product/matcha-set.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .large-product-image {
+    height: 500px;
+    background: image-url('product/large-set.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .syllabus {
+    border-bottom: 1px solid #E2E2E2;
+    padding: 40px;
+  }
+
+  .syllabus-description {
+
+    h2 {
+      font-family: $lato;
+      font-size: 32px;
+      color: #324141;
+      line-height: 42px;
+      letter-spacing: 1px;
+      font-family: ProximaNova-Bold;
+    }
+
+    .sub-header {
+      font-family: $lato;
+      font-size: 16px;
+      color: #9FAEAE;
+      line-height: 27px;
+    }
+
+    blockquote {
+      font-family: Adelle-Italic;
+      font-size: 15px;
+      color: #959595;
+      line-height: 26px;
+      letter-spacing: 0px;
+    }
+
+    p.description {
+      font-family: Adelle-Light;
+      font-size: 15px;
+      color: #454545;
+      line-height: 26px;
+      letter-spacing: 0px;
+    }
+  }
+
+  .syllabus-lessons {
+
+  }
+
+  .syllabus-lessons ul {
+    padding-top: 40px;
+  }
+
+  .syllabus-lessons li {
+    font-family: $lato;
+    font-size: 14px;
+    color: #324141;
+    line-height: 27px;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0 12px 38px;
+    position: relative;
+
+    .play-button {
+      position: absolute;
+      left: 0;
+      font-size: 24px;
+    }
+
+    .play-button i {
+      color: #CACACA;
+    }
+
+    span {
+      position: absolute;
+      right: 0;
+      background: #203C6E;
+      color: #fff;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+    }
+  }
+
+  .ingredients {
+    padding: 40px;
+  }
+
+  .ingredients img {
+
+  }
+
+  .ingredients h1 {
+    font-family: ProximaNova-Bold;
+    font-size: 32px;
+    color: #324141;
+    line-height: 42px;
+    letter-spacing: 1px;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .ingredients p {
+    font-family: ProximaNova-Regular;
+    font-size: 16px;
+    color: #5A5A5A;
+    line-height: 25px;
+  }
+
 
 
 

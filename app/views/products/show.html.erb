@@ -8,8 +8,8 @@
     </div>
 
     <!-- Hero Info -->
-    <div class="product-hero-info-wrap">
-      <div class="large-4 columns product-hero-info">
+    <div class="product-hero-info-wrap large-4 columns">
+      <div class="product-hero-info">
         <h1><%= @product.title %></h1>
         <%= simple_form_for(@line_item) do |f| %>
           <% @product.variants.sort_by{|variant| variant.price}.each do |variant| %>
@@ -35,3 +35,103 @@
   </div>
 
 </div>
+
+<!-- About This Box -->
+<div class="about-this-box row">
+  <div class="large-6 columns about-this-box-description">
+    <h2>More About This Box</h2>
+    <p class="sub-header">You will become a master of matcha in no time with this interactive kit from Japan.</p>
+    <p class="description">
+      Coffee takes specific knowledge to do correctly. From water control, to fixing bitterness or sourness, to blooming your grinds, and much more. Let expert barista, Josh Littlefield, teach you everything you need to know. Videos included with the box.
+    </p>
+    <blockquote>
+      Coffee takes specific knowledge to do correctly. From water control, to fixing bitterness or sourness, to blooming your grinds, and much more.
+    </blockquote>
+    <p class="description">
+      Coffee takes specific knowledge to do correctly. From water control, to fixing bitterness or sourness, to blooming your grinds, and much more. Let expert barista, Josh Littlefield, teach you everything you need to know. Videos included with the box.
+    </p>
+  </div>
+  <div class="large-6 columns about-this-box-image"></div>
+</div>
+
+<!-- Large Image -->
+<div class="large-product-image">
+
+</div>
+
+<!-- Syllabus -->
+<div class="row syllabus">
+  <div class="large-6 columns syllabus-description">
+    <h2>What You'll Learn</h2>
+      <p class="sub-header">You will become a master of matcha in no time with this interactive kit from Japan.</p>
+      <p class="description">
+        <em>Tea is an art.</em> Coffee takes specific knowledge to do correctly. From water control, to fixing bitterness or sourness, to blooming your grinds, and much more. Let expert barista, Josh Littlefield, teach you everything you need to know. Videos included with the box.
+      </p>
+      <p class="description">
+        <em>It's also a science.</em> Coffee takes specific knowledge to do correctly. From water control, to fixing bitterness or sourness, to blooming your grinds, and much more. Let expert barista, Josh Littlefield, teach you everything you need to know. Videos included with the box.
+      </p>
+      <p class="description">
+        <em>You must train your taste buds.</em> Coffee takes specific knowledge to do correctly. From water control, to fixing bitterness or sourness, to blooming your grinds, and much more. Let expert barista, Josh Littlefield, teach you everything you need to know. Videos included with the box.
+      </p>
+    </div>
+  <div class="large-6 columns syllabus-lessons">
+    <ul>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        What is matcha?
+        <span>Preview</span>
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        Brewing Tools
+        <span>Preview</span>
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        Your Ingredients
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        Brewing techniques
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        Getting the ratio right
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        Tasting your tea
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        Adjusting your brew
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        What is matcha?
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        Brewing Tools
+      </li>
+      <li>
+        <div class="play-button"><i class="fa fa-play-circle-o"></i></div>
+        Your Ingredients
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Ingredients -->
+<div class="row ingredients">
+  <h1>We scoured the globe for superior tools, here's what you get.</h1>
+  <% 6.times do %>
+    <div class="ingredient large-6 columns">
+      <%= image_tag("products/bowl.png") %>
+      <h3>Traditional Chawan</h3>
+      <p>It's exactly what you need to brew the perfect matcha, a tradtion that goes back over a thousand years and spans dynasties.</p>
+    </div>
+  <% end %>
+</div>
+
+<!-- Reviews -->
