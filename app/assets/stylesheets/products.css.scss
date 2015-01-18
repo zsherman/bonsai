@@ -1,333 +1,98 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'mixins';
 
 .product-page {
-  background: #fff;
 
-  .row {
-
+  .product-hero-wrap {
+    background-image: linear-gradient(-179deg, #EEEFEA 0%, #EAEBE5 82%, #E5E6E0 100%);
   }
 
   .product-hero {
-    padding: 20px 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #1B655F;
-    // background-image: image-url("josh-green-flipped.png");
-    background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.1),
-          rgba(0, 0, 0, 0.5)
-        ),
-        /* bottom, image */
-        image-url('kettle-pour.jpg');
-    background: #fff;
-    background-size: contain;
-    min-height: inherit;
-    padding: 42px 0;
+    height: 500px;
   }
 
-  .product-wrapper {
+  .product-hero-image {
+    background: image-url('product/tea-bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position-y: 50%;
+  }
+
+  .product-hero-info-wrap {
+    padding: 40px 0;
+  }
+
+  .product-hero-info {
+    background: #fff;
+    border-readius: 3px;
+    height: 100%;
+    border-radius: 4px;
+    padding: 15px;
+  }
+
+  .product-hero-info h1 {
+    font-family: "Brandon-Grotesque";
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #303030;
+  }
+
+  .product-variant {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 5px 5px 5px 15px;
+    margin: 15px 0;
     position: relative;
+    cursor: pointer;
+    border-radius: 4px;
 
-    .product-info-inner {
-      background: #fff;
-      position: relative;
-      padding: 10px 20px;
-    }
-
-    .product-image {
-      text-align: center;
-    }
-
-    h1, h3, p {
-      font-size: 2em;
-      color: #2E3133;
-      font-weight: 400;
-      font-family: "Raleway";
-      font-size: 32px;
-      letter-spacing: 1px;
-    }
-
-    h3 {
-      font-size: 1em;
-    }
-
-    p {
-      color: #969C9D;
-      font-size: .85em;
+    span {
+      display: block;
       font-family: "Lato";
-      font-weight: 300;
-      line-height: 25px;
-    }
-
-    ul {
-      margin-left: 0;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      min-height: 30px;
-      list-style-type: disc;
-      padding-left: 10px;
-    }
-
-    ul li {
-      color: #969C9D;
-      font-size: .85em;
-      font-family: "Lato";
-      font-weight: 300;
-      line-height: 25px;
+      padding: 7px 17px 0 17px;
       float: left;
-      margin: 6px;
-      width: 47%;
+    }
+
+    .variant-description {
+      font-size: 11px;
+      color: #1D98D4;
+      padding-top: 3px;
+      padding-bottom: 3px;
     }
 
     input {
-      background: #5AB8EC;
-      color: #fff;
-      outline: none;
-      padding: 20px 50px;
-      font-size: 14px;
-      border: none;
-      border-radius: 4px;
+      @include vertical-align;
       position: absolute;
-      top: 54px;
-      right: 26px;
-    }
-  }
-
-  #ingredients {
-    padding-top: 4em;
-
-    .ingredient-slider li{
-      min-height: 300px;
     }
 
-    .ingredient-description {
-      padding-top: 60px;
-    }
-
-    .ingredient-slider li p {
-      font-size: 1.15rem;
-      font-family: "raleway";
-      font-weight: 400;
-      line-height: 40px;
-      letter-spacing: .2px;
-      color: #373737;
-    }
-
-  }
-
-  #photo-grid {
-
-
-  }
-
-  #story {
-    height: 500px;
-    background: image-url('field.jpg');
-    background-size: cover;
-    position: relative;
-
-    .story-description {
-      position: absolute;
-      height: 50%;
-      background: #fff;
-      color: #000;
-      top: 100px;
-      right: 0px;
-      padding: 20px;
-
-      h1 {
-        font-weight: 400;
-        color: #333;
-        font-family: "Raleway";
-        text-decoration: uppercase;
-        letter-spacing: 2px;
-        font-size: 1.8rem;
-      }
-
-      p {
-        font-size: 14px;
-        font-weight: 400;
-        color: #333;
-        font-family: "Lato";
-        letter-spacing: 1px;
-        line-height: 28px;
-      }
-    }
-  }
-
-  #preview-video {
-    background: #074058;
-    height: 400px;
-
-    .large-12 {
-      max-width: 62.5em;
-    }
-
-    .columns {
-      min-height: 300px;
-    }
-
-    .video-wrapper {
-
-    }
-
-    .video-description {
-
-      h3 {
-        padding: 10px 0;
-      }
-
-      h3, p {
-        color: #fff;
-      }
-
-      p {
-        font-size: 1.15rem;
-        font-family: "raleway";
-        font-weight: 400;
-        line-height: 40px;
-        letter-spacing: .2px;
-      }
-    }
-
-  }
-
-  #instructor {
-    padding: 2em 0;
-
-    .columns {
-      min-height: 400px;
-    }
-
-    .instructor-description {
-
-    }
-
-    .instructor-description h3 {
-      padding: 10px 0;
-    }
-
-    .instructor-description p {
-      font-size: 1.15rem;
-      font-family: "raleway";
-      font-weight: 400;
-      line-height: 40px;
-      letter-spacing: .2px;
-    }
-
-    .instructor-image {
-      background: image-url('josh.png');
-      background-size: cover;
-      background-position-x: 50%;
-      position: relative;
-    }
-  }
-
-  #topics {
-    min-height: 400px;
-    border-top: 1px solid #ddd;
-
-    .columns {
+    .variant-info {
       float: left;
+      width: 200px;
     }
 
-    h3:first-of-type {
-      font-size: 1.6875rem;
-      padding-left: 10px;
+    .price {
+      @include vertical-align;
+      position: absolute;
+      font-size: 20px;
+      padding: 20px 30px 20px 0;
     }
 
-    .topic-lesson-wrapper {
-      padding: 10px;
-
-      h3 {
-        font-size: 20px;
-        color: #333;
-      }
-
-      h3 i {
-        padding-right: 12px;
-      }
-
-      p {
-        font-size: 14px;
-        padding-left: 28px;
-      }
-    }
-
-    .topic-lesson {
-      border: 1px solid #ddd;
-      background: #f7f7f7;
-      padding: 15px;
-    }
-  }
-
-  #reviews {
-    border-bottom: 1px solid #ddd;
-    background: #f7f7f7;
-    padding-bottom: 30px;
-
-    h2 {
-      margin: 40px 0;
-      font-weight: 400;
-      color: #333;
-      font-family: "Lato";
-      text-decoration: uppercase;
-      letter-spacing: 2px;
-      font-size: 28px;
-    }
-
-    .centered-text {
-      text-align: center;
-    }
-
-    .quote {
-      background: #fff;
-      padding: 15px 20px 5px 15px;
-      border-radius: 5px;
-      margin-bottom: 30px;
-      color: #7A7D7F;
-    }
-    .quote:after {
-      content: '';
-      width: 0px;
-      height: 0px;
-      border-style: solid;
-      border-width: 20px 18px 0 18px;
-      border-color: #fff transparent transparent transparent;
+    .input-wrapper {
+      height: 55px;
+      float: left;
       position: relative;
-      top: 37px;
-      left: 20px;
+      width: 15px;
     }
 
-    .student {
-      margin-left: 25px;
-      margin-bottom: 80px;
-    }
-    .student .photo {
-      background-color: #ccc;
-      border-radius: 100px;
+    .price-wrapper {
+      height: 55px;
       width: 60px;
-      height: 60px;
-      float: left;
-      margin-right: 10px;
-    }
-    .student p {
+      float: right;
       position: relative;
-      top: 5px;
-      text-transform: uppercase;
-    }
-    .student p:nth-child(2) {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 0;
-    }
-    .student p:nth-child(3) {
-      font-size: 14px;
-      color: #777;
     }
   }
+
+
+
 
 }
