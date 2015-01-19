@@ -1,5 +1,29 @@
 @import 'mixins';
 @import 'fonts';
+
+.zig-zag {
+  position: relative;
+  width: 200px;
+  height: 0px;
+  background: #fff;
+}
+
+.zig-zag:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 75%, #9AA4B1 75%, #9AA4B1), linear-gradient(225deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 75%, #9AA4B1 75%, #b6b5eb), linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 75%, #9AA4B1 75%, #9AA4B1), linear-gradient(315deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 75%, #9AA4B1 75%, #9AA4B1);
+  background-position: 0.5em 0.5em, 0.5em 0.5em, 0 0.5em, 0 0.5em;
+  background-size: 1em 1em;
+  left: 0;
+  top: -1em;
+  height: 1em;
+  width: 100%;
+}
+
 .product-page {
 
   .product-hero-wrap {
@@ -259,7 +283,11 @@
   }
 
   .ingredient {
-    padding-top: 20px;
+    padding: 20px 50px 20px 0;
+  }
+
+  .ingredient:nth-child(2n+1) {
+    padding-left: 20px;
   }
 
   .ingredient h3 {
