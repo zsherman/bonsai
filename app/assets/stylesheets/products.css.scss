@@ -307,5 +307,15 @@
     line-height: 25px;
   }
 
+  .sponsor {
+    height: 400px;
+    background: image-url('product/matcha-bar.png');
+    background-size: cover;
+  }
+
+  .reviews {
+    min-height: 400px;
+  }
+
 
 }
