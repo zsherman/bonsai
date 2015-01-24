@@ -20,10 +20,11 @@
   background: linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 75%, #9AA4B1 75%, #9AA4B1), linear-gradient(225deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 75%, #9AA4B1 75%, #b6b5eb), linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 75%, #9AA4B1 75%, #9AA4B1), linear-gradient(315deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 75%, #9AA4B1 75%, #9AA4B1);
   background-position: 0.5em 0.5em, 0.5em 0.5em, 0 0.5em, 0 0.5em;
   background-size: 1em 1em;
-  left: 0;
+  left: -50px;
   top: -1em;
   height: 1em;
   width: 100%;
+  transform: scale(.5);
 }
 
 .product-page {
@@ -308,13 +309,57 @@
   }
 
   .sponsor {
-    height: 400px;
+    height: 470px;
     background: image-url('product/matcha-bar.png');
     background-size: cover;
+    position: relative;
+  }
+
+  .sponsor .sponsor-info {
+    @include vertical-align;
+    position: absolute;
+    right: 0;
+    background: #fff;
+    height: 80%;
+    width: 35%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .sponsor .sponsor-info h1 {
+    font-family: ProximaNova-Bold;
+    font-size: 32px;
+    color: #324141;
+    line-height: 42px;
+    letter-spacing: 1px;
+  }
+
+  .sponsor .sponsor-info p {
+    font-family: ProximaNova-Regular;
+    font-size: 16px;
+    color: #5A5A5A;
+    line-height: 25px;
   }
 
   .reviews {
     min-height: 400px;
+  }
+
+  .reviews h1 {
+    font-family: ProximaNova-Bold;
+    font-size: 32px;
+    color: #324141;
+    line-height: 42px;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .reviews .quote-block {
+    border-bottom: 1px solid #ccc;
+    font-size: 60px;
+    font-family: Adelle;
   }
 
 
