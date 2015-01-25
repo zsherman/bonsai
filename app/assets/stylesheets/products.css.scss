@@ -321,7 +321,6 @@
     right: 0;
     background: #fff;
     height: 80%;
-    width: 35%;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -343,6 +342,7 @@
 
   .reviews {
     min-height: 400px;
+    padding-top: 30px;
   }
 
   .reviews h1 {
@@ -357,10 +357,65 @@
   }
 
   .reviews .quote-block {
-    border-bottom: 1px solid #ccc;
     font-size: 60px;
     font-family: Adelle;
+    position: relative;
   }
 
+  .reviews .quote-block p {
+    font-family: Georgia, serif;
+    font-size: 110px;
+    text-align: center;
+    line-height: 160px;
+    color: #1F4F7F;
+  }
+
+  .reviews .quote-block p:before {
+    content: " ";
+    position: absolute;
+    width: 45%;
+    border-bottom: 1px solid #eee;
+    left: 0;
+    top: 53px;
+  }
+
+  .reviews .quote-block p:after {
+    content: " ";
+    position: absolute;
+    width: 45%;
+    border-bottom: 1px solid #eee;
+    right: 0;
+    top: 53px;
+  }
+
+  .reviews .review {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+
+  .review .review-user-image {
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 30px 0 30px 10px;
+    border: 1px solid #eee;
+    background: image-url('katie.png');
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .review .review-body {
+    padding-left: 80px;
+  }
+
+  .review h4 {
+
+  }
+
+  .review p {
+
+  }
 
 }

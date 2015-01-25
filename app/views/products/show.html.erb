@@ -138,7 +138,7 @@
 
 <!-- Sponsor -->
 <div class="sponsor">
-  <div class="sponsor-info">
+  <div class="sponsor-info large-4 columns">
     <h1>In partnership with our friends from Matcha Bar NYC.</h1>
     <p>Matcha Bar is proud to serve it's own brand of matcha sourced directly from an independent family farm in Nishio, Japan. We were luck enough to visit the farm for the spring harvest, learning about the extensive cultivation, manufacturing and quality analysis that goes into our product. We offer matcha tins in two grades: Matcha bar classic and Matcha bar premium.</p>
   </div>
@@ -146,8 +146,17 @@
 
 <!-- Reviews -->
 <div class="reviews row">
-  <h1>Across the globe, people use Bonsai to learn, now here's what they say.</h1>
+  <h1>People all over are using Bonsai to learn new skills, here's what they say.</h1>
   <div class="quote-block">
-    <span>"</span>
+    <p>“</p>
   </div>
+  <% 3.times do %>
+    <div class="large-12 columns review">
+      <div class="review-user-image"></div>
+      <div class="review-body">
+        <h4>Katie Byrd</h4>
+        <p>It's literally the best thing I've ever purchased. So far I've learned to brew the perfect cup of coffee, whisky delicious matcha, and make amazing whisky drinks all from the comfort of my desk.</p>
+      </div>
+    </div>
+  <% end %>
 </div>
