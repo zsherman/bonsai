@@ -51,15 +51,14 @@
 
   .product-hero-info {
     background: #fff;
-    border-readius: 3px;
     height: 100%;
     border-radius: 4px;
+    border: 1px solid #DEDEDE;
     padding: 15px;
   }
 
   .product-hero-info h1 {
-    font-family: "Brandon-Grotesque";
-    text-transform: uppercase;
+    font-family: "Adelle";
     font-size: 24px;
     color: #303030;
   }
@@ -123,14 +122,15 @@
 
   .product-hero-info .check-out {
     outline: none;
-    background: #000;
-    border-radius: 0;
+    background: #9DBA90;
+    border-radius: 4px;
+    margin-bottom: 0;
     color: #fff;
     width: 100%;
   }
 
   .about-this-box {
-    padding: 40px 0;
+    padding: 50px 0;
   }
 
   .about-this-box-description {
@@ -410,6 +410,7 @@
 
   .review .review-body {
     padding-left: 80px;
+    font-family: Proxima Nova;
   }
 
   .review h4 {
